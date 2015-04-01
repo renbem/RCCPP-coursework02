@@ -12,5 +12,6 @@
 #
 #============================================================================*/
 
-add_subdirectory(HelloWorld)
-add_subdirectory(ConwaysGameOfLife)
+add_executable(ConwaysGameOfLifeTest ConwaysGameOfLifeTest.cc)
+#target_link_libraries(ConwaysGameOfLife ${ITK_LIBRARIES})
+

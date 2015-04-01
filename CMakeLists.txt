@@ -189,8 +189,10 @@ endforeach()
 # Setup further include folders
 ######################################################################
 include_directories(Code/HelloWorld)
+include_directories(Code/ConwaysGameOfLife)
 include_directories(Testing/catch)
 include_directories(Testing/HelloWorld)
+include_directories(Testing/ConwaysGameOfLife)
  
 ######################################################################
 # Decide what subdirectories we are building, and go and build them.

@@ -12,5 +12,5 @@
 #
 #============================================================================*/
 
-add_subdirectory(HelloWorld)
-add_subdirectory(ConwaysGameOfLife)
+add_executable(ConwaysGameOfLife ConwaysGameOfLife.cc)
+target_link_libraries(ConwaysGameOfLife ${Boost_LIBRARIES})
