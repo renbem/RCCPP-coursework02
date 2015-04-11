@@ -12,5 +12,6 @@
 #
 #============================================================================*/
 
-add_executable(ConwaysGameOfLife ConwaysGameOfLife.cc)
+add_executable(ConwaysGameOfLife conwaysGameOfLife.cc Cell.cc Board.cc Game.cc
+    MyException.cc)
 target_link_libraries(ConwaysGameOfLife ${Boost_LIBRARIES})
