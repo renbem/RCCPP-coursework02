@@ -17,6 +17,8 @@
 #include <Eigen/Dense>
 // #include <boost/lexical_cast.hpp>
 #include <boost/program_options.hpp>
+
+#include "Game.h"
 #include "MyException.h"
 // #include <itkImage.h>
 
@@ -98,7 +100,7 @@ int main(int argc, char** argv){
 			std::cout << "Number of steps of game given (" 
 				<< vm["s"].as<int>() << ").\n";
 
-			imaximumNumberOfSteps = vm["s"].as< std::vector<std::string> >()[0];
+			imaximumNumberOfSteps = vm["s"].as<int>();
 		} 
 		else {
 			std::cout << "Number of steps of game NOT given.\n";
@@ -113,8 +115,11 @@ int main(int argc, char** argv){
 				"Please type 'conwaysGameOfLife --help'");
 		}
 
-		std::cout << "test" << std::endl;
-		// Game game = newGame()
+		Game *game = new Game(sfileInitialBoard);
+        game->dispStateOfGame();
+        
+        game->computeNextStep();
+        game->dispStateOfGame();
 
 
 	}
