@@ -92,171 +92,42 @@ void Board::readBoardFromFile(std::string infile){
     this->board = bBoard;
 }
 
-unsigned int Board::getElementFrom2D(unsigned int irow, unsigned int icol){
-    return icol*(this->irows) + irow;
+std::vector<Cell> Board::determineNeighbourCells(unsigned int irow, 
+    unsigned int icol){
+
+    std::vector<Cell> neighbourCells;
+
+    unsigned int iR = this->irows;
+    unsigned int iC = this->icolumns;
+
+    //***Fetch neighbour cells by regarding periodic boundary conditions
+    unsigned int irowTop = (irow-1+iR)%iR;
+    unsigned int irowBottom = (irow+1)%iR;
+    unsigned int icolLeft = (icol-1+iC)%iC;
+    unsigned int icolRight = (icol+1)%iC;
+
+    neighbourCells.push_back(this->board[irow][icolRight]);
+    neighbourCells.push_back(this->board[irowTop][icolRight]);
+    neighbourCells.push_back(this->board[irowTop][icol]);
+    neighbourCells.push_back(this->board[irowTop][icolLeft]);
+    neighbourCells.push_back(this->board[irow][icolLeft]);
+    neighbourCells.push_back(this->board[irowBottom][icolLeft]);
+    neighbourCells.push_back(this->board[irowBottom][icol]);
+    neighbourCells.push_back(this->board[irowBottom][icolRight]);
+
+    return neighbourCells;
 }
 
-unsigned int Board::determineNumberOfNeighboursAlive(unsigned int irow, 
-    unsigned int icol){
+void Board::applyTransitionRules(unsigned int irow, unsigned int icol, 
+    std::vector<Cell> neighbourCells){
 
     unsigned int numberOfNeighboursAlive = 0;
 
-    unsigned int M = this->irows;
-    unsigned int N = this->icolumns;
-    std::vector<unsigned int> neighbours;
-
-
-    //***Find neighbour cells:
-    //******First outer left column:
-    if(icol == 0){
-        if(irow == 0){
-            //Standard:
-            neighbours.push_back(getElementFrom2D(irow+1, icol));
-            neighbours.push_back(getElementFrom2D(irow+1, icol+1));
-            neighbours.push_back(getElementFrom2D(irow, icol+1));
-
-            //Periodic Boundary:
-            neighbours.push_back(getElementFrom2D(M-1, 1));
-            neighbours.push_back(getElementFrom2D(M-1, 0));
-            neighbours.push_back(getElementFrom2D(M-1, N-1));
-            neighbours.push_back(getElementFrom2D(0, N-1));
-            neighbours.push_back(getElementFrom2D(1, N-1));
-        }
-        else if(irow == M-1){
-            //Standard:
-            neighbours.push_back(getElementFrom2D(irow, icol+1));
-            neighbours.push_back(getElementFrom2D(irow-1, icol+1));
-            neighbours.push_back(getElementFrom2D(irow-1, icol));
-
-            //Periodic Boundary:
-            neighbours.push_back(getElementFrom2D(M-2, N-1));
-            neighbours.push_back(getElementFrom2D(M-1, N-1));
-            neighbours.push_back(getElementFrom2D(0, N-1));
-            neighbours.push_back(getElementFrom2D(0, 0));
-            neighbours.push_back(getElementFrom2D(0, 1));
-        }
-        else{
-            //Standard:
-            neighbours.push_back(getElementFrom2D(irow+1, icol));
-            neighbours.push_back(getElementFrom2D(irow+1, icol+1));
-            neighbours.push_back(getElementFrom2D(irow, icol+1));
-            neighbours.push_back(getElementFrom2D(irow-1, icol+1));
-            neighbours.push_back(getElementFrom2D(irow-1, icol));
-
-            //Periodic Boundary:
-            neighbours.push_back(getElementFrom2D(irow-1, N-1));
-            neighbours.push_back(getElementFrom2D(irow, N-1));
-            neighbours.push_back(getElementFrom2D(irow+1, N-1));
-        }
-    }
-    //******Last outer right column:
-    else if(icol == N-1){
-        if(irow == 0){
-            //Standard:
-            neighbours.push_back(getElementFrom2D(irow, icol-1));
-            neighbours.push_back(getElementFrom2D(irow+1, icol-1));
-            neighbours.push_back(getElementFrom2D(irow+1, icol));
-
-            //Periodic Boundary:
-            neighbours.push_back(getElementFrom2D(1, 0));
-            neighbours.push_back(getElementFrom2D(0, 0));
-            neighbours.push_back(getElementFrom2D(M-1, 0));
-            neighbours.push_back(getElementFrom2D(M-1, N-1));
-            neighbours.push_back(getElementFrom2D(M-1, N-2));
-        }
-        else if(irow == M-1){
-            //Standard:
-            neighbours.push_back(getElementFrom2D(irow-1, icol));
-            neighbours.push_back(getElementFrom2D(irow-1, icol-1));
-            neighbours.push_back(getElementFrom2D(irow, icol-1));
-
-            //Periodic Boundary:
-            neighbours.push_back(getElementFrom2D(0, N-2));
-            neighbours.push_back(getElementFrom2D(0, N-1));
-            neighbours.push_back(getElementFrom2D(0, 0));
-            neighbours.push_back(getElementFrom2D(M-1, 0));
-            neighbours.push_back(getElementFrom2D(M-2, 0));
-        }
-        else{
-            //Standard:
-            neighbours.push_back(getElementFrom2D(irow-1, icol));
-            neighbours.push_back(getElementFrom2D(irow-1, icol-1));
-            neighbours.push_back(getElementFrom2D(irow, icol-1));
-            neighbours.push_back(getElementFrom2D(irow, icol+1));
-            neighbours.push_back(getElementFrom2D(irow+1, icol-1));
-
-            //Periodic Boundary:
-            neighbours.push_back(getElementFrom2D(irow-1, 0));
-            neighbours.push_back(getElementFrom2D(irow, 0));
-            neighbours.push_back(getElementFrom2D(irow+1, 0));
-        }
-    }
-    //******Top row: (Corners are already covered above)
-    else if(irow == 0){       
-        //Standard:
-        neighbours.push_back(getElementFrom2D(irow, icol-1));
-        neighbours.push_back(getElementFrom2D(irow+1, icol-1));
-        neighbours.push_back(getElementFrom2D(irow+1, icol));
-        neighbours.push_back(getElementFrom2D(irow+1, icol+1));
-        neighbours.push_back(getElementFrom2D(irow, icol+1));
-
-            //Periodic Boundary:
-        neighbours.push_back(getElementFrom2D(M-1, icol+1));
-        neighbours.push_back(getElementFrom2D(M-1, icol));
-        neighbours.push_back(getElementFrom2D(M-1, icol-1));
-    }
-    //******Bottom row: (Corners are already covered above)
-    else if(irow == M-1){       
-        //Standard:
-        neighbours.push_back(getElementFrom2D(irow, icol+1));
-        neighbours.push_back(getElementFrom2D(irow-1, icol+1));
-        neighbours.push_back(getElementFrom2D(irow-1, icol));
-        neighbours.push_back(getElementFrom2D(irow-1, icol-1));
-        neighbours.push_back(getElementFrom2D(irow, icol-1));
-
-        //Periodic Boundary:
-        neighbours.push_back(getElementFrom2D(0, icol-1));
-        neighbours.push_back(getElementFrom2D(0, icol));
-        neighbours.push_back(getElementFrom2D(0, icol+1));
-    }
-    //******Inner board:
-    else{
-        //Standard:
-        neighbours.push_back(getElementFrom2D(irow, icol+1));
-        neighbours.push_back(getElementFrom2D(irow-1, icol+1));
-        neighbours.push_back(getElementFrom2D(irow-1, icol));
-        neighbours.push_back(getElementFrom2D(irow-1, icol-1));
-        neighbours.push_back(getElementFrom2D(irow, icol-1));
-        neighbours.push_back(getElementFrom2D(irow+1, icol-1));
-        neighbours.push_back(getElementFrom2D(irow+1, icol));
-        neighbours.push_back(getElementFrom2D(irow+1, icol+1));
-    }
-
-    // printf("neighbours(%i, %i):\n", irow, icol);
-    // for (int i = 0; i < 8; ++i)
-    // {
-    //     printf("   (%i)\n", neighbours[i]);
-    // }
-
-    // printf("Cell (%i, %i):\n", irow, icol);
-
-    //***Compute number of alive neighbours cells:
     for (int i = 0; i < 8; ++i){
-        //***Complete bullshit to do it like that:
-        unsigned int r = neighbours[i]%M;
-        unsigned int c = (neighbours[i]-r)/M;
-
-        // printf("   (r, c) = (%i, %i)\n", r,c);
-
-        if(this->board[r][c].getStatus()){
+        if(neighbourCells[i].getStatus()){
             numberOfNeighboursAlive++;
         }
     }
-
-return numberOfNeighboursAlive;
-}
-
-void Board::applyTransitions(unsigned int irow, unsigned int icol, unsigned numberOfNeighboursAlive){
 
     // printf("Cell (%i,%i): numberOfNeighboursAlive = %i\n", 
     //     irow,icol,numberOfNeighboursAlive);

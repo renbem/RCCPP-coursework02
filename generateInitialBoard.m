@@ -1,12 +1,16 @@
 function generateInitialBoard()
 
+dir = 'Testing/ConwaysGameOfLifeData/';
+
 rows = 40;
 columns = 60;
 
 A = rand(rows,columns)>0.9;
-
-dir = 'Testing/ConwaysGameOfLifeData/';
 filename = 'InitialBoardRandom.txt';
+
+%***Generate numbered board for unit test: 
+% A = zeros(rows,columns); A(:) = 0:rows*columns-1;
+% filename = 'TestBoardNumbered.txt';
 
 f = fopen([dir filename],'w');
 
