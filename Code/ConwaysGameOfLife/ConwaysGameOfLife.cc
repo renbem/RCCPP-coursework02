@@ -14,9 +14,14 @@
 
 #include <cstdlib>
 #include <iostream>
-#include <Eigen/Dense>
+#include <string>
+
+
+// #include <Eigen/Dense>
 // #include <boost/lexical_cast.hpp>
 #include <boost/program_options.hpp>
+
+
 
 #include "Game.h"
 #include "MyException.h"
@@ -116,11 +121,24 @@ int main(int argc, char** argv){
 		}
 
 		Game *game = new Game(sfileInitialBoard);
-        game->dispStateOfGame();
-        
-        game->computeNextStep();
-        game->dispStateOfGame();
 
+        system("clear");            //Clear display
+
+        printf("Iteartion %d of %d:\n",0,imaximumNumberOfSteps);       
+        game->dispStateOfGame();
+    
+        #include <unistd.h>
+ 
+        unsigned int itr = 1;
+        while(itr <= imaximumNumberOfSteps){
+            game->computeNextStep();
+
+            sleep(1);
+            system("clear");            //Clear display
+            printf("Iteartion %d of %d:\n",itr,imaximumNumberOfSteps);       
+            game->dispStateOfGame();
+            itr++;
+        }        
 
 	}
 	catch(std::exception& e) {

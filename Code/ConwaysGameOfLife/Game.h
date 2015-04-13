@@ -3,7 +3,6 @@
 
 #include <stack>
 #include "Board.h"
-#include "Cell.h"
 
 class Game{
 public:
@@ -15,8 +14,7 @@ public:
 
 private:
     void pushBoard(Board board);
-    std::stack<Board> boardHistory;
-    Cell applyRules(unsigned int numberOfNeighboursAlive);
+    std::vector<Board> boardHistory;
 };
 
 #endif  /* GAME_H_ */

@@ -4,7 +4,7 @@
 Game::Game(std::string infile){
     Board* board = new Board(infile);
 
-    this->boardHistory.push(*board);
+    this->boardHistory.push_back(*board);
 }
 
 //***Destructor
@@ -13,13 +13,11 @@ Game::~Game(){
 }
 
 void Game::computeNextStep(){
-    Board currentBoard = boardHistory.top();
+    Board currentBoard = boardHistory.back();
+    Board updatedBoard = currentBoard;
 
     unsigned int irows = currentBoard.getRows();
     unsigned int icolumns = currentBoard.getColumns();
-
-    Board updatedBoard = Board(irows, icolumns);
-
     unsigned int numberOfNeighboursAlive = 0;
 
     // std::cout << "rows = " << updatedBoard.getRows() << std::endl;
@@ -28,26 +26,23 @@ void Game::computeNextStep(){
     for (unsigned int row = 0; row < irows; ++row){
         for (unsigned int col = 0; col < icolumns; ++col){   
             numberOfNeighboursAlive
-                = currentBoard.determineNumberOfNeighboursAlive(row,col,irows,icolumns);
-
-            // updatedBoard[row][col] = this->applyRules(numberOfNeighboursAlive);
-
+                = currentBoard.determineNumberOfNeighboursAlive(row, col);
+            updatedBoard.applyTransitions(row,col,numberOfNeighboursAlive);
         }
         // std::cout << "\n";
     }
 
-
-    pushBoard(updatedBoard);
+    this->pushBoard(updatedBoard);
 }
 
 void Game::dispStateOfGame(){
-    Board currentBoard = boardHistory.top();
+    Board currentBoard = boardHistory.back();
 
-    std::cout << "\n";
-    std::cout << "Current iteration = " << boardHistory.size() -1;
-    std::cout << " (rows = " << currentBoard.getRows();
-    std::cout << ", columns = " << currentBoard.getColumns() << ")";
-    std::cout << "\n";
+    // std::cout << "\n";
+    // std::cout << "Current iteration = " << boardHistory.size() -1;
+    // std::cout << " (rows = " << currentBoard.getRows();
+    // std::cout << ", columns = " << currentBoard.getColumns() << ")";
+    // std::cout << "\n";
 
     currentBoard.dispBoard();
 }
@@ -57,11 +52,5 @@ void Game::saveGameHistory(){
 }
 
 void Game::pushBoard(Board board){
-    this->boardHistory.push(board);
-}
-
-Cell Game::applyRules(unsigned int numberOfNeighboursAlive){
-    Cell *c = new Cell;
-
-    return *c;
+    this->boardHistory.push_back(board);
 }

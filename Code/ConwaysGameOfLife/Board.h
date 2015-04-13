@@ -17,19 +17,21 @@
 class Board{
 public:
     Board(std::string infile);
-    Board(unsigned int rows, unsigned int cols);
+    // Board(unsigned int rows, unsigned int cols);
     ~Board();
     void dispBoard();
     void saveBoard();
     unsigned int getRows();
     unsigned int getColumns();
-    unsigned int determineNumberOfNeighboursAlive(unsigned int, unsigned int, unsigned int, unsigned int);
+    unsigned int determineNumberOfNeighboursAlive(unsigned int, unsigned int);
+    void applyTransitions(unsigned int, unsigned int, unsigned int);
 
 private:
     unsigned int irows;
     unsigned int icolumns;
     std::vector<std::vector<Cell> > board;
     void readBoardFromFile(std::string infile);
+    unsigned int getElementFrom2D(unsigned int, unsigned int);
 };
 
 #endif  /* BOARD_H_ */
