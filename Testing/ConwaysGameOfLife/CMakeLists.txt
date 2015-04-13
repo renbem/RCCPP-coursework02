@@ -12,6 +12,10 @@
 #
 #============================================================================*/
 
-add_executable(ConwaysGameOfLifeTest ConwaysGameOfLifeTest.cc)
+add_executable(conwaysGameOfLifeTest conwaysGameOfLifeTest.cc 
+    ../../Code/ConwaysGameOfLife/Game.cc
+    ../../Code/ConwaysGameOfLife/Board.cc
+    ../../Code/ConwaysGameOfLife/Cell.cc
+    )
 #target_link_libraries(ConwaysGameOfLife ${ITK_LIBRARIES})
 

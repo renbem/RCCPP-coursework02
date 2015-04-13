@@ -20,7 +20,13 @@ bool Cell::getStatus(){
     return this->status;
 }
 
+int Cell::unitTest_getValue(){
+    return this->unitTest_value;
+}
+
 void Cell::setStatus(int stat){
+    this->unitTest_value = stat;
+
     if (stat > 0){
         this->status = true;
         // std::cout<<"true\n";

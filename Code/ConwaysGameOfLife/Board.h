@@ -23,15 +23,14 @@ public:
     void saveBoard();
     unsigned int getRows();
     unsigned int getColumns();
-    unsigned int determineNumberOfNeighboursAlive(unsigned int, unsigned int);
-    void applyTransitions(unsigned int, unsigned int, unsigned int);
+    std::vector<Cell> determineNeighbourCells(unsigned int, unsigned int);
+    void applyTransitionRules(unsigned int, unsigned int, std::vector<Cell>);
 
 private:
     unsigned int irows;
     unsigned int icolumns;
     std::vector<std::vector<Cell> > board;
     void readBoardFromFile(std::string infile);
-    unsigned int getElementFrom2D(unsigned int, unsigned int);
 };
 
 #endif  /* BOARD_H_ */

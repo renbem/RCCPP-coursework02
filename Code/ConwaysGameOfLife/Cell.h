@@ -9,11 +9,13 @@ public:
     Cell(bool stat);
     ~Cell();
     bool getStatus();
+    int unitTest_getValue();             //Just for unit test to check neighbours
     void setStatus(int );
     void dispCell();
 
 private:
     bool status;
+    int unitTest_value;
 };
 
 #endif  /* CELL_H_ */

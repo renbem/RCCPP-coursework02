@@ -18,16 +18,16 @@ void Game::computeNextStep(){
 
     unsigned int irows = currentBoard.getRows();
     unsigned int icolumns = currentBoard.getColumns();
-    unsigned int numberOfNeighboursAlive = 0;
+    std::vector<Cell> neighbourCells;
 
     // std::cout << "rows = " << updatedBoard.getRows() << std::endl;
     // std::cout << "columns = " << updatedBoard.getColumns() << std::endl;
 
     for (unsigned int row = 0; row < irows; ++row){
         for (unsigned int col = 0; col < icolumns; ++col){   
-            numberOfNeighboursAlive
-                = currentBoard.determineNumberOfNeighboursAlive(row, col);
-            updatedBoard.applyTransitions(row,col,numberOfNeighboursAlive);
+            neighbourCells
+                = currentBoard.determineNeighbourCells(row, col);
+            updatedBoard.applyTransitionRules(row,col,neighbourCells);
         }
         // std::cout << "\n";
     }

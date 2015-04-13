@@ -120,6 +120,7 @@ int main(int argc, char** argv){
 				"Please type 'conwaysGameOfLife --help'");
 		}
 
+
 		Game *game = new Game(sfileInitialBoard);
 
         system("clear");            //Clear display
@@ -138,7 +139,34 @@ int main(int argc, char** argv){
             printf("Iteartion %d of %d:\n",itr,imaximumNumberOfSteps);       
             game->dispStateOfGame();
             itr++;
-        }        
+        }       
+
+        // unsigned int iR = 9;
+        // unsigned int iC = 8;
+
+        // unsigned int irow = 8;
+        // unsigned int icol = 7;
+
+
+        // //***Fetch neighbour cells by regarding periodic boundary conditions
+        // unsigned int irowTop = (irow-1+iR)%iR;
+        // unsigned int irowBottom = (irow+1)%iR;
+        // unsigned int icolLeft = (icol-1+iC)%iC;
+        // unsigned int icolRight = (icol+1)%iC;
+
+        // printf("nC = %i, nR = %i\n",iR, iC);
+
+        // printf("(%i, %i)  (%i, %i)  (%i, %i)\n", 
+        //     irowTop, icolLeft, irowTop, icol, irowTop, icolRight);
+        // printf("(%i, %i)  (%i, %i)  (%i, %i)\n", 
+        //     irow, icolLeft, irow, icol, irow, icolRight);
+        // printf("(%i, %i)  (%i, %i)  (%i, %i)\n", 
+        //     irowBottom, icolLeft, irowBottom, icol, irowBottom, icolRight);
+        // unsigned int test = 0;
+        // printf("test = %i\n", test); 
+        // printf("test - 1 = %i\n", test-1); 
+        // printf("(test - 1 + 6)mod(6) = %i\n", (test-1+6)%6); 
+
 
 	}
 	catch(std::exception& e) {
