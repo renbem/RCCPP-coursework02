@@ -12,6 +12,7 @@ public:
     int unitTest_getValue();             //Just for unit test to check neighbours
     void setStatus(int );
     void dispCell();
+    std::string saveCell();
 
 private:
     bool status;

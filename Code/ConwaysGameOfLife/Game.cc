@@ -2,7 +2,9 @@
 
 //***Constructor
 Game::Game(std::string infile){
-    Board* board = new Board(infile);
+    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
+
+    Board* board = new Board(sdir+infile);
 
     this->boardHistory.push_back(*board);
 }
@@ -47,8 +49,29 @@ void Game::dispStateOfGame(){
     currentBoard.dispBoard();
 }
 
-void Game::saveGameHistory(){
+void Game::saveGameHistory(std::string outfile){
+    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
+    outfile = sdir+outfile;
 
+    unsigned int inumberOfSteps = this->boardHistory.size();
+
+    // std::remove(outfile.c_str()); //delete file
+
+    std::ofstream output(outfile);
+
+    if(!output.is_open()){
+        throw MyException("Cannot write file.");
+    }
+
+    output << inumberOfSteps << std::endl;
+
+    output.close();
+
+    for (int i = 0; i < inumberOfSteps; ++i){
+        Board b = this->boardHistory[i];
+        b.saveBoard(outfile);
+    }
+    
 }
 
 void Game::pushBoard(Board board){

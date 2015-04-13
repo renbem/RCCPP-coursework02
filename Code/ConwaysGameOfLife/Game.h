@@ -10,7 +10,7 @@ public:
     ~Game();
     void computeNextStep();
     void dispStateOfGame();
-    void saveGameHistory();
+    void saveGameHistory(std::string outfile);
 
 private:
     void pushBoard(Board board);

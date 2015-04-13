@@ -34,8 +34,24 @@ void Board::dispBoard(){
     }
 }
 
-void Board::saveBoard(){
+void Board::saveBoard(std::string outfile){
+    std::ofstream output(outfile, 
+        std::ofstream::out | std::ofstream::app);
 
+    if(!output.is_open()){
+        throw MyException("Cannot write file.");
+    }
+
+    for (int ir = 0; ir < this->irows; ir++){
+        for (int ic = 0; ic < this->icolumns; ic++){
+            output << this->board[ir][ic].saveCell();
+            if(ic < this->icolumns-1){
+                output << "\t";
+            }
+        }
+     
+        output << "\n";
+    }
 }
 
 unsigned int Board::getRows(){
@@ -47,9 +63,7 @@ unsigned int Board::getColumns(){
 }
 
 void Board::readBoardFromFile(std::string infile){
-    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
-
-    std::ifstream input(sdir+infile);
+    std::ifstream input(infile);
 
     if (!input.is_open()) {
         throw MyException("Cannot open the file to read.");
@@ -68,7 +82,7 @@ void Board::readBoardFromFile(std::string infile){
             getline(input, line);
             std::istringstream iss(line);
 
-            std::cout << line << std::endl;
+            // std::cout << line << std::endl;
 
             while (iss >> sfoo){
                 c->setStatus(stoi(sfoo));

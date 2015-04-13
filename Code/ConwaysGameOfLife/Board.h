@@ -2,10 +2,10 @@
 #define BOARD_H_
 
 #include <stdlib.h>
-
 #include <string>
 #include <iostream>
 #include <fstream>
+// #include <cstdio>
 #include <sstream>
 #include <vector>
 // #include <iterator>
@@ -20,7 +20,7 @@ public:
     // Board(unsigned int rows, unsigned int cols);
     ~Board();
     void dispBoard();
-    void saveBoard();
+    void saveBoard(std::string outfile);
     unsigned int getRows();
     unsigned int getColumns();
     std::vector<Cell> determineNeighbourCells(unsigned int, unsigned int);

@@ -28,8 +28,8 @@ TEST_CASE( "Test 1 of Board::determineNeighbourCells",
     Board board = Board("TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
-    unsigned int irow = 1;
-    unsigned int icol = 1;
+    unsigned int irow = 5;
+    unsigned int icol = 5;
 
     std::vector<Cell>neighbourCells = board.determineNeighbourCells(irow, icol);
 

@@ -45,3 +45,11 @@ void Cell::dispCell(){
         std::cout << "   ";
     }
 }
+std::string Cell::saveCell(){
+    if(this->status){
+        return "1";
+    }
+    else{
+        return "0";
+    }
+}
