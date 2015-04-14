@@ -2,11 +2,11 @@ function generateInitialBoard()
 
 dir = 'Testing/ConwaysGameOfLifeData/';
 
-rows = 40;
-columns = 60;
+rows = 200;
+columns = 400;
 
-A = rand(rows,columns)>0.9;
-filename = 'InitialBoardRandom.txt';
+A = rand(rows,columns)>0.8;
+filename = ['InitialBoardRandom_' num2str(rows) 'Times' num2str(columns) '.txt'];
 
 %***Generate numbered board for unit test: 
 % A = zeros(rows,columns); A(:) = 0:rows*columns-1;

@@ -21,8 +21,6 @@
 // #include <boost/lexical_cast.hpp>
 #include <boost/program_options.hpp>
 
-
-
 #include "Game.h"
 #include "MyException.h"
 // #include <itkImage.h>
@@ -118,7 +116,9 @@ std::vector<std::string> readCommandLine(int argc, char** argv){
 int main(int argc, char** argv){
 	try{
         const bool flagDisplayGame = false;
-		
+        std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
+        
+        //***Parse input of command line
         std::vector<std::string> input = readCommandLine(argc, argv);
 
         //***It was given: --help in command line
@@ -130,6 +130,8 @@ int main(int argc, char** argv){
         std::string sfileGameHistory = input[1];
         unsigned int imaximumNumberOfSteps = stoi(input[2]);
 
+        sfileInitialBoard = sdir+sfileInitialBoard;
+        sfileGameHistory = sdir+sfileGameHistory;
 
         //***Create game
 		Game *game = new Game(sfileInitialBoard);

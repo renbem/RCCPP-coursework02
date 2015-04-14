@@ -22,10 +22,18 @@ unsigned int getElementFrom2D(unsigned int irow, unsigned int icol, unsigned int
     return icol*iR + irow;
 }
 
+TEST_CASE( "Check whether file for input read is given", 
+  "[Not existing txt-file]") {
+    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
+
+    REQUIRE_THROWS_AS(Game *game = new Game(sdir+"nofile.txt"), MyException);
+}
+
 TEST_CASE( "Test 1 of Board::determineNeighbourCells", 
     "[determine Neighbours inner board]" ) {
 
-    Board board = Board("TestBoardNumbered.txt");
+    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
+    Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
     unsigned int irow = 5;
@@ -54,7 +62,8 @@ TEST_CASE( "Test 1 of Board::determineNeighbourCells",
 TEST_CASE( "Test 2 of Board::determineNeighbourCells", 
     "[determine Neighbours upper left corner]" ) {
 
-    Board board = Board("TestBoardNumbered.txt");
+    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
+    Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
     unsigned int iC = board.getColumns();
@@ -84,7 +93,8 @@ TEST_CASE( "Test 2 of Board::determineNeighbourCells",
 TEST_CASE( "Test 3 of Board::determineNeighbourCells", 
     "[determine Neighbours bottom left corner]" ) {
 
-    Board board = Board("TestBoardNumbered.txt");
+    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
+    Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
     unsigned int iC = board.getColumns();
@@ -115,7 +125,8 @@ TEST_CASE( "Test 3 of Board::determineNeighbourCells",
 TEST_CASE( "Test 4 of Board::determineNeighbourCells", 
     "[determine Neighbours bottom right corner]" ) {
 
-    Board board = Board("TestBoardNumbered.txt");
+    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
+    Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
     unsigned int iC = board.getColumns();
@@ -145,7 +156,8 @@ TEST_CASE( "Test 4 of Board::determineNeighbourCells",
 TEST_CASE( "Test 5 of Board::determineNeighbourCells", 
     "[determine Neighbours upper right corner]" ) {
 
-    Board board = Board("TestBoardNumbered.txt");
+    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
+    Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
     unsigned int iC = board.getColumns();

@@ -2,9 +2,8 @@
 
 //***Constructor
 Game::Game(std::string infile){
-    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
-
-    Board* board = new Board(sdir+infile);
+    
+    Board* board = new Board(infile);
 
     this->boardHistory.push_back(*board);
 }
@@ -25,6 +24,7 @@ void Game::computeNextStep(){
     // std::cout << "rows = " << updatedBoard.getRows() << std::endl;
     // std::cout << "columns = " << updatedBoard.getColumns() << std::endl;
 
+    #pragma omp single
     for (unsigned int row = 0; row < irows; ++row){
         for (unsigned int col = 0; col < icolumns; ++col){   
             neighbourCells
@@ -50,9 +50,6 @@ void Game::dispStateOfGame(){
 }
 
 void Game::saveGameHistory(std::string outfile){
-    std::string sdir = "../../Source/Testing/ConwaysGameOfLifeData/";
-    outfile = sdir+outfile;
-
     unsigned int inumberOfSteps = this->boardHistory.size();
 
     // std::remove(outfile.c_str()); //delete file

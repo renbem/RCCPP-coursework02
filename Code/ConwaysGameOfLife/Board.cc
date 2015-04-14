@@ -149,11 +149,10 @@ void Board::applyTransitionRules(unsigned int irow, unsigned int icol,
     //***Live cell:
     if( this->board[irow][icol].getStatus() ){
         if( 
-            numberOfNeighboursAlive == 0 ||
-            numberOfNeighboursAlive == 1 ||
+            numberOfNeighboursAlive < 2 ||
             numberOfNeighboursAlive > 3
-            ){
-
+            )
+        {
             this->board[irow][icol].setStatus(0);
         }
     }
