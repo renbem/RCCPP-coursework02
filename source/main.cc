@@ -16,7 +16,6 @@
 #include <iostream>
 #include <string>
 
-
 // #include <Eigen/Dense>
 // #include <boost/lexical_cast.hpp>
 #include <boost/program_options.hpp>

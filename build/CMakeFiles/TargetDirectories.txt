@@ -1,2 +1,0 @@
-/Users/mebner/UCL/UCL/Courses/Research Computing with C++/CW2/Build/test/CMakeFiles/conwaysGameOfLife_UnitTests.dir
-/Users/mebner/UCL/UCL/Courses/Research Computing with C++/CW2/Build/source/CMakeFiles/conwaysGameOfLife.dir
