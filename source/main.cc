@@ -15,11 +15,12 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
+#include <chrono>
 
 // #include <Eigen/Dense>
 // #include <boost/lexical_cast.hpp>
 #include <boost/program_options.hpp>
-
+#include <omp.h>
 #include "Game.h"
 #include "MyException.h"
 // #include <itkImage.h>
@@ -115,7 +116,7 @@ std::vector<std::string> readCommandLine(int argc, char** argv){
 int main(int argc, char** argv){
 	try{
         const bool flagDisplayGame = false;
-        std::string sdir = "../../test/data/";
+        std::string sdir = ""; //../../test/data/";
         
         //***Parse input of command line
         std::vector<std::string> input = readCommandLine(argc, argv);
@@ -141,19 +142,38 @@ int main(int argc, char** argv){
             game->dispStateOfGame();
         }
     
+
         //***Compute propagation of cells:
         unsigned int itr = 1;
+	//clock_t start;
+	//clock_t end;
+	double elapsedSeconds = 0.;
         while(itr <= imaximumNumberOfSteps){
+            //***Measure time: Start
+            auto start = std::chrono::system_clock::now();
+
+            //***Compute subsequent board of Conways Game of Life
             game->computeNextStep();
+	
+            //***Measure time: Stop
+            auto end = std::chrono::system_clock::now();
+	    std::chrono::duration<double> diff = end-start;
+            elapsedSeconds += diff.count();
+	   
+            printf("Iteration %d of %d: Computational time = %f s\n", 
+                itr, imaximumNumberOfSteps, elapsedSeconds);
 
             if(flagDisplayGame){
                 sleep(1);
                 system("clear");            //Clear display
-                printf("Iteartion %d of %d:\n",itr,imaximumNumberOfSteps);       
+                printf("Iteration %d of %d:\n",itr,imaximumNumberOfSteps);       
                 game->dispStateOfGame();
             }
+	   
             itr++;
-        }       
+        }
+	
+	printf("Total time = %f s\n", elapsedSeconds);      
 
         //***Save history of game:
         game->saveGameHistory(sfileGameHistory);

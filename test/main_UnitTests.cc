@@ -24,7 +24,7 @@ unsigned int getElementFrom2D(unsigned int irow, unsigned int icol, unsigned int
 
 TEST_CASE( "Check whether file for input read is given", 
   "[Not existing txt-file]") {
-    std::string sdir = "../../test/data/";
+    std::string sdir = "../data/";
 
     REQUIRE_THROWS_AS(Game *game = new Game(sdir+"nofile.txt"), MyException);
 }
@@ -32,7 +32,7 @@ TEST_CASE( "Check whether file for input read is given",
 TEST_CASE( "Test 1 of Board::determineNeighbourCells", 
     "[determine Neighbours inner board]" ) {
 
-    std::string sdir = "../../test/data/";
+    std::string sdir = "../data/";
     Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
@@ -62,7 +62,7 @@ TEST_CASE( "Test 1 of Board::determineNeighbourCells",
 TEST_CASE( "Test 2 of Board::determineNeighbourCells", 
     "[determine Neighbours upper left corner]" ) {
 
-    std::string sdir = "../../test/data/";
+    std::string sdir = "../data/";
     Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
@@ -93,7 +93,7 @@ TEST_CASE( "Test 2 of Board::determineNeighbourCells",
 TEST_CASE( "Test 3 of Board::determineNeighbourCells", 
     "[determine Neighbours bottom left corner]" ) {
 
-    std::string sdir = "../../test/data/";
+    std::string sdir = "../data/";
     Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
@@ -125,7 +125,7 @@ TEST_CASE( "Test 3 of Board::determineNeighbourCells",
 TEST_CASE( "Test 4 of Board::determineNeighbourCells", 
     "[determine Neighbours bottom right corner]" ) {
 
-    std::string sdir = "../../test/data/";
+    std::string sdir = "../data/";
     Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();
@@ -156,7 +156,7 @@ TEST_CASE( "Test 4 of Board::determineNeighbourCells",
 TEST_CASE( "Test 5 of Board::determineNeighbourCells", 
     "[determine Neighbours upper right corner]" ) {
 
-    std::string sdir = "../../test/data/";
+    std::string sdir = "../data/";
     Board board = Board(sdir+"TestBoardNumbered.txt");
 
     unsigned int iR = board.getRows();

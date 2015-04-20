@@ -12,5 +12,7 @@ set( PROJ_SOURCES
     "../source/MyException.cc"
     )
 
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/test/bin) 
+
 add_executable( ${EXEC_NAME} ${PROJ_SOURCES} )
 target_link_libraries( ${EXEC_NAME} ${Boost_LIBRARIES} )

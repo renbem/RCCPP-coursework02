@@ -1,3 +1,5 @@
+#include <omp.h>
+
 #include "Game.h"
 
 //***Constructor
@@ -24,8 +26,10 @@ void Game::computeNextStep(){
     // std::cout << "rows = " << updatedBoard.getRows() << std::endl;
     // std::cout << "columns = " << updatedBoard.getColumns() << std::endl;
 
-    #pragma omp single
+
+    #pragma omp parallel for private(neighbourCells)
     for (unsigned int row = 0; row < irows; ++row){
+
         for (unsigned int col = 0; col < icolumns; ++col){   
             neighbourCells
                 = currentBoard.determineNeighbourCells(row, col);
