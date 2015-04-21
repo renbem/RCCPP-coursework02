@@ -10,6 +10,7 @@ set( PROJ_SOURCES
     "Board.cc"
     "Game.cc"
     "MyException.cc"
+    "writeComputationalTimeResultsToFile.cc"
     )
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin) 

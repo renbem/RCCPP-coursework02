@@ -2,4 +2,4 @@
 *~
 ConwaysGameOfLife*
 build/
-test/data/GameHistory_200Times400.txt
+test/data/GameHistory_*

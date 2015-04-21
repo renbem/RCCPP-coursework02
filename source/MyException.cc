@@ -1,13 +1,13 @@
 #include "MyException.h"
 
-// MyException::MyException(const char *msg) : sErrorMessage(msg) {
+MyException::MyException(const char *msg) : sErrorMessage(msg) {
 
-// }; 
+}; 
 
-// MyException::~MyException() throw() {
+MyException::~MyException() throw() {
 
-// };
+};
 
-// const char *what() const throw() { 
-//   return this->sErrorMessage.c_str(); 
-// }
+const char* MyException::what() const throw() { 
+    return this->sErrorMessage.c_str(); 
+}

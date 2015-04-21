@@ -20,9 +20,9 @@
 // #include <Eigen/Dense>
 // #include <boost/lexical_cast.hpp>
 #include <boost/program_options.hpp>
-#include <omp.h>
 #include "Game.h"
 #include "MyException.h"
+#include "writeComputationalTimeResultsToFile.h"
 // #include <itkImage.h>
 
 namespace po = boost::program_options;
@@ -57,6 +57,12 @@ std::vector<std::string> readCommandLine(int argc, char** argv){
 
     std::cout << "------------------------------------------------------" 
     << "----------------------------" << std::endl;
+
+    if (argc != 7){
+        std::string msg = std::to_string(argc) + " arguments given."
+        " Please type 'conwaysGameOfLife --help' for further help.";
+        throw MyException(msg.c_str());
+    }
 
     if (vm.count("help")) {
         std::cout << desc << "\n";
@@ -100,7 +106,7 @@ std::vector<std::string> readCommandLine(int argc, char** argv){
 
     if(errorflag){
         throw MyException("Input data not complete. " 
-            "Please type 'conwaysGameOfLife --help'");
+            "Please type 'conwaysGameOfLife --help' for further help.");
     }
 
     input.push_back(sfileInitialBoard);
@@ -116,6 +122,7 @@ std::vector<std::string> readCommandLine(int argc, char** argv){
 int main(int argc, char** argv){
 	try{
         const bool flagDisplayGame = false;
+        const bool flagDisplayComputationalTime = false;
         std::string sdir = ""; //../../test/data/";
         
         //***Parse input of command line
@@ -138,16 +145,16 @@ int main(int argc, char** argv){
 
         if(flagDisplayGame){
             system("clear");            //Clear display
-            printf("Iteartion %d of %d:\n",0,imaximumNumberOfSteps);       
+            printf("Iteration %d of %d:\n",0,imaximumNumberOfSteps);       
             game->dispStateOfGame();
         }
     
 
         //***Compute propagation of cells:
         unsigned int itr = 1;
-	//clock_t start;
-	//clock_t end;
-	double elapsedSeconds = 0.;
+    	std::vector<double> elapsedSeconds(imaximumNumberOfSteps+1);
+        elapsedSeconds[0] = 0.;
+
         while(itr <= imaximumNumberOfSteps){
             //***Measure time: Start
             auto start = std::chrono::system_clock::now();
@@ -157,12 +164,16 @@ int main(int argc, char** argv){
 	
             //***Measure time: Stop
             auto end = std::chrono::system_clock::now();
-	    std::chrono::duration<double> diff = end-start;
-            elapsedSeconds += diff.count();
-	   
-            printf("Iteration %d of %d: Computational time = %f s\n", 
-                itr, imaximumNumberOfSteps, elapsedSeconds);
+	        std::chrono::duration<double> diff = end-start;
+            elapsedSeconds[itr] = elapsedSeconds[itr-1] + diff.count();
 
+            //***Display computational time on screen if desired:
+            if(flagDisplayComputationalTime){
+                printf("Iteration %d of %d: Computational time = %f s\n", 
+                    itr, imaximumNumberOfSteps, elapsedSeconds[itr]);
+            }
+
+            //***Display results on screen if desired:
             if(flagDisplayGame){
                 sleep(1);
                 system("clear");            //Clear display
@@ -173,7 +184,13 @@ int main(int argc, char** argv){
             itr++;
         }
 	
-	printf("Total time = %f s\n", elapsedSeconds);      
+        printf("Total time = %f s\n", elapsedSeconds[imaximumNumberOfSteps]); 
+        std::string str = sfileGameHistory;
+        str.resize(str.size()-4);
+        writeComputationalTimeResultsToFile(elapsedSeconds, 
+            str+"_ComputationalTime.txt");
+        // writeComputationalTimeResultsToFile(elapsedSeconds,"computationalTime.txt"); 
+
 
         //***Save history of game:
         game->saveGameHistory(sfileGameHistory);

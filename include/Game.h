@@ -3,7 +3,6 @@
 
 #include <stack>
 #include "Board.h"
-#include <omp.h>
 
 class Game{
 public:

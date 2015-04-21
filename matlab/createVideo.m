@@ -1,6 +1,6 @@
 function createVideo()
 
-dir = 'Testing/ConwaysGameOfLifeData/';
+dir = '../test/data/';
 filename = 'GameHistory_200Times400.txt';
 
 B = dlmread([dir filename]);
@@ -12,24 +12,6 @@ B = mod(B+1,2);     %invert colours of black and white
 
 rows = size(B,1)/numberOfBoards;
 columns = size(B,2);
-
-% close all
-% figure
-% imagesc(B(1:rows,:)); 
-% colormap(gray)
-
-% outputVideo = VideoWriter('ConwaysGameOfLife.avi'); 
-% 
-% 
-% for j = 1:numberOfBoards
-%     imagesc((j-1)*rows+1 : j*rows, :); 
-%     colormap(gray);
-%     frame = getframe;
-%     writeVideo(outputVideo,B(),frame);
-% end
-% 
-% outputVideo = close(outputVideo);
-
 
 outputVideo = VideoWriter('../ConwaysGameOfLife.avi');
 outputVideo.FrameRate = 10;

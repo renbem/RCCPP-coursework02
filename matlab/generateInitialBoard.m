@@ -1,9 +1,9 @@
 function generateInitialBoard()
 
-dir = 'Testing/ConwaysGameOfLifeData/';
+dir = '../test/data/';
 
-rows = 200;
-columns = 400;
+rows = 8;
+columns = 8;
 
 A = rand(rows,columns)>0.8;
 filename = ['InitialBoardRandom_' num2str(rows) 'Times' num2str(columns) '.txt'];

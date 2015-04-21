@@ -1,13 +1,15 @@
-#include <omp.h>
+#ifdef __linux
+    #include <omp.h>
+#endif
 
 #include "Game.h"
 
 //***Constructor
 Game::Game(std::string infile){
     
-    Board* board = new Board(infile);
+    Board board(infile);
 
-    this->boardHistory.push_back(*board);
+    this->boardHistory.push_back(board);
 }
 
 //***Destructor
@@ -26,8 +28,9 @@ void Game::computeNextStep(){
     // std::cout << "rows = " << updatedBoard.getRows() << std::endl;
     // std::cout << "columns = " << updatedBoard.getColumns() << std::endl;
 
-
-    #pragma omp parallel for private(neighbourCells)
+    #ifdef __linux
+        #pragma omp parallel for private(neighbourCells)
+    #endif
     for (unsigned int row = 0; row < irows; ++row){
 
         for (unsigned int col = 0; col < icolumns; ++col){   
@@ -37,7 +40,6 @@ void Game::computeNextStep(){
         }
         // std::cout << "\n";
     }
-
     this->pushBoard(updatedBoard);
 }
 
