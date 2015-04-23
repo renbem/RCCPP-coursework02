@@ -1,0 +1,1013 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"boar",
+				"board_serial"
+			],
+			[
+				"board",
+				"board_MPI"
+			],
+			[
+				"EXIT",
+				"EXIT_FAILURE"
+			],
+			[
+				"Ex",
+				"ExceptionCommandLine"
+			],
+			[
+				"In",
+				"InitialBoardRandom_10Times10"
+			],
+			[
+				"up",
+				"updatedBoard_comparison"
+			],
+			[
+				"get",
+				"getStatusOfBoardCell"
+			],
+			[
+				"RE",
+				"REQUIRE_THROWS_AS"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"icol",
+				"icolumns"
+			],
+			[
+				"read",
+				"readCommandLine"
+			],
+			[
+				"flag",
+				"flagDisplayComputationalTime"
+			],
+			[
+				"el",
+				"elapsedTime"
+			],
+			[
+				"to",
+				"to_string"
+			],
+			[
+				"im",
+				"imaximumNumberOfSteps"
+			],
+			[
+				"CUDA",
+				"CUDA_VERSION"
+			],
+			[
+				"vt",
+				"vTriangle"
+			],
+			[
+				"indMin",
+				"indMinDist_l"
+			],
+			[
+				"MyE",
+				"MyException"
+			],
+			[
+				"the",
+				"theta"
+			],
+			[
+				"det",
+				"determinant"
+			],
+			[
+				"Vector",
+				"VectorXd"
+			],
+			[
+				"matrix",
+				"matrixV"
+			],
+			[
+				"sin",
+				"singularValues"
+			],
+			[
+				"ge",
+				"getError"
+			],
+			[
+				"row",
+				"rows"
+			],
+			[
+				"col",
+				"cols"
+			],
+			[
+				"dMSE",
+				"dMSEcomp"
+			],
+			[
+				"compu",
+				"computeRotationMatrix"
+			],
+			[
+				"vq",
+				"vq_R"
+			],
+			[
+				"Matrix",
+				"MatrixXd"
+			],
+			[
+				"comp",
+				"computeRotationMatrix"
+			],
+			[
+				"Ma",
+				"MatrixXd"
+			],
+			[
+				"vm",
+				"vmu_p"
+			],
+			[
+				"vmu",
+				"vmu_x"
+			],
+			[
+				"veigv",
+				"veigvecs"
+			],
+			[
+				"ei",
+				"eigenvalue"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/readCommandLine.cc",
+			"settings":
+			{
+				"buffer_size": 3033,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/ExceptionCommandLine.cc",
+			"settings":
+			{
+				"buffer_size": 516,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/main.cc",
+			"settings":
+			{
+				"buffer_size": 3679,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/ExceptionCommandLine.h",
+			"settings":
+			{
+				"buffer_size": 396,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 620,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 3984,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/CMakeLists.txt",
+			"settings":
+			{
+				"buffer_size": 605,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/Game.cc",
+			"settings":
+			{
+				"buffer_size": 2148,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/Board.cc",
+			"settings":
+			{
+				"buffer_size": 4503,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/Board.h",
+			"settings":
+			{
+				"buffer_size": 878,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/Cell.h",
+			"settings":
+			{
+				"buffer_size": 372,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"package control packag",
+				"Package Control: Install Package"
+			],
+			[
+				"package control add pac",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"package con",
+				"Package Control: Remove Repository"
+			],
+			[
+				"",
+				"Package Control: Add Repository"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/UnitTest_NumberedBoard.txt",
+		"/Users/mebner/Documents/TU Wien/Diplomarbeit_AIT/Matlab/documentation/plotDirectComparison_Methods.m",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/main_UnitTests.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/UnitTest_InitialBoardRandom_100Times100_OneIteration_MPI.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/UnitTest_InitialBoardRandom_100Times100_OneIteration.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/build/bin/InitialBoardRandom_100Times100_OneIteration_MPI.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/build/bin/InitialBoardRandom_100Times100_OneIteration.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/build/bin/InitialBoardRandom_10Times10_OneIteration_MPI_ComputationalTime.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/build/bin/InitialBoardRandom_100Times100_OneIteration_MPI_ComputationalTime.txt",
+		"/Users/mebner/development/IRTK_bkainz/runCmake.sh",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/matlab/evaluateSpeedUpOfMPI.m",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/matlab/createVideo.m",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/build/test/exampleData/InitialBoardRandom_10Times10_GameHistory.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/include/Cell.h",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/include/Board.h",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/include/Game.h",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/include/ExceptionBoardAccess.h",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/include/MyException.h",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/include/writeComputationalTimeResultsToFile.h",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/source/writeComputationalTimeResultsToFile.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/source/Board.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/source/Cell.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/source/Game.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/source/MyException.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/source/ExceptionBoardAccess.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/InitialBoardRandom.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/CMakeLists.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/source/CMakeLists.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/01_Point and Surface Based Registration/research-computing-with-cpp-demo/Code/PointBasedReg/MyExceptions.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/InitialBoardRandom_8Times8.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/UnitTest_InitialBoardRandom_Transition.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/include/readCommandLine.h",
+		"/Users/mebner/development/NiftyReg/runCmake.sh",
+		"/Users/mebner/UCL/UCL/Courses/Information Processing in Medical Imaging/IPMI_2014_2015_Coursework/test_NiftyReg/applyNiftyReg.sh",
+		"/Users/mebner/UCL/UCL/Courses/Information Processing in Medical Imaging/IPMI_2014_2015_Coursework/src/applySegmentationPropagationViaNiftyReg.sh",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/Doxyfile",
+		"/Users/mebner/development/doxygraph/README",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/Doxyfile",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/InitialBoard.txt",
+		"/Users/mebner/Documents/TU Wien/Diplomarbeit_AIT/Matlab/plotData.m",
+		"/Users/mebner/Documents/TU Wien/Diplomarbeit_AIT/Matlab/generateDesiredReservoirResults.m",
+		"/Users/mebner/Documents/TU Wien/Diplomarbeit_AIT/Matlab/runDirectComparisonReservoir.m",
+		"/Users/mebner/Documents/TU Wien/Diplomarbeit_AIT/Matlab/documentation/plotDirectComparison_Locations.m",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/GameHistory_100Times200_ComputationalTime.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/GameHistory_200Times400_ComputationalTime.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/GameHistory_200Times400.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/data/GameHistoryA_ComputationalTime.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/build/bin/GameHistory_computationalTime.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/build/computationalTime.txt",
+		"/Users/mebner/UCL/UCL/Courses/Information Processing in Medical Imaging/IPMI_2014_2015_Coursework/src/tmp/ref_AD_10_baseline_flo_template_9_nrr_cpp.nii.gz",
+		"/Users/mebner/development/BTK/runCmake.sh",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/build/bin/GameHistory.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/bin/conwaysGameOfLife_UnitTests",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/02_Conways Game of Life/test/CMakeLists.txt",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/README",
+		"/Users/mebner/development/BTK/meb/BrainWeb Images/02_Original but split into separate files/run.sh",
+		"/Users/mebner/Desktop/Sixt Car Accident/Additional/comments.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/01_Point and Surface Based Registration/readme.txt",
+		"/Users/mebner/development/BTK/meb/BrainWeb Images/03_Corrupted Images/run.sh",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/01_Point and Surface Based Registration/research-computing-with-cpp-demo/Code/PointBasedReg/pointBasedReg.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/courseworks/01_Point and Surface Based Registration/research-computing-with-cpp-demo/Code/PointBasedReg/MyExceptions.hpp",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction-build/out.txt",
+		"/opt/local/include/boost/spirit/include/version.hpp",
+		"/opt/local/include/boost/spirit/version.hpp",
+		"/opt/local/include/boost/version.hpp",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo-build_osx/Boost/ded10/src/boost/version.hpp",
+		"/opt/local/include/CLucene/ext/boost/version.hpp",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/source/IRTKSimple2/geometry++/include/irtkComplexFunction.h",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/source/IRTKSimple2/packages/registration/CMakeLists.txt",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction-build/IRTKSimple2/nifti/zlib/CMakeFiles/zlib.dir/link.txt",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/source/IRTKSimple2/nifti/zlib/configure",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/source/IRTKSimple2/nifti/zlib/CMakeLists.txt",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/source/IRTKSimple2/nifti/zlib/Makefile",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/source/IRTKSimple2/common++/src/CMakeLists.txt",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/source/IRTKSimple2/geometry++/include/irtkMatrix.h",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/source/IRTKSimple2/packages/transformation/src/irtkTemporalHomogeneousTransformation.cc",
+		"/Users/mebner/development/IRTK_bkainz/fetalReconstruction/source/IRTKSimple2/geometry++/src/irtkMatrix.cc",
+		"/Users/mebner/development/fetalReconstruction_bkainz/fetalReconstruction/source/IRTKSimple2/packages/transformation/src/irtkTemporalHomogeneousTransformation.cc",
+		"/Users/mebner/development/fetalReconstruction_bkainz/fetalReconstruction/source/IRTKSimple2/geometry++/src/irtkMatrix.cc",
+		"/Users/mebner/development/fetalReconstruction_bkainz/fetalReconstruction/README",
+		"/Users/mebner/development/fetalReconstruction_bkainz/fetalReconstruction/source/IRTKSimple2/geometry++/include/irtkMatrix.h",
+		"/Users/mebner/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/mebner/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/mebner/development/fetalReconstruction_bkainz/fetalReconstruction/source/IRTKSimple2/config/FindTBB.cmake",
+		"/Users/mebner/development/fetalReconstruction_bkainz/fetalReconstruction/source/CMakeLists.txt",
+		"/Users/mebner/development/tbb43_20150316oss/README",
+		"/Users/mebner/development/fetalReconstruction_bkainz/fetalReconstruction/source/IRTKSimple2/CMakeLists.txt",
+		"/Users/mebner/development/BTK/meb/Test/run.sh",
+		"/Users/mebner/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/mebner/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/mebner/development/BTK/meb/Test/commands.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Testing/PointBasedRegistrationData/matrix.4x4",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/PointBasedReg/PointBasedTrafo.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/SurfaceBasedReg/SurfaceBasedTrafo.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/PointBasedReg/PointBasedTrafo.hpp",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Testing/PointBasedReg/pointBasedRegTest.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/PointBasedReg/pointBasedReg.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/PointBasedReg/writeMatrixIntoFile.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Testing/SurfaceBasedReg/surfaceBasedRegTest.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Testing/SurfaceBasedReg/CMakeLists.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/CMakeLists.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Testing/PointBasedRegistrationData/TransformationMatrix_Latex.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/SurfaceBasedReg/SurfaceBasedTrafo.hpp",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/PointBasedReg/CMakeLists.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/PointBasedReg/PointBasedTrafo2.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/PointBasedReg/PointBasedTrafo2.hpp",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/SurfaceBasedReg/CMakeLists.txt",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/PointBasedReg/readFileIntoMatrix.cc",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/research-computing-with-cpp-demo/Code/SurfaceBasedReg/SurfaceBasedReg",
+		"/private/tmp/point_based_registration.cpp",
+		"/Users/mebner/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/Users/mebner/UCL/UCL/Courses/Research Computing with C++/coursework01/PointBasedReg/CMakeLists.txt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"*Lists.txt",
+			"*txt",
+			"",
+			"out.txt",
+			"*.txt",
+			"",
+			"*Lists.txt",
+			"*.txt",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"updatedBoard",
+			"InitialBoardRandom_10Times10_GameHistory",
+			"sdir+",
+			"FAILURE",
+			"ErrorCommandLine",
+			"ExceptionBoardAccess",
+			"EXCEPTIONBOARDACCESS_H_",
+			"data",
+			"MY_PUBLIC_HEADERS",
+			"updatedBoard",
+			"updatedBoard_comparison",
+			"getStatusOfBoardCell",
+			"MyException",
+			"MYEXCEPTION_H_",
+			"MyException",
+			"irow",
+			"dispStateOfGame",
+			"board",
+			"WRITECOMPUTATIONALTIMERESULTSTOFILE_H_",
+			"TestBoardNumbered",
+			"XML",
+			"generate_xml",
+			"extract_all",
+			"recursive",
+			"have_dot",
+			"Have_D\nhave_dot",
+			"Have_D",
+			"UML",
+			"XML",
+			"Generate_X",
+			"extract_",
+			"EXTRACT_ALL",
+			"UML",
+			"Have_Do",
+			"EXTRACT_ALL",
+			"GAME_H_",
+			"__linux",
+			"linux",
+			"__linux__",
+			"\n        ",
+			"../test/",
+			"Boost",
+			"Boost version",
+			"Boost",
+			"STATUS",
+			"mebner:",
+			"mebner",
+			"meb",
+			"STAUTS",
+			"INFO",
+			"STATUS",
+			"meb:",
+			"USING -std=c++11",
+			"IRTKSimple2",
+			"USING -std=c++11",
+			"USING -std=c++11\"",
+			"USING -std=c++11",
+			"-std=c++0x",
+			"has no C++11 support",
+			"has no C++11 support\n\nhas no C++11 support",
+			"has no C++11 support",
+			"USING -std=c++0x",
+			"std=c++11",
+			"USING -std=c++11",
+			"Building with CUDA >= 5.0",
+			"Building with CUDA < 5.0",
+			"set_compute_capability",
+			"Building with CUDA < 5.0",
+			"set_compute capability",
+			"set_compute_capability",
+			"CMAKE_CURRENT_SOURCE_DIR",
+			"compute_",
+			"compute",
+			"--version-script",
+			"version-script",
+			"\n        ",
+			"version-script",
+			"version",
+			"zlib",
+			"irtkMatrix FrechetMean",
+			"irtkMatrix",
+			"friend irtkMatrix FrechetMean(irtkMatrix *, double *, int, int = 10);",
+			"USING -std=c++11",
+			"c++11",
+			"USING -std=c++11",
+			"TBB_INCLUDE_DIR",
+			"TBB_LIBRARY_DIRS",
+			"word_wrap",
+			"mask3",
+			"mask2",
+			"mask1",
+			"mask01",
+			"mask03",
+			"mask02",
+			"super+alt+g",
+			"ana1",
+			"Utilities",
+			"ana1",
+			"super+f",
+			"ana1",
+			"binding key",
+			"replace",
+			"find",
+			"replace",
+			"mask01",
+			"../fbrain-build/",
+			"../",
+			"../fbrain-build/Utilities/",
+			"mask3",
+			"mask2",
+			"mask1",
+			"ana3",
+			"ana2",
+			"ana1",
+			"ana",
+			"mask03",
+			"mask02",
+			"mask03",
+			"mask02",
+			"mask01",
+			"ana03",
+			"ana02",
+			"ana01",
+			"PointBasedReg",
+			"PointBased",
+			"PointBasedRegistrationData",
+			"3",
+			"dFRE"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ExceptionBoardAccess",
+			"dispCurrentBoard",
+			"mebner",
+			"${mask1}",
+			"${mask3}",
+			"${mask2}",
+			"${mask3}",
+			"${mask2}",
+			"mask01",
+			"${ana3}",
+			"${ana2}",
+			"${ana1}",
+			"SurfaceBased",
+			"dFRE",
+			"FRE",
+			"dFRE",
+			"PointBasedTrafo2",
+			"computeRegistration",
+			"mx",
+			"**",
+			"SurfaceBasedTrafo",
+			"mx",
+			"dMSE",
+			"SurfaceBasedTrafo"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 9,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/readCommandLine.cc",
+					"settings":
+					{
+						"buffer_size": 3033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2146,
+								2146
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 393.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/ExceptionCommandLine.cc",
+					"settings":
+					{
+						"buffer_size": 516,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								516
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/main.cc",
+					"settings":
+					{
+						"buffer_size": 3679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								138,
+								138
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "include/ExceptionCommandLine.h",
+					"settings":
+					{
+						"buffer_size": 396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "test/CMakeLists.txt",
+					"settings":
+					{
+						"buffer_size": 620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								397,
+								397
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CMake/CMake.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "CMakeLists.txt",
+					"settings":
+					{
+						"buffer_size": 3984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3903,
+								3903
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CMake/CMake.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 825.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "source/CMakeLists.txt",
+					"settings":
+					{
+						"buffer_size": 605,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								397,
+								397
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CMake/CMake.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "source/Game.cc",
+					"settings":
+					{
+						"buffer_size": 2148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								686,
+								686
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "source/Board.cc",
+					"settings":
+					{
+						"buffer_size": 4503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 320.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "include/Board.h",
+					"settings":
+					{
+						"buffer_size": 878,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "include/Cell.h",
+					"settings":
+					{
+						"buffer_size": 372,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								346,
+								346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 576.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"o",
+				"fetalReconstruction-build/out.txt"
+			],
+			[
+				"irtkmatri",
+				"fetalReconstruction/source/IRTKSimple2/geometry++/include/irtkMatrix.h"
+			],
+			[
+				"irtkm",
+				"fetalReconstruction/source/IRTKSimple2/geometry++/include/irtkMatrix.h"
+			],
+			[
+				"irtkmat",
+				"fetalReconstruction/source/IRTKSimple2/geometry++/include/irtkMatrix.h"
+			],
+			[
+				"irtktemporalhomogeneoustransformation",
+				"fetalReconstruction/source/IRTKSimple2/packages/transformation/src/irtkTemporalHomogeneousTransformation.cc"
+			],
+			[
+				"irtkmatr",
+				"fetalReconstruction/source/IRTKSimple2/geometry++/include/irtkMatrix.h"
+			],
+			[
+				"lhomogeneoustransformation.cc",
+				"source/IRTKSimple2/packages/transformation/src/irtkTemporalHomogeneousTransformation.cc"
+			],
+			[
+				"irtkmatrix",
+				"source/IRTKSimple2/geometry++/src/irtkMatrix.cc"
+			],
+			[
+				"pointbasedtrafo",
+				"research-computing-with-cpp-demo/Code/PointBasedReg/PointBasedTrafo.cc"
+			],
+			[
+				"readfil",
+				"research-computing-with-cpp-demo/Code/PointBasedReg/readFileIntoMatrix.cc"
+			],
+			[
+				"pointbasedregcmake",
+				"research-computing-with-cpp-demo/Code/PointBasedReg/CMakeLists.txt"
+			],
+			[
+				"cmake",
+				"PointBasedReg/CMakeLists.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 253.0,
+	"status_bar_visible": true
+}

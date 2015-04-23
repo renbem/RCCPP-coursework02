@@ -29,7 +29,7 @@ void Game::computeNextStep(){
     // std::cout << "columns = " << updatedBoard.getColumns() << std::endl;
 
     #ifdef __linux
-        #pragma omp parallel for private(neighbourCells)
+        // #pragma omp parallel for private(neighbourCells)
     #endif
     for (unsigned int row = 0; row < irows; ++row){
 

@@ -246,6 +246,28 @@ TEST_CASE( "Test one step of Conways Game of Life",
     }
 }
 
+//***Bit of a weird test since the iterations of the board needed to be
+//***computed manually for each mode, i.e with or without OpenMP. 
+//***At the moment no automatic solution available.
+TEST_CASE( "Test Parallel Computation", 
+    "[Parallel Computation]" ) {
+
+    std::string sdir = "../exampleData/";
+
+    Board board_serial = Board(sdir+"UnitTest_InitialBoardRandom_100Times100_OneIteration.txt");
+    Board board_MPI = Board(sdir+"UnitTest_InitialBoardRandom_100Times100_OneIteration_MPI.txt");
+
+    unsigned int iR = board_serial.getRows();
+    unsigned int iC = board_serial.getColumns();
+
+    for (int irow = 0; irow < iR; ++irow){
+        for (int icol = 0; icol < iC; ++icol){
+            REQUIRE( board_serial.getStatusOfBoardCell(irow,icol) 
+                == board_MPI.getStatusOfBoardCell(irow,icol));
+        }        
+    }
+}
+
 TEST_CASE( "Malformed command line", "[Command line]" ) {
 
     REQUIRE( system("../../bin/conwaysGameOfLife --help") == EXIT_SUCCESS );
@@ -295,3 +317,5 @@ TEST_CASE( "Malformed command line", "[Command line]" ) {
 
     system("rm ../exampleData/out*.txt");
 }
+
+
