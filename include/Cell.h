@@ -9,7 +9,7 @@ public:
     Cell(bool stat);
     ~Cell();
     bool getStatus();
-    int unitTest_getValue();             //Just for unit test to check neighbours
+    int unitTest_getValue();          //Just for unit test to check neighbours
     void setStatus(int );
     void dispCell();
     std::string saveCell();

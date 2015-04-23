@@ -9,8 +9,10 @@ public:
     Game(std::string infile);
     ~Game();
     void computeNextStep();
-    void dispStateOfGame();
+    void dispCurrentBoard();
+    Board getCurrentBoard();
     void saveGameHistory(std::string outfile);
+    std::vector<Board> getBoardHistory();
 
 private:
     void pushBoard(Board board);

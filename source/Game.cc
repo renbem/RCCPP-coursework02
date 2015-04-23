@@ -43,7 +43,8 @@ void Game::computeNextStep(){
     this->pushBoard(updatedBoard);
 }
 
-void Game::dispStateOfGame(){
+
+void Game::dispCurrentBoard(){
     Board currentBoard = boardHistory.back();
 
     // std::cout << "\n";
@@ -53,6 +54,10 @@ void Game::dispStateOfGame(){
     // std::cout << "\n";
 
     currentBoard.dispBoard();
+}
+
+Board Game::getCurrentBoard(){
+    return boardHistory.back();
 }
 
 void Game::saveGameHistory(std::string outfile){
@@ -75,6 +80,10 @@ void Game::saveGameHistory(std::string outfile){
         b.saveBoard(outfile);
     }
     
+}
+
+std::vector<Board> Game::getBoardHistory(){ 
+    return this->boardHistory;
 }
 
 void Game::pushBoard(Board board){

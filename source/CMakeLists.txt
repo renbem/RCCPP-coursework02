@@ -9,8 +9,11 @@ set( PROJ_SOURCES
     "Cell.cc"
     "Board.cc"
     "Game.cc"
-    "MyException.cc"
     "writeComputationalTimeResultsToFile.cc"
+    "readCommandLine.cc"
+    "MyException.cc"
+    "ExceptionCommandLine.cc"
+    "ExceptionBoardAccess.cc"
     )
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin) 

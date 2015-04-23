@@ -1,4 +1,5 @@
 #include "Board.h"
+#include "ExceptionBoardAccess.h"
 
 //***Constructor
 // Board::Board(std::string infile) : rows(5));columns(5){}
@@ -60,6 +61,16 @@ unsigned int Board::getRows(){
 
 unsigned int Board::getColumns(){
     return this->icolumns;
+}
+
+bool Board::getStatusOfBoardCell(unsigned int irow, 
+    unsigned int icol){
+
+    if( irow > this->irows-1 || icol > this->icolumns-1 ){
+        throw ExceptionBoardAccess(irow, icol, irows, icolumns);
+    }
+
+    return this->board[irow][icol].getStatus();
 }
 
 void Board::readBoardFromFile(std::string infile){
