@@ -51,31 +51,65 @@ elapsedTime_50Times100 = readComputationalTimeOfBoard('GameHistory_50Times100_Co
 elapsedTime_10Times10_MPI = readComputationalTimeOfBoard('GameHistory_10Times10_ComputationalTime_MPI.txt');
 elapsedTime_10Times10 = readComputationalTimeOfBoard('GameHistory_10Times10_ComputationalTime.txt');
 
+%%
+
+ 
+% set(0,'defaultTextFontSize', 20)
+% set(0,'defaultAxesFontSize', 14)
+% set(0,'DefaultLegendFontSize',22);
+set(0, 'defaultTextInterpreter', 'latex');
+set(0,'defaultaxesfontname','Times New Roman')
+
+plotDir = 'figures/';
+saveFlag = 1;
 
 close all
 
 MyLineWidth = 2;
 
 figure
-plot(1:numel(elapsedTime_200Times400_MPI),elapsedTime_200Times400_MPI, 'r-', 'LineWidth', MyLineWidth); hold on
-plot(1:numel(elapsedTime_200Times400),elapsedTime_200Times400, 'r--', 'LineWidth', MyLineWidth);
-plot(1:numel(elapsedTime_50Times100_MPI),elapsedTime_50Times100_MPI, 'b-', 'LineWidth', MyLineWidth); hold on
-plot(1:numel(elapsedTime_50Times100),elapsedTime_50Times100, 'b--', 'LineWidth', MyLineWidth);
-plot(1:numel(elapsedTime_10Times10_MPI),elapsedTime_10Times10_MPI, 'g-', 'LineWidth', MyLineWidth); hold on
-plot(1:numel(elapsedTime_10Times10),elapsedTime_10Times10, 'g--', 'LineWidth', MyLineWidth);
+plot(1:numel(elapsedTime_200Times400),elapsedTime_200Times400, 'r-', 'LineWidth', MyLineWidth); hold on
+plot(1:numel(elapsedTime_200Times400_MPI),elapsedTime_200Times400_MPI, 'r--', 'LineWidth', MyLineWidth); 
+plot(1:numel(elapsedTime_50Times100),elapsedTime_50Times100, 'b-', 'LineWidth', MyLineWidth);
+plot(1:numel(elapsedTime_50Times100_MPI),elapsedTime_50Times100_MPI, 'b--', 'LineWidth', MyLineWidth); 
+plot(1:numel(elapsedTime_10Times10),elapsedTime_10Times10, 'g-', 'LineWidth', MyLineWidth); 
+plot(1:numel(elapsedTime_10Times10_MPI),elapsedTime_10Times10_MPI, 'g--', 'LineWidth', MyLineWidth);
 xlabel('Iterations')
 ylabel('Computational Time [s]')
-title('Comparison of three boards')
+legend({...
+    '$(200 \times 400)$-board (serial)', '$(200 \times 400)$-board (MPI)'...
+    '$(50 \times 100)$-board (serial)', '$(50 \times 100)$-board (MPI)' ...
+    '$(10 \times 10)$-board (serial)', '$(10 \times 10)$-board (MPI)' ...
+    },'interpreter','latex','Location','northwest')
+legend boxoff
+title('Serial and parallel computational time after 1000 steps')
+
+if(saveFlag)
+    print('-r600','-depsc2', [plotDir 'SerialMPI_Iterations.eps'])
+end
+
 
 figure
-semilogx(boardCells,elapsedTime(:,1), 'rx', 'LineWidth', MyLineWidth); hold on
-semilogx(boardCells,elapsedTime(:,2), 'bo', 'LineWidth', MyLineWidth);
+plot(boardCells,elapsedTime(:,1), 'rx', 'LineWidth', MyLineWidth); hold on
+plot(boardCells,elapsedTime(:,2), 'bo', 'LineWidth', MyLineWidth);
+legend('Serial','MPI','Location','northwest')
+legend boxoff
 xlabel('Number of Cells')
 ylabel('Computational Time [s]')
+title('Comparison of serial and parallel computational time after 1000 steps')
+
+if(saveFlag)
+    print('-r600','-depsc2', [plotDir 'SerialMPI_Cells.eps'])
+end
 
 figure
 semilogx(boardCells,elapsedTime(:,1)./elapsedTime(:,2), 'rx', 'LineWidth', MyLineWidth); hold on
 xlabel('Number of Cells')
 ylabel('MPI/Serial')
+title('Relative speed-up after 1000 steps')
+
+if(saveFlag)
+    print('-r600','-depsc2', [plotDir 'SerialMPI_Speedup.eps'])
+end
 
 end

@@ -1,6 +1,6 @@
 function createVideo()
 
-dir = '../test/data/';
+dir = 'GameHistories/';
 filename = 'GameHistory_200Times400.txt';
 
 B = dlmread([dir filename]);

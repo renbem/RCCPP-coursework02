@@ -2,4 +2,5 @@
 *~
 ConwaysGameOfLife*
 build/
+matlab/GameHistories/
 test/data/GameHistory_*

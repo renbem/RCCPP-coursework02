@@ -6,7 +6,7 @@ rows = 8;
 columns = 8;
 
 A = rand(rows,columns)>0.8;
-filename = ['InitialBoardRandom_' num2str(rows) 'Times' num2str(columns) '.txt'];
+filename = ['InitialBoardRandomsdf_' num2str(rows) 'Times' num2str(columns) '.txt'];
 
 %***Generate numbered board for unit test: 
 % A = zeros(rows,columns); A(:) = 0:rows*columns-1;

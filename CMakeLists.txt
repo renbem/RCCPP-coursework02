@@ -97,10 +97,19 @@ endif()
 include_directories(include)
 include_directories(test/catch)
 
-
 #***Specify location for all generated executables:
 # set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin) 
 
 #***Directories with additional CMakeLists.txt:
 add_subdirectory(source)
 add_subdirectory(test)
+
+######################################################################
+# Copy files into build folder.
+######################################################################
+
+file(GLOB MY_COPY_FILES
+  "test/data/UnitTest*"
+  "test/data/InitialBoardRandom*"
+)
+file(COPY ${MY_COPY_FILES} DESTINATION ${CMAKE_BINARY_DIR}/test/exampleData)

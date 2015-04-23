@@ -23,6 +23,8 @@ public:
     void saveBoard(std::string outfile);
     unsigned int getRows();
     unsigned int getColumns();
+    bool getStatusOfBoardCell(unsigned int, 
+        unsigned int);
     std::vector<Cell> determineNeighbourCells(unsigned int, unsigned int);
     void applyTransitionRules(unsigned int, unsigned int, std::vector<Cell>);
 
