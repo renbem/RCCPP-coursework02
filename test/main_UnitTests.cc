@@ -26,7 +26,9 @@
 #include "ExceptionCommandLine.h"
 #include "ExceptionBoardAccess.h"
 
-unsigned int getElementFrom2D(unsigned int irow, unsigned int icol, unsigned int iR){
+//***translate x- and y-index into lexicographic numbering:
+unsigned int getLexicographicIndex(unsigned int irow, unsigned int icol, 
+    unsigned int iR){
     return icol*iR + irow;
 }
 
@@ -43,6 +45,57 @@ unsigned int getElementFrom2D(unsigned int irow, unsigned int icol, unsigned int
 //     pclose(pipe);
 //     return result;
 // }
+
+TEST_CASE( "Malformed command line", "[Command line]" ) {
+
+    REQUIRE( system("../../bin/conwaysGameOfLife --help") == EXIT_SUCCESS );
+
+    //***Would like to ask for '== EXIT_FAILURE' but return value of
+    //***system() in Mac gives 255 back whereas EXIT_FAILURE = 1 (wtf!?)
+    REQUIRE( system("../../bin/conwaysGameOfLife") != EXIT_SUCCESS );
+
+    //***Valid command line (therefore delete a possibly existing out.txt)
+    system("rm ../exampleData/out*.txt");
+    REQUIRE( system("../../bin/conwaysGameOfLife \
+        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
+        --o '../exampleData/out.txt' \
+        --s 1 \
+        ") == EXIT_SUCCESS );
+
+    //***output file now already given and shall not be overwritten:
+    REQUIRE( system("../../bin/conwaysGameOfLife \
+        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
+        --o '../exampleData/out.txt' \
+        --s 1 \
+        ") != EXIT_SUCCESS );
+
+    system("rm ../exampleData/out*.txt");
+    REQUIRE( system("../../bin/conwaysGameOfLife \
+        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
+        --o '../exampleData/out.txt' \
+        --s 10000 \
+        ") != EXIT_SUCCESS );
+
+    system("rm ../exampleData/out*.txt");
+    REQUIRE( system("../../bin/conwaysGameOfLife \
+        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
+        --s 10 \
+        ") != EXIT_SUCCESS );
+
+    system("rm ../exampleData/out*.txt");
+    REQUIRE( system("../../bin/conwaysGameOfLife \
+        --o '../exampleData/out.txt' \
+        --s 10000 \
+        ") != EXIT_SUCCESS );
+
+    system("rm ../exampleData/out*.txt");
+    REQUIRE( system("../../bin/conwaysGameOfLife \
+        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
+        --o '../exampleData/out.txt' \
+        ") != EXIT_SUCCESS );
+
+    system("rm ../exampleData/out*.txt");
+}
 
 TEST_CASE( "Check whether file for input read is given", 
   "[Not existing txt-file]") {
@@ -64,21 +117,21 @@ TEST_CASE( "Test 1 of Board::determineNeighbourCells",
     std::vector<Cell>neighbourCells = board.determineNeighbourCells(irow, icol);
 
     REQUIRE( neighbourCells[0].unitTest_getValue()
-        == getElementFrom2D(irow, icol+1, iR) );
+        == getLexicographicIndex(irow, icol+1, iR) );
     REQUIRE( neighbourCells[1].unitTest_getValue()
-        == getElementFrom2D(irow-1, icol+1, iR) );
+        == getLexicographicIndex(irow-1, icol+1, iR) );
     REQUIRE( neighbourCells[2].unitTest_getValue() 
-        == getElementFrom2D(irow-1, icol, iR) );
+        == getLexicographicIndex(irow-1, icol, iR) );
     REQUIRE( neighbourCells[3].unitTest_getValue()
-        == getElementFrom2D(irow-1, icol-1, iR) );
+        == getLexicographicIndex(irow-1, icol-1, iR) );
     REQUIRE( neighbourCells[4].unitTest_getValue() 
-        == getElementFrom2D(irow, icol-1, iR) );
+        == getLexicographicIndex(irow, icol-1, iR) );
     REQUIRE( neighbourCells[5].unitTest_getValue() 
-        == getElementFrom2D(irow+1, icol-1, iR) );
+        == getLexicographicIndex(irow+1, icol-1, iR) );
     REQUIRE( neighbourCells[6].unitTest_getValue() 
-        == getElementFrom2D(irow+1, icol, iR) );
+        == getLexicographicIndex(irow+1, icol, iR) );
     REQUIRE( neighbourCells[7].unitTest_getValue()
-        == getElementFrom2D(irow+1, icol+1, iR) );
+        == getLexicographicIndex(irow+1, icol+1, iR) );
 }
 
 TEST_CASE( "Test 2 of Board::determineNeighbourCells", 
@@ -95,21 +148,21 @@ TEST_CASE( "Test 2 of Board::determineNeighbourCells",
     std::vector<Cell>neighbourCells = board.determineNeighbourCells(irow, icol);
 
     REQUIRE( neighbourCells[0].unitTest_getValue()
-        == getElementFrom2D(irow, icol+1, iR) );
+        == getLexicographicIndex(irow, icol+1, iR) );
     REQUIRE( neighbourCells[1].unitTest_getValue()
-        == getElementFrom2D(iR-1, icol+1, iR) );
+        == getLexicographicIndex(iR-1, icol+1, iR) );
     REQUIRE( neighbourCells[2].unitTest_getValue() 
-        == getElementFrom2D(iR-1, icol, iR) );
+        == getLexicographicIndex(iR-1, icol, iR) );
     REQUIRE( neighbourCells[3].unitTest_getValue()
-        == getElementFrom2D(iR-1, iC-1, iR) );
+        == getLexicographicIndex(iR-1, iC-1, iR) );
     REQUIRE( neighbourCells[4].unitTest_getValue() 
-        == getElementFrom2D(irow, iC-1, iR) );
+        == getLexicographicIndex(irow, iC-1, iR) );
     REQUIRE( neighbourCells[5].unitTest_getValue() 
-        == getElementFrom2D(irow+1, iC-1, iR) );
+        == getLexicographicIndex(irow+1, iC-1, iR) );
     REQUIRE( neighbourCells[6].unitTest_getValue() 
-        == getElementFrom2D(irow+1, icol, iR) );
+        == getLexicographicIndex(irow+1, icol, iR) );
     REQUIRE( neighbourCells[7].unitTest_getValue()
-        == getElementFrom2D(irow+1, icol+1, iR) );
+        == getLexicographicIndex(irow+1, icol+1, iR) );
 }
 
 TEST_CASE( "Test 3 of Board::determineNeighbourCells", 
@@ -126,21 +179,21 @@ TEST_CASE( "Test 3 of Board::determineNeighbourCells",
     std::vector<Cell>neighbourCells = board.determineNeighbourCells(irow, icol);
 
     REQUIRE( neighbourCells[0].unitTest_getValue()
-        == getElementFrom2D(irow, icol+1, iR) );
+        == getLexicographicIndex(irow, icol+1, iR) );
     REQUIRE( neighbourCells[1].unitTest_getValue()
-        == getElementFrom2D(irow-1, icol+1, iR) );
+        == getLexicographicIndex(irow-1, icol+1, iR) );
     REQUIRE( neighbourCells[2].unitTest_getValue() 
-        == getElementFrom2D(irow-1, icol, iR) );
+        == getLexicographicIndex(irow-1, icol, iR) );
     REQUIRE( neighbourCells[3].unitTest_getValue()
-        == getElementFrom2D(irow-1, iC-1, iR) );
+        == getLexicographicIndex(irow-1, iC-1, iR) );
     REQUIRE( neighbourCells[4].unitTest_getValue() 
-        == getElementFrom2D(irow, iC-1, iR) );
+        == getLexicographicIndex(irow, iC-1, iR) );
     REQUIRE( neighbourCells[5].unitTest_getValue() 
-        == getElementFrom2D(0, iC-1, iR) );
+        == getLexicographicIndex(0, iC-1, iR) );
     REQUIRE( neighbourCells[6].unitTest_getValue() 
-        == getElementFrom2D(0, icol, iR) );
+        == getLexicographicIndex(0, icol, iR) );
     REQUIRE( neighbourCells[7].unitTest_getValue()
-        == getElementFrom2D(0, icol+1, iR) );
+        == getLexicographicIndex(0, icol+1, iR) );
 }
 
 
@@ -158,21 +211,21 @@ TEST_CASE( "Test 4 of Board::determineNeighbourCells",
     std::vector<Cell>neighbourCells = board.determineNeighbourCells(irow, icol);
 
     REQUIRE( neighbourCells[0].unitTest_getValue()
-        == getElementFrom2D(irow, 0, iR) );
+        == getLexicographicIndex(irow, 0, iR) );
     REQUIRE( neighbourCells[1].unitTest_getValue()
-        == getElementFrom2D(irow-1, 0, iR) );
+        == getLexicographicIndex(irow-1, 0, iR) );
     REQUIRE( neighbourCells[2].unitTest_getValue() 
-        == getElementFrom2D(irow-1, icol, iR) );
+        == getLexicographicIndex(irow-1, icol, iR) );
     REQUIRE( neighbourCells[3].unitTest_getValue()
-        == getElementFrom2D(irow-1, icol-1, iR) );
+        == getLexicographicIndex(irow-1, icol-1, iR) );
     REQUIRE( neighbourCells[4].unitTest_getValue() 
-        == getElementFrom2D(irow, icol-1, iR) );
+        == getLexicographicIndex(irow, icol-1, iR) );
     REQUIRE( neighbourCells[5].unitTest_getValue() 
-        == getElementFrom2D(0, icol-1, iR) );
+        == getLexicographicIndex(0, icol-1, iR) );
     REQUIRE( neighbourCells[6].unitTest_getValue() 
-        == getElementFrom2D(0, icol, iR) );
+        == getLexicographicIndex(0, icol, iR) );
     REQUIRE( neighbourCells[7].unitTest_getValue()
-        == getElementFrom2D(0, 0, iR) );
+        == getLexicographicIndex(0, 0, iR) );
 }
 
 TEST_CASE( "Test 5 of Board::determineNeighbourCells", 
@@ -189,21 +242,21 @@ TEST_CASE( "Test 5 of Board::determineNeighbourCells",
     std::vector<Cell>neighbourCells = board.determineNeighbourCells(irow, icol);
 
     REQUIRE( neighbourCells[0].unitTest_getValue()
-        == getElementFrom2D(irow, 0, iR) );
+        == getLexicographicIndex(irow, 0, iR) );
     REQUIRE( neighbourCells[1].unitTest_getValue()
-        == getElementFrom2D(iR-1, 0, iR) );
+        == getLexicographicIndex(iR-1, 0, iR) );
     REQUIRE( neighbourCells[2].unitTest_getValue() 
-        == getElementFrom2D(iR-1, icol, iR) );
+        == getLexicographicIndex(iR-1, icol, iR) );
     REQUIRE( neighbourCells[3].unitTest_getValue()
-        == getElementFrom2D(iR-1, icol-1, iR) );
+        == getLexicographicIndex(iR-1, icol-1, iR) );
     REQUIRE( neighbourCells[4].unitTest_getValue() 
-        == getElementFrom2D(irow, icol-1, iR) );
+        == getLexicographicIndex(irow, icol-1, iR) );
     REQUIRE( neighbourCells[5].unitTest_getValue() 
-        == getElementFrom2D(irow+1, icol-1, iR) );
+        == getLexicographicIndex(irow+1, icol-1, iR) );
     REQUIRE( neighbourCells[6].unitTest_getValue() 
-        == getElementFrom2D(irow+1, icol, iR) );
+        == getLexicographicIndex(irow+1, icol, iR) );
     REQUIRE( neighbourCells[7].unitTest_getValue()
-        == getElementFrom2D(irow+1, 0, iR) );
+        == getLexicographicIndex(irow+1, 0, iR) );
 }
 
 TEST_CASE( "Access of cell beyond board dimensions", 
@@ -268,54 +321,5 @@ TEST_CASE( "Test Parallel Computation",
     }
 }
 
-TEST_CASE( "Malformed command line", "[Command line]" ) {
-
-    REQUIRE( system("../../bin/conwaysGameOfLife --help") == EXIT_SUCCESS );
-
-    //***Would like to ask for '== EXIT_FAILURE' but return value of
-    //***system() in Mac gives 255 back whereas EXIT_FAILURE = 1 (wtf!?)
-    REQUIRE( system("../../bin/conwaysGameOfLife") != EXIT_SUCCESS );
-
-    system("rm ../exampleData/out*.txt");
-    REQUIRE( system("../../bin/conwaysGameOfLife \
-        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
-        --o '../exampleData/out.txt' \
-        --s 1 \
-        ") == EXIT_SUCCESS );
-
-    //***output file now already given and shall not be overwritten:
-    REQUIRE( system("../../bin/conwaysGameOfLife \
-        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
-        --o '../exampleData/out.txt' \
-        --s 1 \
-        ") != EXIT_SUCCESS );
-
-    system("rm ../exampleData/out*.txt");
-    REQUIRE( system("../../bin/conwaysGameOfLife \
-        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
-        --o '../exampleData/out.txt' \
-        --s 10000 \
-        ") != EXIT_SUCCESS );
-
-    system("rm ../exampleData/out*.txt");
-    REQUIRE( system("../../bin/conwaysGameOfLife \
-        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
-        --s 10 \
-        ") != EXIT_SUCCESS );
-
-    system("rm ../exampleData/out*.txt");
-    REQUIRE( system("../../bin/conwaysGameOfLife \
-        --o '../exampleData/out.txt' \
-        --s 10000 \
-        ") != EXIT_SUCCESS );
-
-    system("rm ../exampleData/out*.txt");
-    REQUIRE( system("../../bin/conwaysGameOfLife \
-        --i '../exampleData/InitialBoardRandom_10Times10.txt' \
-        --o '../exampleData/out.txt' \
-        ") != EXIT_SUCCESS );
-
-    system("rm ../exampleData/out*.txt");
-}
 
 

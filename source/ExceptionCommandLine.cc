@@ -1,3 +1,13 @@
+/**
+ * \brief Implementation of the ExceptionCommandLine class.
+ *
+ * Exception CommandLine deals with the exceptions related to the parsing of
+ * invalid input parameters via the command line.
+ *
+ * \author Michael Ebner
+ * \date April 2015
+ */
+ 
 #include "ExceptionCommandLine.h"
 
 ExceptionCommandLine::ExceptionCommandLine(){

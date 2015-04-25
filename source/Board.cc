@@ -1,5 +1,13 @@
+/**
+ * \brief Implementation of the board class.
+ *
+ * Board represents the grid of the game.
+ *
+ * \author Michael Ebner
+ * \date April 2015
+ */
+
 #include "Board.h"
-#include "ExceptionBoardAccess.h"
 
 //***Constructor
 // Board::Board(std::string infile) : rows(5));columns(5){}
@@ -157,7 +165,7 @@ void Board::applyTransitionRules(unsigned int irow, unsigned int icol,
     // printf("Cell (%i,%i): numberOfNeighboursAlive = %i\n", 
     //     irow,icol,numberOfNeighboursAlive);
 
-    //***Live cell:
+    //***Cell is alive:
     if( this->board[irow][icol].getStatus() ){
         if( 
             numberOfNeighboursAlive < 2 ||
@@ -167,6 +175,7 @@ void Board::applyTransitionRules(unsigned int irow, unsigned int icol,
             this->board[irow][icol].setStatus(0);
         }
     }
+    //***Cell is dead:
     else{
         if (numberOfNeighboursAlive == 3){
             this->board[irow][icol].setStatus(1);

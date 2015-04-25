@@ -1,0 +1,5 @@
+<map id="Catch::Matchers::Impl::Matcher&lt; ExpressionT &gt;" name="Catch::Matchers::Impl::Matcher&lt; ExpressionT &gt;">
+<area shape="rect" id="node2" href="$a00074.html" title="{Catch::SharedImpl\&lt;\l IShared \&gt;\n|+ m_rc\l|+ SharedImpl()\l+ addRef()\l+ release()\l}" alt="" coords="22,288,162,401"/>
+<area shape="rect" id="node3" href="$a00042.html" title="{Catch::IShared\n||+ ~IShared()\l+ addRef()\l+ release()\l}" alt="" coords="37,140,147,240"/>
+<area shape="rect" id="node4" href="$a00054.html" title="{Catch::NonCopyable\n||# NonCopyable()\l# ~NonCopyable()\l}" alt="" coords="20,5,164,92"/>
+</map>

@@ -1,0 +1,231 @@
+\hypertarget{a00067}{}\subsection{Catch\+:\+:Result\+Builder Class Reference}
+\label{a00067}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Collaboration diagram for Catch\+:\+:Result\+Builder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{a00251}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00067_a18c2929702bdde1f835e39717a0e554b}{Result\+Builder} (char const $\ast$macro\+Name, \hyperlink{a00075}{Source\+Line\+Info} const \&line\+Info, char const $\ast$captured\+Expression, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8}{Result\+Disposition\+::\+Flags} result\+Disposition)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{a00028}{Expression\+Lhs}$<$ T const \& $>$ \hyperlink{a00067_ae0ab04cb09f26ffdc5c7dd9eec89e7c9}{operator-\/$>$$\ast$} (T const \&operand)
+\item 
+\hyperlink{a00028}{Expression\+Lhs}$<$ bool $>$ \hyperlink{a00067_af2b2645b38c8dca2de0b83650383c6bd}{operator-\/$>$$\ast$} (bool value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{a00067}{Result\+Builder} \& \hyperlink{a00067_a5aa79ce6160ab8cd800eb65bbd7a28a4}{operator$<$$<$} (T const \&value)
+\item 
+{\footnotesize template$<$typename Rhs\+T $>$ }\\S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \hyperlink{a00067_a2bbd6b026765202aee224a14d24c68bc}{operator\&\&} (Rhs\+T const \&)
+\item 
+{\footnotesize template$<$typename Rhs\+T $>$ }\\S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison \& \hyperlink{a00067_ad489243e89e9f0ec3cb1f95392a537de}{operator$\vert$$\vert$} (Rhs\+T const \&)
+\item 
+\hyperlink{a00067}{Result\+Builder} \& \hyperlink{a00067_af896e372db9d7fc90ddeceff3ad110d0}{set\+Result\+Type} (\hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601ef}{Result\+Was\+::\+Of\+Type} result)
+\item 
+\hyperlink{a00067}{Result\+Builder} \& \hyperlink{a00067_ae504348b073d0360bfd5fc33347ec689}{set\+Result\+Type} (bool result)
+\item 
+\hyperlink{a00067}{Result\+Builder} \& \hyperlink{a00067_a5de584deec90fc6b7cc5bcf9eb636442}{set\+Lhs} (std\+::string const \&lhs)
+\item 
+\hyperlink{a00067}{Result\+Builder} \& \hyperlink{a00067_aaeb41a00cf352c7a0bcf75a0ded0a4a2}{set\+Rhs} (std\+::string const \&rhs)
+\item 
+\hyperlink{a00067}{Result\+Builder} \& \hyperlink{a00067_a8232ed051ed7f6adfbc152c98aa1dc0c}{set\+Op} (std\+::string const \&op)
+\item 
+void \hyperlink{a00067_a75ac2dbabd8d4b4b3a75de9bbc3abf02}{end\+Expression} ()
+\item 
+std\+::string \hyperlink{a00067_ad34bc9b83d5cbd5d960903e5a3c6c96c}{reconstruct\+Expression} () const 
+\item 
+\hyperlink{a00005}{Assertion\+Result} \hyperlink{a00067_a31eba48feb02817d2151e31bd8331eeb}{build} () const 
+\item 
+void \hyperlink{a00067_a5bbd2f14a678f3e8d0f791ac6d233d65}{use\+Active\+Exception} (\hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8}{Result\+Disposition\+::\+Flags} result\+Disposition=\hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Result\+Disposition\+::\+Normal})
+\item 
+void \hyperlink{a00067_a10e467f7b7a4976e5d148b4d5066e8fd}{capture\+Result} (\hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601ef}{Result\+Was\+::\+Of\+Type} result\+Type)
+\item 
+void \hyperlink{a00067_af2ae2343965802eeeb0abbd4ea9d2d36}{capture\+Expression} ()
+\item 
+void \hyperlink{a00067_a3085cdc46533d45bed6f652a2ac295c0}{react} ()
+\item 
+bool \hyperlink{a00067_a34cdbf7ad1e5b3cb4a94047f2d14bcb2}{should\+Debug\+Break} () const 
+\item 
+bool \hyperlink{a00067_a3dbf18a3a4b00173dab052a8864e435e}{allow\+Throws} () const 
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+
+
+Definition at line 719 of file catch.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{a00067_a18c2929702bdde1f835e39717a0e554b}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!Result\+Builder@{Result\+Builder}}
+\index{Result\+Builder@{Result\+Builder}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{Result\+Builder}]{\setlength{\rightskip}{0pt plus 5cm}Catch\+::\+Result\+Builder\+::\+Result\+Builder (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{macro\+Name, }
+\item[{{\bf Source\+Line\+Info} const \&}]{line\+Info, }
+\item[{char const $\ast$}]{captured\+Expression, }
+\item[{{\bf Result\+Disposition\+::\+Flags}}]{result\+Disposition}
+\end{DoxyParamCaption}
+)}\label{a00067_a18c2929702bdde1f835e39717a0e554b}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{a00067_a3dbf18a3a4b00173dab052a8864e435e}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!allow\+Throws@{allow\+Throws}}
+\index{allow\+Throws@{allow\+Throws}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{allow\+Throws}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\+::\+Result\+Builder\+::allow\+Throws (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{a00067_a3dbf18a3a4b00173dab052a8864e435e}
+\hypertarget{a00067_a31eba48feb02817d2151e31bd8331eeb}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!build@{build}}
+\index{build@{build}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{build}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Assertion\+Result} Catch\+::\+Result\+Builder\+::build (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{a00067_a31eba48feb02817d2151e31bd8331eeb}
+\hypertarget{a00067_af2ae2343965802eeeb0abbd4ea9d2d36}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!capture\+Expression@{capture\+Expression}}
+\index{capture\+Expression@{capture\+Expression}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{capture\+Expression}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\+::\+Result\+Builder\+::capture\+Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00067_af2ae2343965802eeeb0abbd4ea9d2d36}
+\hypertarget{a00067_a10e467f7b7a4976e5d148b4d5066e8fd}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!capture\+Result@{capture\+Result}}
+\index{capture\+Result@{capture\+Result}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{capture\+Result}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\+::\+Result\+Builder\+::capture\+Result (
+\begin{DoxyParamCaption}
+\item[{{\bf Result\+Was\+::\+Of\+Type}}]{result\+Type}
+\end{DoxyParamCaption}
+)}\label{a00067_a10e467f7b7a4976e5d148b4d5066e8fd}
+\hypertarget{a00067_a75ac2dbabd8d4b4b3a75de9bbc3abf02}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!end\+Expression@{end\+Expression}}
+\index{end\+Expression@{end\+Expression}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{end\+Expression}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\+::\+Result\+Builder\+::end\+Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00067_a75ac2dbabd8d4b4b3a75de9bbc3abf02}
+\hypertarget{a00067_a2bbd6b026765202aee224a14d24c68bc}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!operator\&\&@{operator\&\&}}
+\index{operator\&\&@{operator\&\&}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{operator\&\&}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Rhs\+T $>$ S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison\& Catch\+::\+Result\+Builder\+::operator\&\& (
+\begin{DoxyParamCaption}
+\item[{Rhs\+T const \&}]{}
+\end{DoxyParamCaption}
+)}\label{a00067_a2bbd6b026765202aee224a14d24c68bc}
+\hypertarget{a00067_ae0ab04cb09f26ffdc5c7dd9eec89e7c9}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!operator-\/$>$$\ast$@{operator-\/$>$$\ast$}}
+\index{operator-\/$>$$\ast$@{operator-\/$>$$\ast$}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{operator-\/$>$$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Expression\+Lhs}$<$ T const \& $>$ Catch\+::\+Result\+Builder\+::operator-\/$>$$\ast$ (
+\begin{DoxyParamCaption}
+\item[{T const \&}]{operand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{a00067_ae0ab04cb09f26ffdc5c7dd9eec89e7c9}
+
+
+Definition at line 1304 of file catch.\+hpp.
+
+\hypertarget{a00067_af2b2645b38c8dca2de0b83650383c6bd}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!operator-\/$>$$\ast$@{operator-\/$>$$\ast$}}
+\index{operator-\/$>$$\ast$@{operator-\/$>$$\ast$}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{operator-\/$>$$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression\+Lhs}$<$ bool $>$ Catch\+::\+Result\+Builder\+::operator-\/$>$$\ast$ (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{a00067_af2b2645b38c8dca2de0b83650383c6bd}
+
+
+Definition at line 1308 of file catch.\+hpp.
+
+\hypertarget{a00067_a5aa79ce6160ab8cd800eb65bbd7a28a4}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Result\+Builder}\& Catch\+::\+Result\+Builder\+::operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{T const \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{a00067_a5aa79ce6160ab8cd800eb65bbd7a28a4}
+
+
+Definition at line 731 of file catch.\+hpp.
+
+\hypertarget{a00067_ad489243e89e9f0ec3cb1f95392a537de}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!operator\texttt{"|}\texttt{"|}@{operator\texttt{"|}\texttt{"|}}}
+\index{operator\texttt{"|}\texttt{"|}@{operator\texttt{"|}\texttt{"|}}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{operator\texttt{"|}\texttt{"|}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Rhs\+T $>$ S\+T\+A\+T\+I\+C\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+Expression\+\_\+\+Too\+\_\+\+Complex\+\_\+\+Please\+\_\+\+Rewrite\+\_\+\+As\+\_\+\+Binary\+\_\+\+Comparison\& Catch\+::\+Result\+Builder\+::operator$\vert$$\vert$ (
+\begin{DoxyParamCaption}
+\item[{Rhs\+T const \&}]{}
+\end{DoxyParamCaption}
+)}\label{a00067_ad489243e89e9f0ec3cb1f95392a537de}
+\hypertarget{a00067_a3085cdc46533d45bed6f652a2ac295c0}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!react@{react}}
+\index{react@{react}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{react}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\+::\+Result\+Builder\+::react (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00067_a3085cdc46533d45bed6f652a2ac295c0}
+\hypertarget{a00067_ad34bc9b83d5cbd5d960903e5a3c6c96c}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!reconstruct\+Expression@{reconstruct\+Expression}}
+\index{reconstruct\+Expression@{reconstruct\+Expression}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{reconstruct\+Expression}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Catch\+::\+Result\+Builder\+::reconstruct\+Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{a00067_ad34bc9b83d5cbd5d960903e5a3c6c96c}
+\hypertarget{a00067_a5de584deec90fc6b7cc5bcf9eb636442}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!set\+Lhs@{set\+Lhs}}
+\index{set\+Lhs@{set\+Lhs}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{set\+Lhs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result\+Builder}\& Catch\+::\+Result\+Builder\+::set\+Lhs (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{lhs}
+\end{DoxyParamCaption}
+)}\label{a00067_a5de584deec90fc6b7cc5bcf9eb636442}
+\hypertarget{a00067_a8232ed051ed7f6adfbc152c98aa1dc0c}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!set\+Op@{set\+Op}}
+\index{set\+Op@{set\+Op}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{set\+Op}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result\+Builder}\& Catch\+::\+Result\+Builder\+::set\+Op (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{op}
+\end{DoxyParamCaption}
+)}\label{a00067_a8232ed051ed7f6adfbc152c98aa1dc0c}
+\hypertarget{a00067_af896e372db9d7fc90ddeceff3ad110d0}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!set\+Result\+Type@{set\+Result\+Type}}
+\index{set\+Result\+Type@{set\+Result\+Type}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{set\+Result\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result\+Builder}\& Catch\+::\+Result\+Builder\+::set\+Result\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Result\+Was\+::\+Of\+Type}}]{result}
+\end{DoxyParamCaption}
+)}\label{a00067_af896e372db9d7fc90ddeceff3ad110d0}
+\hypertarget{a00067_ae504348b073d0360bfd5fc33347ec689}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!set\+Result\+Type@{set\+Result\+Type}}
+\index{set\+Result\+Type@{set\+Result\+Type}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{set\+Result\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result\+Builder}\& Catch\+::\+Result\+Builder\+::set\+Result\+Type (
+\begin{DoxyParamCaption}
+\item[{bool}]{result}
+\end{DoxyParamCaption}
+)}\label{a00067_ae504348b073d0360bfd5fc33347ec689}
+\hypertarget{a00067_aaeb41a00cf352c7a0bcf75a0ded0a4a2}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!set\+Rhs@{set\+Rhs}}
+\index{set\+Rhs@{set\+Rhs}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{set\+Rhs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result\+Builder}\& Catch\+::\+Result\+Builder\+::set\+Rhs (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00067_aaeb41a00cf352c7a0bcf75a0ded0a4a2}
+\hypertarget{a00067_a34cdbf7ad1e5b3cb4a94047f2d14bcb2}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!should\+Debug\+Break@{should\+Debug\+Break}}
+\index{should\+Debug\+Break@{should\+Debug\+Break}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{should\+Debug\+Break}]{\setlength{\rightskip}{0pt plus 5cm}bool Catch\+::\+Result\+Builder\+::should\+Debug\+Break (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{a00067_a34cdbf7ad1e5b3cb4a94047f2d14bcb2}
+\hypertarget{a00067_a5bbd2f14a678f3e8d0f791ac6d233d65}{}\index{Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}!use\+Active\+Exception@{use\+Active\+Exception}}
+\index{use\+Active\+Exception@{use\+Active\+Exception}!Catch\+::\+Result\+Builder@{Catch\+::\+Result\+Builder}}
+\paragraph[{use\+Active\+Exception}]{\setlength{\rightskip}{0pt plus 5cm}void Catch\+::\+Result\+Builder\+::use\+Active\+Exception (
+\begin{DoxyParamCaption}
+\item[{{\bf Result\+Disposition\+::\+Flags}}]{result\+Disposition = {\ttfamily {\bf Result\+Disposition\+::\+Normal}}}
+\end{DoxyParamCaption}
+)}\label{a00067_a5bbd2f14a678f3e8d0f791ac6d233d65}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00094}{catch.\+hpp}\end{DoxyCompactItemize}

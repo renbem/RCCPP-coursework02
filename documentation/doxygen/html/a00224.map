@@ -1,0 +1,4 @@
+<map id="Catch::ITestCase" name="Catch::ITestCase">
+<area shape="rect" id="node2" href="$a00042.html" title="{Catch::IShared\n||+ ~IShared()\l+ addRef()\l+ release()\l}" alt="" coords="22,140,133,240"/>
+<area shape="rect" id="node3" href="$a00054.html" title="{Catch::NonCopyable\n||# NonCopyable()\l# ~NonCopyable()\l}" alt="" coords="5,5,150,92"/>
+</map>

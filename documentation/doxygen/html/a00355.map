@@ -1,0 +1,7 @@
+<map id="Catch::Matchers::Impl::StdString::Equals" name="Catch::Matchers::Impl::StdString::Equals">
+<area shape="rect" id="node2" href="$a00048.html" title="{Catch::Matchers::Impl\l::MatcherImpl\&lt; Equals,\l std::string \&gt;\n||+ clone()\l}" alt="" coords="5,624,163,724"/>
+<area shape="rect" id="node3" href="$a00047.html" title="{Catch::Matchers::Impl\l::Matcher\&lt; std::string \&gt;\n||+ ~Matcher()\l+ clone()\l+ match()\l+ toString()\l}" alt="" coords="6,449,163,576"/>
+<area shape="rect" id="node4" href="$a00074.html" title="{Catch::SharedImpl\&lt;\l IShared \&gt;\n|+ m_rc\l|+ SharedImpl()\l+ addRef()\l+ release()\l}" alt="" coords="15,288,154,401"/>
+<area shape="rect" id="node5" href="$a00042.html" title="{Catch::IShared\n||+ ~IShared()\l+ addRef()\l+ release()\l}" alt="" coords="29,140,139,240"/>
+<area shape="rect" id="node6" href="$a00054.html" title="{Catch::NonCopyable\n||# NonCopyable()\l# ~NonCopyable()\l}" alt="" coords="12,5,157,92"/>
+</map>

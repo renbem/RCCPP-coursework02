@@ -4,3 +4,6 @@ ConwaysGameOfLife*
 build/
 matlab/GameHistories/
 test/data/GameHistory_*
+
+#documentation/Makefile
+#documentation/*tex

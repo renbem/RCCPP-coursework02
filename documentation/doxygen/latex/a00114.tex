@@ -1,0 +1,134 @@
+\hypertarget{a00114}{}\subsection{read\+Computational\+Time\+Of\+Board.\+m File Reference}
+\label{a00114}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Close the \hyperlink{a00114_ac3ed6ea030e1a1d6234b110347cad11e}{text} \hyperlink{a00114_afb14c82a145a51f20aea2593e1d84b86}{file} \hyperlink{a00114_a9a3043eed208fc59883c3d1fcdee2df9}{fclose} (\hyperlink{a00114_a0535e16c4a03a88fd449c86dc20c47c4}{file\+I\+D})
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+function \hyperlink{a00114_ab95225146f45d9e8e1089618cf68c6e1}{elapsed\+Time}
+\item 
+\hyperlink{a00114_aacf4e58be14eef37272a71c004bc3f58}{delimiter} = \textquotesingle{}\textbackslash{}\hyperlink{a00107_aaccc9105df5383111407fd5b41255e23}{t}\textquotesingle{}
+\item 
+\hyperlink{a00114_a987da3ccdd04c7003429ef9f85a24f24}{start\+Row} = 2
+\item 
+Format string for each line of \hyperlink{a00114_ac3ed6ea030e1a1d6234b110347cad11e}{text}
+\item 
+Format string for each line of see the T\+E\+X\+T\+S\+C\+A\+N documentation \hyperlink{a00114_ae03fb7cd0dab408f33b554c861354325}{format\+Spec} = \textquotesingle{}\%$\ast$s\%\hyperlink{a00107_a633de4b0c14ca52ea2432a3c8a5c4c31}{f}\%\mbox{[}$^\wedge$\textbackslash{}n\textbackslash{}r\mbox{]}\textquotesingle{}
+\item 
+Open the \hyperlink{a00114_ac3ed6ea030e1a1d6234b110347cad11e}{text} \hyperlink{a00114_afb14c82a145a51f20aea2593e1d84b86}{file} \hyperlink{a00114_a0535e16c4a03a88fd449c86dc20c47c4}{file\+I\+D} = fopen(\mbox{[}dir \hyperlink{a00107_a4a32877dda2cdbef8aa5f01eacc16f0c}{filename}\mbox{]},\textquotesingle{}r\textquotesingle{})
+\item 
+Read \hyperlink{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}{columns} of \hyperlink{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{data} according to format string This call is based on the structure of the file used to generate this code If an error occurs for a different \hyperlink{a00114_afb14c82a145a51f20aea2593e1d84b86}{file}
+\item 
+Read \hyperlink{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}{columns} of \hyperlink{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{data} according to format string This call is based on the structure of the \hyperlink{a00114_afb14c82a145a51f20aea2593e1d84b86}{file} used to generate this code If an error occurs for a different try regenerating the code from the Import Tool \hyperlink{a00114_a2234c02acb5c24b59c955753e6ef8441}{data\+Array} = textscan(\hyperlink{a00114_a0535e16c4a03a88fd449c86dc20c47c4}{file\+I\+D}, \hyperlink{a00114_ae03fb7cd0dab408f33b554c861354325}{format\+Spec}, \textquotesingle{}Delimiter\textquotesingle{}, \hyperlink{a00114_aacf4e58be14eef37272a71c004bc3f58}{delimiter}, \textquotesingle{}Header\+Lines\textquotesingle{} ,\hyperlink{a00114_a987da3ccdd04c7003429ef9f85a24f24}{start\+Row}-\/1, \textquotesingle{}Return\+On\+Error\textquotesingle{}, false)
+\item 
+Post processing for unimportable \hyperlink{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{data} No unimportable \hyperlink{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{data} rules were applied during the \hyperlink{a00114_a97736099a9ac43f989770145ce6b9935}{import}
+\item 
+Post processing for unimportable data No unimportable data rules were applied during the so no post processing code is included To generate code which works for unimportable \hyperlink{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{data}
+\item 
+Clear temporary variables clearvars \hyperlink{a00107_a4a32877dda2cdbef8aa5f01eacc16f0c}{filename} \hyperlink{a00114_aacf4e58be14eef37272a71c004bc3f58}{delimiter} \hyperlink{a00114_a987da3ccdd04c7003429ef9f85a24f24}{start\+Row} \hyperlink{a00114_ae03fb7cd0dab408f33b554c861354325}{format\+Spec} \hyperlink{a00114_a0535e16c4a03a88fd449c86dc20c47c4}{file\+I\+D} \hyperlink{a00114_a2234c02acb5c24b59c955753e6ef8441}{data\+Array} \hyperlink{a00114_a7a2d374117d1db12f74214d95ead82a6}{ans}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{a00114_a9a3043eed208fc59883c3d1fcdee2df9}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!fclose@{fclose}}
+\index{fclose@{fclose}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{fclose}]{\setlength{\rightskip}{0pt plus 5cm}Close the {\bf text} {\bf file} fclose (
+\begin{DoxyParamCaption}
+\item[{{\bf file\+I\+D}}]{}
+\end{DoxyParamCaption}
+)}\label{a00114_a9a3043eed208fc59883c3d1fcdee2df9}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{a00114_a7a2d374117d1db12f74214d95ead82a6}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!ans@{ans}}
+\index{ans@{ans}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{ans}]{\setlength{\rightskip}{0pt plus 5cm}Clear temporary variables clearvars {\bf filename} {\bf delimiter} {\bf start\+Row} {\bf format\+Spec} {\bf file\+I\+D} {\bf data\+Array} ans}\label{a00114_a7a2d374117d1db12f74214d95ead82a6}
+
+
+Definition at line 48 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!data@{data}}
+\index{data@{data}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{data}]{\setlength{\rightskip}{0pt plus 5cm}Post processing for unimportable data No unimportable data rules were applied during the so no post processing code is included To generate code which works for unimportable data}\label{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}
+
+
+Definition at line 38 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_a2234c02acb5c24b59c955753e6ef8441}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!data\+Array@{data\+Array}}
+\index{data\+Array@{data\+Array}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{data\+Array}]{\setlength{\rightskip}{0pt plus 5cm}Read {\bf columns} of {\bf data} according to format string This call is based on the structure of the {\bf file} used to generate this code If an error occurs for a different try regenerating the code from the Import Tool data\+Array = textscan({\bf file\+I\+D}, {\bf format\+Spec}, \textquotesingle{}Delimiter\textquotesingle{}, {\bf delimiter}, \textquotesingle{}Header\+Lines\textquotesingle{} ,{\bf start\+Row}-\/1, \textquotesingle{}Return\+On\+Error\textquotesingle{}, false)}\label{a00114_a2234c02acb5c24b59c955753e6ef8441}
+
+
+Definition at line 32 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_aacf4e58be14eef37272a71c004bc3f58}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!delimiter@{delimiter}}
+\index{delimiter@{delimiter}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{delimiter}]{\setlength{\rightskip}{0pt plus 5cm}delimiter = \textquotesingle{}\textbackslash{}{\bf t}\textquotesingle{}}\label{a00114_aacf4e58be14eef37272a71c004bc3f58}
+
+
+Definition at line 17 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_ab95225146f45d9e8e1089618cf68c6e1}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!elapsed\+Time@{elapsed\+Time}}
+\index{elapsed\+Time@{elapsed\+Time}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{elapsed\+Time}]{\setlength{\rightskip}{0pt plus 5cm}Post processing for unimportable {\bf data} No unimportable {\bf data} rules were applied during the so no post processing code is included To generate code which works for unimportable select unimportable cells in a {\bf file} and regenerate the script Allocate imported array to column variable names elapsed\+Time}\label{a00114_ab95225146f45d9e8e1089618cf68c6e1}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= readComputationalTimeOfBoard(\hyperlink{a00099_a2ff994e16bf9521154de4cf659a3b689}{filename})
+%% Import \hyperlink{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{data} from \hyperlink{a00114_ac3ed6ea030e1a1d6234b110347cad11e}{text} \hyperlink{a00114_afb14c82a145a51f20aea2593e1d84b86}{file}.
+% Script \textcolor{keywordflow}{for} importing \hyperlink{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{data} from the following \hyperlink{a00114_ac3ed6ea030e1a1d6234b110347cad11e}{text} \hyperlink{a00114_afb14c82a145a51f20aea2593e1d84b86}{file}:
+%
+%    /Users/mebner/UCL/UCL/Courses/Research Computing with
+%    C++/courseworks/02\_Conways \hyperlink{a00030}{Game} of
+%    Life/\hyperlink{a00107_ab52c919104cfd3fd5aef89c5e39ec637}{test}/\hyperlink{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{data}/GameHistoryA\_ComputationalTime.txt
+%
+% To extend the code to different selected \hyperlink{a00114_a32d7eebae6f15ceb9cc7f573d7dbd27d}{data} or a different \hyperlink{a00114_ac3ed6ea030e1a1d6234b110347cad11e}{text} \hyperlink{a00114_afb14c82a145a51f20aea2593e1d84b86}{file}
+\end{DoxyCode}
+
+
+Definition at line 1 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_afb14c82a145a51f20aea2593e1d84b86}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!file@{file}}
+\index{file@{file}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{file}]{\setlength{\rightskip}{0pt plus 5cm}Read {\bf columns} of {\bf data} according to format string This call is based on the structure of the file used to generate this code If an error occurs for a different file}\label{a00114_afb14c82a145a51f20aea2593e1d84b86}
+
+
+Definition at line 30 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_a0535e16c4a03a88fd449c86dc20c47c4}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!file\+I\+D@{file\+I\+D}}
+\index{file\+I\+D@{file\+I\+D}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{file\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}Open the {\bf text} {\bf file} file\+I\+D = fopen(\mbox{[}dir {\bf filename}\mbox{]},\textquotesingle{}r\textquotesingle{})}\label{a00114_a0535e16c4a03a88fd449c86dc20c47c4}
+
+
+Definition at line 26 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_ae03fb7cd0dab408f33b554c861354325}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!format\+Spec@{format\+Spec}}
+\index{format\+Spec@{format\+Spec}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{format\+Spec}]{\setlength{\rightskip}{0pt plus 5cm}Format string for each line of see the T\+E\+X\+T\+S\+C\+A\+N documentation format\+Spec = \textquotesingle{}\%$\ast$s\%{\bf f}\%\mbox{[}$^\wedge$\textbackslash{}n\textbackslash{}r\mbox{]}\textquotesingle{}}\label{a00114_ae03fb7cd0dab408f33b554c861354325}
+
+
+Definition at line 23 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_a97736099a9ac43f989770145ce6b9935}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!import@{import}}
+\index{import@{import}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{import}]{\setlength{\rightskip}{0pt plus 5cm}Post processing for unimportable {\bf data} No unimportable {\bf data} rules were applied during the import}\label{a00114_a97736099a9ac43f989770145ce6b9935}
+
+
+Definition at line 38 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_a987da3ccdd04c7003429ef9f85a24f24}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!start\+Row@{start\+Row}}
+\index{start\+Row@{start\+Row}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{start\+Row}]{\setlength{\rightskip}{0pt plus 5cm}start\+Row = 2}\label{a00114_a987da3ccdd04c7003429ef9f85a24f24}
+
+
+Definition at line 18 of file read\+Computational\+Time\+Of\+Board.\+m.
+
+\hypertarget{a00114_ac3ed6ea030e1a1d6234b110347cad11e}{}\index{read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}!text@{text}}
+\index{text@{text}!read\+Computational\+Time\+Of\+Board.\+m@{read\+Computational\+Time\+Of\+Board.\+m}}
+\paragraph[{text}]{\setlength{\rightskip}{0pt plus 5cm}Format string for each line of text}\label{a00114_ac3ed6ea030e1a1d6234b110347cad11e}
+
+
+Definition at line 22 of file read\+Computational\+Time\+Of\+Board.\+m.
+

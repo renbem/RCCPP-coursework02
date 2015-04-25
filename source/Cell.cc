@@ -1,7 +1,15 @@
+/**
+ * \brief Implementation of the cell class.
+ *
+ * Cell represents the status of dead or alive.
+ *
+ * \author Michael Ebner
+ * \date April 2015
+ */
+
 #include "Cell.h"
 
 //***Constructor
-
 Cell::Cell(){
     this->status = false;
 }

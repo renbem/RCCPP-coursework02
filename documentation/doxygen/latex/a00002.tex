@@ -1,0 +1,143 @@
+\hypertarget{a00002}{}\subsection{Catch\+:\+:Matchers\+:\+:Impl\+:\+:Generic\+:\+:Any\+Of$<$ Expression\+T $>$ Class Template Reference}
+\label{a00002}\index{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of$<$ Expression\+T $>$@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of$<$ Expression\+T $>$}}
+
+
+{\ttfamily \#include $<$catch.\+hpp$>$}
+
+
+
+Inheritance diagram for Catch\+:\+:Matchers\+:\+:Impl\+:\+:Generic\+:\+:Any\+Of$<$ Expression\+T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{a00345}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Catch\+:\+:Matchers\+:\+:Impl\+:\+:Generic\+:\+:Any\+Of$<$ Expression\+T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{a00346}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00002_a131d84740c6b250ff7ef2213ae0de2aa}{Any\+Of} ()
+\item 
+\hyperlink{a00002_a74fbc05b32d334fcbfd0fae0163a404e}{Any\+Of} (\hyperlink{a00002}{Any\+Of} const \&other)
+\item 
+\hyperlink{a00002}{Any\+Of} \& \hyperlink{a00002_a3bce94b627551e5f96c5f9c6060413f0}{add} (\hyperlink{a00047}{Matcher}$<$ Expression\+T $>$ const \&matcher)
+\item 
+virtual bool \hyperlink{a00002_a2f97a08338e12deba541043a57d73db9}{match} (Expression\+T const \&expr) const 
+\item 
+virtual std\+::string \hyperlink{a00002_a7ecc6ec08b2018a643923a9d450aa328}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+\subsubsection*{template$<$typename Expression\+T$>$class Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of$<$ Expression\+T $>$}
+
+
+
+Definition at line 2158 of file catch.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{a00002_a131d84740c6b250ff7ef2213ae0de2aa}{}\index{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}!Any\+Of@{Any\+Of}}
+\index{Any\+Of@{Any\+Of}!Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}}
+\paragraph[{Any\+Of}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Expression\+T $>$ {\bf Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}$<$ Expression\+T $>$\+::{\bf Any\+Of} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{a00002_a131d84740c6b250ff7ef2213ae0de2aa}
+
+
+Definition at line 2161 of file catch.\+hpp.
+
+\hypertarget{a00002_a74fbc05b32d334fcbfd0fae0163a404e}{}\index{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}!Any\+Of@{Any\+Of}}
+\index{Any\+Of@{Any\+Of}!Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}}
+\paragraph[{Any\+Of}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Expression\+T $>$ {\bf Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}$<$ Expression\+T $>$\+::{\bf Any\+Of} (
+\begin{DoxyParamCaption}
+\item[{{\bf Any\+Of}$<$ Expression\+T $>$ const \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{a00002_a74fbc05b32d334fcbfd0fae0163a404e}
+
+
+Definition at line 2162 of file catch.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{a00002_a3bce94b627551e5f96c5f9c6060413f0}{}\index{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}!add@{add}}
+\index{add@{add}!Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}}
+\paragraph[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Expression\+T $>$ {\bf Any\+Of}\& {\bf Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}$<$ Expression\+T $>$\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Matcher}$<$ Expression\+T $>$ const \&}]{matcher}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{a00002_a3bce94b627551e5f96c5f9c6060413f0}
+
+
+Definition at line 2164 of file catch.\+hpp.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{a00002_a3bce94b627551e5f96c5f9c6060413f0_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00002_a3bce94b627551e5f96c5f9c6060413f0_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00002_a2f97a08338e12deba541043a57d73db9}{}\index{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}!match@{match}}
+\index{match@{match}!Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}}
+\paragraph[{match}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Expression\+T $>$ virtual bool {\bf Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}$<$ Expression\+T $>$\+::match (
+\begin{DoxyParamCaption}
+\item[{Expression\+T const \&}]{expr}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{a00002_a2f97a08338e12deba541043a57d73db9}
+
+
+Implements \hyperlink{a00047_a8c1c5511ce1f3738a45e6901b558f583}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher$<$ Expression\+T $>$}.
+
+
+
+Definition at line 2168 of file catch.\+hpp.
+
+\hypertarget{a00002_a7ecc6ec08b2018a643923a9d450aa328}{}\index{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of@{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Expression\+T $>$ virtual std\+::string {\bf Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of}$<$ Expression\+T $>$\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{a00002_a7ecc6ec08b2018a643923a9d450aa328}
+
+
+Implements \hyperlink{a00047_a091bcc37e589967d7e10fc7790d820e2}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher$<$ Expression\+T $>$}.
+
+
+
+Definition at line 2175 of file catch.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00094}{catch.\+hpp}\end{DoxyCompactItemize}

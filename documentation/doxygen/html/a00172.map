@@ -1,0 +1,5 @@
+<map id="Catch::AssertionResult" name="Catch::AssertionResult">
+<area shape="rect" id="node2" href="$a00006.html" title="{Catch::AssertionResultData\n|+ reconstructedExpression\l+ message\l+ resultType\l|+ AssertionResultData()\l}" alt="" coords="5,213,190,313"/>
+<area shape="rect" id="node3" href="$a00004.html" title="{Catch::AssertionInfo\n|+ macroName\l+ capturedExpression\l+ resultDisposition\l|+ AssertionInfo()\l+ AssertionInfo()\l}" alt="" coords="215,207,365,320"/>
+<area shape="rect" id="node4" href="$a00075.html" title="{Catch::SourceLineInfo\n|+ file\l+ line\l|+ SourceLineInfo()\l+ SourceLineInfo()\l+ SourceLineInfo()\l+ empty()\l+ operator==()\l}" alt="" coords="213,5,367,145"/>
+</map>

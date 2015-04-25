@@ -1,0 +1,137 @@
+\hypertarget{a00107}{}\subsection{generate\+Initial\+Board.\+m File Reference}
+\label{a00107}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+function \hyperlink{a00107_ad750a7808e20a62df4fc83708ebbcbbb}{generate\+Initial\+Board} () dir
+\item 
+\hyperlink{a00107_a331f6ddeaf324600392c6d1f76374c4b}{if} (j$\sim$=\hyperlink{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}{columns}) fprintf(\hyperlink{a00107_a633de4b0c14ca52ea2432a3c8a5c4c31}{f}
+\item 
+end end \hyperlink{a00107_adaccd24104cadc8933e48c3a5569e23f}{if} (i$\sim$=\hyperlink{a00107_a74742cb5c8e2ac354a60cb73383d8176}{rows}) fprintf(\hyperlink{a00107_a633de4b0c14ca52ea2432a3c8a5c4c31}{f}
+\item 
+end end \hyperlink{a00107_a11dd0dea805474ae6b163150f213f12d}{fclose} (\hyperlink{a00107_a633de4b0c14ca52ea2432a3c8a5c4c31}{f})
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00107_a74742cb5c8e2ac354a60cb73383d8176}{rows} = 8
+\item 
+\hyperlink{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}{columns} = 8
+\item 
+\hyperlink{a00107_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A} = rand(\hyperlink{a00107_a74742cb5c8e2ac354a60cb73383d8176}{rows},\hyperlink{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}{columns})$>$0.\+8
+\item 
+\hyperlink{a00107_a4a32877dda2cdbef8aa5f01eacc16f0c}{filename} = \mbox{[}\textquotesingle{}Initial\+Board\+Randomsdf\+\_\+\textquotesingle{} num2str(\hyperlink{a00107_a74742cb5c8e2ac354a60cb73383d8176}{rows}) \textquotesingle{}Times\textquotesingle{} num2str(\hyperlink{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}{columns}) \textquotesingle{}.txt\textquotesingle{}\mbox{]}
+\item 
+$\ast$$\ast$$\ast$Generate numbered board for unit \hyperlink{a00107_ab52c919104cfd3fd5aef89c5e39ec637}{test}
+\item 
+\hyperlink{a00107_a633de4b0c14ca52ea2432a3c8a5c4c31}{f} = fopen(\mbox{[}dir \hyperlink{a00107_a4a32877dda2cdbef8aa5f01eacc16f0c}{filename}\mbox{]},\textquotesingle{}w\textquotesingle{})
+\item 
+for \hyperlink{a00107_a6f6ccfcf58b31cb6412107d9d5281426}{i}
+\item 
+\hyperlink{a00107_aaccc9105df5383111407fd5b41255e23}{t}
+\item 
+end end \hyperlink{a00107_ae4e1b71ca84b7ff488e42aa1b6b485ce}{n}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{a00107_a11dd0dea805474ae6b163150f213f12d}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!fclose@{fclose}}
+\index{fclose@{fclose}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{fclose}]{\setlength{\rightskip}{0pt plus 5cm}end end fclose (
+\begin{DoxyParamCaption}
+\item[{{\bf f}}]{}
+\end{DoxyParamCaption}
+)}\label{a00107_a11dd0dea805474ae6b163150f213f12d}
+\hypertarget{a00107_ad750a7808e20a62df4fc83708ebbcbbb}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!generate\+Initial\+Board@{generate\+Initial\+Board}}
+\index{generate\+Initial\+Board@{generate\+Initial\+Board}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{generate\+Initial\+Board}]{\setlength{\rightskip}{0pt plus 5cm}function generate\+Initial\+Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00107_ad750a7808e20a62df4fc83708ebbcbbb}
+\hypertarget{a00107_a331f6ddeaf324600392c6d1f76374c4b}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!if@{if}}
+\index{if@{if}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{j$\sim$}]{ = {\ttfamily {\bf columns}}}
+\end{DoxyParamCaption}
+)}\label{a00107_a331f6ddeaf324600392c6d1f76374c4b}
+\hypertarget{a00107_adaccd24104cadc8933e48c3a5569e23f}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!if@{if}}
+\index{if@{if}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{if}]{\setlength{\rightskip}{0pt plus 5cm}end end if (
+\begin{DoxyParamCaption}
+\item[{i$\sim$}]{ = {\ttfamily {\bf rows}}}
+\end{DoxyParamCaption}
+)}\label{a00107_adaccd24104cadc8933e48c3a5569e23f}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{a00107_a3b98e2dffc6cb06a89dcb0d5c60a0206}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!A@{A}}
+\index{A@{A}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{A}]{\setlength{\rightskip}{0pt plus 5cm}A = rand({\bf rows},{\bf columns})$>$0.\+8}\label{a00107_a3b98e2dffc6cb06a89dcb0d5c60a0206}
+
+
+Definition at line 8 of file generate\+Initial\+Board.\+m.
+
+\hypertarget{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!columns@{columns}}
+\index{columns@{columns}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{columns}]{\setlength{\rightskip}{0pt plus 5cm}$\ast$$\ast$$\ast$ Generate numbered board for unit columns = 8}\label{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}
+
+
+Definition at line 6 of file generate\+Initial\+Board.\+m.
+
+\hypertarget{a00107_a633de4b0c14ca52ea2432a3c8a5c4c31}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!f@{f}}
+\index{f@{f}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{f}]{\setlength{\rightskip}{0pt plus 5cm}f = fopen(\mbox{[}dir {\bf filename}\mbox{]},\textquotesingle{}w\textquotesingle{})}\label{a00107_a633de4b0c14ca52ea2432a3c8a5c4c31}
+
+
+Definition at line 15 of file generate\+Initial\+Board.\+m.
+
+\hypertarget{a00107_a4a32877dda2cdbef8aa5f01eacc16f0c}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!filename@{filename}}
+\index{filename@{filename}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{filename}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A} (\+:) = 0 filename = \mbox{[}\textquotesingle{}Initial\+Board\+Randomsdf\+\_\+\textquotesingle{} num2str({\bf rows}) \textquotesingle{}Times\textquotesingle{} num2str({\bf columns}) \textquotesingle{}.txt\textquotesingle{}\mbox{]}}\label{a00107_a4a32877dda2cdbef8aa5f01eacc16f0c}
+
+
+Definition at line 9 of file generate\+Initial\+Board.\+m.
+
+\hypertarget{a00107_a6f6ccfcf58b31cb6412107d9d5281426}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!i@{i}}
+\index{i@{i}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{i}]{\setlength{\rightskip}{0pt plus 5cm}for i}\label{a00107_a6f6ccfcf58b31cb6412107d9d5281426}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=1:\hyperlink{a00107_a74742cb5c8e2ac354a60cb73383d8176}{rows}
+    \textcolor{keywordflow}{for} \hyperlink{a00099_ac86694252f8dfdb19aaeadc4b7c342c6}{j}=1:\hyperlink{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}{columns}
+        fprintf(\hyperlink{a00107_a633de4b0c14ca52ea2432a3c8a5c4c31}{f},\textcolor{stringliteral}{'%d'}, \hyperlink{a00107_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}(\hyperlink{a00107_a6f6ccfcf58b31cb6412107d9d5281426}{i},\hyperlink{a00099_ac86694252f8dfdb19aaeadc4b7c342c6}{j}))
+\end{DoxyCode}
+
+
+Definition at line 17 of file generate\+Initial\+Board.\+m.
+
+\hypertarget{a00107_ae4e1b71ca84b7ff488e42aa1b6b485ce}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!n@{n}}
+\index{n@{n}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{n}]{\setlength{\rightskip}{0pt plus 5cm}end end n}\label{a00107_ae4e1b71ca84b7ff488e42aa1b6b485ce}
+
+
+Definition at line 25 of file generate\+Initial\+Board.\+m.
+
+\hypertarget{a00107_a74742cb5c8e2ac354a60cb73383d8176}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!rows@{rows}}
+\index{rows@{rows}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{rows}]{\setlength{\rightskip}{0pt plus 5cm}rows = 8}\label{a00107_a74742cb5c8e2ac354a60cb73383d8176}
+
+
+Definition at line 5 of file generate\+Initial\+Board.\+m.
+
+\hypertarget{a00107_aaccc9105df5383111407fd5b41255e23}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!t@{t}}
+\index{t@{t}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{t}]{\setlength{\rightskip}{0pt plus 5cm}t}\label{a00107_aaccc9105df5383111407fd5b41255e23}
+
+
+Definition at line 21 of file generate\+Initial\+Board.\+m.
+
+\hypertarget{a00107_ab52c919104cfd3fd5aef89c5e39ec637}{}\index{generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}!test@{test}}
+\index{test@{test}!generate\+Initial\+Board.\+m@{generate\+Initial\+Board.\+m}}
+\paragraph[{test}]{\setlength{\rightskip}{0pt plus 5cm}$\ast$$\ast$$\ast$ Generate numbered board for unit test}\label{a00107_ab52c919104cfd3fd5aef89c5e39ec637}
+
+
+Definition at line 12 of file generate\+Initial\+Board.\+m.
+

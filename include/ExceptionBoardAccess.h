@@ -1,3 +1,13 @@
+/**
+ * \brief Implementation of the ExceptionBoardAccess class.
+ *
+ * ExceptionBoardClass deals with an attemped access to not allocated indices 
+ * within the grid.
+ *
+ * \author Michael Ebner
+ * \date April 2015
+ */
+
 #ifndef EXCEPTIONBOARDACCESS_H_
 #define EXCEPTIONBOARDACCESS_H_
 

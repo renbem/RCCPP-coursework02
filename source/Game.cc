@@ -1,3 +1,12 @@
+/**
+ * \brief Implementation of the game class.
+ *
+ * Game represents the grid of the game, incorporating all the boards.
+ *
+ * \author Michael Ebner
+ * \date April 2015
+ */
+
 #ifdef __linux
     #include <omp.h>
 #endif
@@ -25,11 +34,8 @@ void Game::computeNextStep(){
     unsigned int icolumns = currentBoard.getColumns();
     std::vector<Cell> neighbourCells;
 
-    // std::cout << "rows = " << updatedBoard.getRows() << std::endl;
-    // std::cout << "columns = " << updatedBoard.getColumns() << std::endl;
-
     #ifdef __linux
-        // #pragma omp parallel for private(neighbourCells)
+        #pragma omp parallel for private(neighbourCells)
     #endif
     for (unsigned int row = 0; row < irows; ++row){
 
@@ -38,7 +44,6 @@ void Game::computeNextStep(){
                 = currentBoard.determineNeighbourCells(row, col);
             updatedBoard.applyTransitionRules(row,col,neighbourCells);
         }
-        // std::cout << "\n";
     }
     this->pushBoard(updatedBoard);
 }

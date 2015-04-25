@@ -1,0 +1,292 @@
+\hypertarget{a00109}{}\subsection{main\+\_\+\+Unit\+Tests.\+cc File Reference}
+\label{a00109}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+{\ttfamily \#include $<$catch.\+hpp$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Game.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Board.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cell.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}My\+Exception.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Exception\+Command\+Line.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Exception\+Board\+Access.\+h\char`\"{}}\\*
+Include dependency graph for main\+\_\+\+Unit\+Tests.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00144}
+\end{center}
+\end{figure}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00109_a656eb5868e824d59f489f910db438420}{C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+I\+N}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{a00109_a5e575afd978c261dd5973eaa88c3620f}{get\+Element\+From2\+D} (unsigned int irow, unsigned int icol, unsigned int i\+R)
+\item 
+\hyperlink{a00109_a978dfdd6632a3dbbc8bce475b8f50f6c}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Check whether \hyperlink{a00114_afb14c82a145a51f20aea2593e1d84b86}{file} for input read is given\char`\"{},\char`\"{}\mbox{[}Not existing txt-\/\hyperlink{a00114_afb14c82a145a51f20aea2593e1d84b86}{file}\mbox{]}\char`\"{})
+\item 
+\hyperlink{a00109_ac6ba53c30c719442f5bcb85d55de175d}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Test 1 of \hyperlink{a00009_aba3e60929ecd1a1867118e907c2078af}{Board\+::determine\+Neighbour\+Cells}\char`\"{},\char`\"{}\mbox{[}determine Neighbours inner board\mbox{]}\char`\"{})
+\item 
+\hyperlink{a00109_ac7b7e4ceb2d0b87b9f2a76ec252424d8}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Test 2 of \hyperlink{a00009_aba3e60929ecd1a1867118e907c2078af}{Board\+::determine\+Neighbour\+Cells}\char`\"{},\char`\"{}\mbox{[}determine Neighbours upper left corner\mbox{]}\char`\"{})
+\item 
+\hyperlink{a00109_aedff4155768550d56d5313f2c6fd5937}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Test 3 of \hyperlink{a00009_aba3e60929ecd1a1867118e907c2078af}{Board\+::determine\+Neighbour\+Cells}\char`\"{},\char`\"{}\mbox{[}determine Neighbours bottom left corner\mbox{]}\char`\"{})
+\item 
+\hyperlink{a00109_ad39ff6af2b36538aa09074809b6709dc}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Test 4 of \hyperlink{a00009_aba3e60929ecd1a1867118e907c2078af}{Board\+::determine\+Neighbour\+Cells}\char`\"{},\char`\"{}\mbox{[}determine Neighbours bottom right corner\mbox{]}\char`\"{})
+\item 
+\hyperlink{a00109_a1f65531b6b3a1c53a05883c7eab3c2e3}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Test 5 of \hyperlink{a00009_aba3e60929ecd1a1867118e907c2078af}{Board\+::determine\+Neighbour\+Cells}\char`\"{},\char`\"{}\mbox{[}determine Neighbours upper right corner\mbox{]}\char`\"{})
+\item 
+\hyperlink{a00109_a54c99047bc01791a779fb69e800c55ed}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Access of cell beyond board dimensions\char`\"{},\char`\"{}\mbox{[}\hyperlink{a00009}{Board} Access\mbox{]}\char`\"{})
+\item 
+\hyperlink{a00109_a685836d6a1adc5aebb848659c6b9d0b5}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Test one step of Conways \hyperlink{a00030}{Game} of Life\char`\"{},\char`\"{}\mbox{[}One step of C\+Go\+L\mbox{]}\char`\"{})
+\item 
+\hyperlink{a00109_a00e36a06c13f945f24d4fae21515c911}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Test Parallel Computation\char`\"{},\char`\"{}\mbox{[}Parallel Computation\mbox{]}\char`\"{})
+\item 
+\hyperlink{a00109_adc967649a56c42f3977c8b7e71cc67e9}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E} (\char`\"{}Malformed command line\char`\"{},\char`\"{}\mbox{[}Command line\mbox{]}\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{a00109_a656eb5868e824d59f489f910db438420}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+I\+N@{C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+I\+N}}
+\index{C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+I\+N@{C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+I\+N}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+I\+N}\label{a00109_a656eb5868e824d59f489f910db438420}
+
+
+Definition at line 15 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{a00109_a5e575afd978c261dd5973eaa88c3620f}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!get\+Element\+From2\+D@{get\+Element\+From2\+D}}
+\index{get\+Element\+From2\+D@{get\+Element\+From2\+D}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{get\+Element\+From2\+D}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int get\+Element\+From2\+D (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{irow, }
+\item[{unsigned int}]{icol, }
+\item[{unsigned int}]{i\+R}
+\end{DoxyParamCaption}
+)}\label{a00109_a5e575afd978c261dd5973eaa88c3620f}
+
+
+Definition at line 29 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{a00109_a5e575afd978c261dd5973eaa88c3620f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00109_a978dfdd6632a3dbbc8bce475b8f50f6c}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Check whether {\bf file} for input read is given\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}\+Not existing txt-\/file\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_a978dfdd6632a3dbbc8bce475b8f50f6c}
+
+
+Definition at line 47 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+\hypertarget{a00109_ac6ba53c30c719442f5bcb85d55de175d}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Test 1 of {\bf Board\+::determine\+Neighbour\+Cells}\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}determine Neighbours inner board\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_ac6ba53c30c719442f5bcb85d55de175d}
+
+
+Definition at line 54 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{a00109_ac6ba53c30c719442f5bcb85d55de175d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00109_ac7b7e4ceb2d0b87b9f2a76ec252424d8}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Test 2 of {\bf Board\+::determine\+Neighbour\+Cells}\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}determine Neighbours upper left corner\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_ac7b7e4ceb2d0b87b9f2a76ec252424d8}
+
+
+Definition at line 84 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{a00109_ac7b7e4ceb2d0b87b9f2a76ec252424d8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00109_aedff4155768550d56d5313f2c6fd5937}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Test 3 of {\bf Board\+::determine\+Neighbour\+Cells}\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}determine Neighbours bottom left corner\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_aedff4155768550d56d5313f2c6fd5937}
+
+
+Definition at line 115 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{a00109_aedff4155768550d56d5313f2c6fd5937_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00109_ad39ff6af2b36538aa09074809b6709dc}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Test 4 of {\bf Board\+::determine\+Neighbour\+Cells}\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}determine Neighbours bottom right corner\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_ad39ff6af2b36538aa09074809b6709dc}
+
+
+Definition at line 147 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{a00109_ad39ff6af2b36538aa09074809b6709dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00109_a1f65531b6b3a1c53a05883c7eab3c2e3}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Test 5 of {\bf Board\+::determine\+Neighbour\+Cells}\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}determine Neighbours upper right corner\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_a1f65531b6b3a1c53a05883c7eab3c2e3}
+
+
+Definition at line 178 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{a00109_a1f65531b6b3a1c53a05883c7eab3c2e3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00109_a54c99047bc01791a779fb69e800c55ed}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Access of cell beyond board dimensions\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}\+Board Access\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_a54c99047bc01791a779fb69e800c55ed}
+
+
+Definition at line 209 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{a00109_a54c99047bc01791a779fb69e800c55ed_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00109_a685836d6a1adc5aebb848659c6b9d0b5}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Test one step of Conways {\bf Game} of Life\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}\+One step of C\+Go\+L\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_a685836d6a1adc5aebb848659c6b9d0b5}
+
+
+Definition at line 227 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00109_a685836d6a1adc5aebb848659c6b9d0b5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00109_a00e36a06c13f945f24d4fae21515c911}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Test Parallel Computation\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}\+Parallel Computation\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_a00e36a06c13f945f24d4fae21515c911}
+
+
+Definition at line 252 of file main\+\_\+\+Unit\+Tests.\+cc.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{a00109_a00e36a06c13f945f24d4fae21515c911_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00109_adc967649a56c42f3977c8b7e71cc67e9}{}\index{main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!main\+\_\+\+Unit\+Tests.\+cc@{main\+\_\+\+Unit\+Tests.\+cc}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+S\+T\+\_\+\+C\+A\+S\+E (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}Malformed command line\char`\"{}}]{, }
+\item[{\char`\"{}\char`\"{}}]{\mbox{[}\+Command line\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{a00109_adc967649a56c42f3977c8b7e71cc67e9}
+
+
+Definition at line 271 of file main\+\_\+\+Unit\+Tests.\+cc.
+

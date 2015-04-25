@@ -1,6 +1,13 @@
+/**
+ * \brief Implementation of the function readCommandLine.
+ *
+ * readCommandLine parses the input parameters given by the command line.
+ *
+ * \author Michael Ebner
+ * \date April 2015
+ */
+ 
 #include "readCommandLine.h"
-#include "MyException.h"
-#include "ExceptionCommandLine.h"
 
 namespace po = boost::program_options;
 
@@ -17,7 +24,7 @@ std::vector<std::string> readCommandLine(int argc, char** argv){
     ("o", po::value< std::vector<std::string> >(), 
         "specify output txt-file for the game history, \n"
         "e.g. --o \"GameHistory.txt\"")
-    ("s", po::value<int>(), 
+    ("s", po::value<unsigned int>(), 
         "specify number of steps < 2000.\n"
         "e.g. --s 20")
     ;
@@ -28,7 +35,7 @@ std::vector<std::string> readCommandLine(int argc, char** argv){
 
     std::string sfileInitialBoard;
     std::string sfileGameHistory;
-    int imaximumNumberOfSteps;
+    unsigned int imaximumNumberOfSteps;
 
     std::string sbar = "------------------------------------------------------" 
         "----------------------------\n";
@@ -69,9 +76,9 @@ std::vector<std::string> readCommandLine(int argc, char** argv){
 
     if (vm.count("s")) {
         std::cout << "Number of steps of game given (" 
-            << vm["s"].as<int>() << ").\n";
+            << vm["s"].as<unsigned int>() << ").\n";
 
-        imaximumNumberOfSteps = vm["s"].as<int>();
+        imaximumNumberOfSteps = vm["s"].as<unsigned int>();
 
         if (imaximumNumberOfSteps >= 2000){
             throw ExceptionCommandLine("Number of maximum steps succeeded.");
@@ -86,7 +93,7 @@ std::vector<std::string> readCommandLine(int argc, char** argv){
     // Exactly three input parameters (i.e. 2*3+1 arguments) must be given
     if (argc != 7){
         // std::string msg = "Number of input arguments = " 
-        // + std::to_string((int) (argc-1)/2) + ". "
+        // + std::to_string((unsigned int) (argc-1)/2) + ". "
         throw ExceptionCommandLine("Input arguments are not correct.");
     }
 

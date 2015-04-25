@@ -1,3 +1,5 @@
+#author: Michael Ebner
+#date: April 2015
 
 set( EXEC_NAME "conwaysGameOfLife" )
 

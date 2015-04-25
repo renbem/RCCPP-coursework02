@@ -1,0 +1,28 @@
+\chapter{Conways Game of Life}
+
+Based on the lecture notes and \url{http://en.wikipedia.org/wiki/Conways_Game_of_Life}\footnote{Retrieved: April 25, October 2015} the concept of the game can be understood as a simulation of a population change over time. The rules read as follows:
+\begin{itemize}
+	\item The game is represented by an infinite two-dimensional grid of cells.
+	\item Every cell can represent two possible states: dead or alive.
+	\item The grid with its cells represent a population at a discrete point of time.
+	\item The state of each cell in the consecutive time step depends on its 8 adjacent neighbours.
+	\item The transition of the each cell's state are described by these rules (Summary is given in \cref{table:rules}):
+	\begin{itemize}
+		\item A live cell remains alive in case it is surrounded by either two or three living cells. Otherwise it dies which relates to the cases of under-population or overcrowding respectively.
+		\item A dead cell with exactly three surrounding living cells becomes alive associated with the idea of reproduction.
+	\end{itemize}
+\end{itemize}
+
+\begin{table}[h]\centering
+	\begin{tabular}{c c | c c c c c c c c c} \hline\hline
+		& & \multicolumn{9}{c}{\bf Number of neighbour cells alive} \\
+		& & \bf 0 & \bf 1 & \bf 2 & \bf 3 & \bf 4 & \bf 5 & \bf 6 & \bf 7 & \bf 8 \\ \hline
+		\multirow{2}{*}{\bf Current state} & \bf 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+		& \bf 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+		\hline\hline
+	\end{tabular}
+	\caption[Transition rules]{Transition rules: "0" indicates a dead and "1" a live cell}
+	\label{table:rules}
+\end{table}
+
+

@@ -1,3 +1,13 @@
+/**
+ * \brief Implementation of the MyException class.
+ *
+ * MyException deals with the exceptions which are not covered by the classes
+ * ExceptionBoardAccess and ExceptionCommandLine.
+ *
+ * \author Michael Ebner
+ * \date April 2015
+ */
+
 #ifndef MYEXCEPTION_H_
 #define MYEXCEPTION_H_
 

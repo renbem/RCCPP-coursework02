@@ -1,0 +1,412 @@
+\hypertarget{a00100}{}\subsection{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m File Reference}
+\label{a00100}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+function \hyperlink{a00100_ae80046205ac111ac13350a8af924023c}{evaluate\+Speed\+Up\+Of\+Open\+M\+P} () board\+Sizes
+\item 
+\hyperlink{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{if} (N$\sim$=numel(board\+Sizes)) error(\textquotesingle{}revise sizes\textquotesingle{})
+\item 
+\hyperlink{a00100_a215005d36e08dd694707b52c8287c82c}{elapsed\+Time} (\hyperlink{a00107_a6f6ccfcf58b31cb6412107d9d5281426}{i}, 1)
+\item 
+\hyperlink{a00100_aa34a8c2af1a2f3a8758e70eafba9d319}{elapsed\+Time} (\hyperlink{a00107_a6f6ccfcf58b31cb6412107d9d5281426}{i}, 2)
+\item 
+\hyperlink{a00100_a9f5744fcd94781c07dbabae4c710c761}{set} (0,\textquotesingle{}default\+Text\+Font\+Size\textquotesingle{}, 20)\%set(0
+\item 
+\hyperlink{a00100_a2460df035eb610714a3c3a48c9f03060}{set} (0,\textquotesingle{}Default\+Legend\+Font\+Size\textquotesingle{}, 22)
+\item 
+\hyperlink{a00100_ac1d3cd781817f4aab3a30fa75caa8eb3}{set} (0, \textquotesingle{}default\+Text\+Interpreter\textquotesingle{}, \textquotesingle{}\hyperlink{a00100_a66e032e6bf106a3a05fb033cce4141a9}{latex}\textquotesingle{})
+\item 
+\hyperlink{a00100_aea2a22e88db44fc95ff2349666eab45f}{set} (0,\textquotesingle{}defaultaxesfontname\textquotesingle{},\textquotesingle{}Times New Roman\textquotesingle{}) plot\+Dir
+\item 
+figure \hyperlink{a00100_a4563e54188162a00258468e4c35cd30c}{plot} (1\+:numel(\hyperlink{a00100_a03937bae300a959855cddd0d6d315fc0}{elapsed\+Time\+\_\+200\+Times400}), \hyperlink{a00100_a03937bae300a959855cddd0d6d315fc0}{elapsed\+Time\+\_\+200\+Times400}, \textquotesingle{}r-\/\textquotesingle{}, \textquotesingle{}Line\+Width\textquotesingle{}, \hyperlink{a00100_a76b83ba444571bd585a06a5e6740202e}{My\+Line\+Width})
+\item 
+hold on \hyperlink{a00100_a8c0f7bd65e593cfe31ad2a224c8776ce}{plot} (1\+:numel(\hyperlink{a00100_adb44ff1fb324f5ca58520511cca92ed7}{elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P}), \hyperlink{a00100_adb44ff1fb324f5ca58520511cca92ed7}{elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P}, \textquotesingle{}r-\/-\/\textquotesingle{}, \textquotesingle{}Line\+Width\textquotesingle{}, \hyperlink{a00100_a76b83ba444571bd585a06a5e6740202e}{My\+Line\+Width})
+\item 
+\hyperlink{a00100_a89f0e0f783696278c9b904d8ab9052aa}{plot} (1\+:numel(\hyperlink{a00100_ab5f5a5607349d43d137f2d3d9b6ac81f}{elapsed\+Time\+\_\+50\+Times100}), \hyperlink{a00100_ab5f5a5607349d43d137f2d3d9b6ac81f}{elapsed\+Time\+\_\+50\+Times100}, \textquotesingle{}b-\/\textquotesingle{}, \textquotesingle{}Line\+Width\textquotesingle{}, \hyperlink{a00100_a76b83ba444571bd585a06a5e6740202e}{My\+Line\+Width})
+\item 
+\hyperlink{a00100_a8e94e8cbeeb84bc0d82c00be8550d327}{plot} (1\+:numel(\hyperlink{a00100_a81a8ed9e2700c8561764b5a0bf578447}{elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P}), \hyperlink{a00100_a81a8ed9e2700c8561764b5a0bf578447}{elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P}, \textquotesingle{}b-\/-\/\textquotesingle{}, \textquotesingle{}Line\+Width\textquotesingle{}, \hyperlink{a00100_a76b83ba444571bd585a06a5e6740202e}{My\+Line\+Width})
+\item 
+\hyperlink{a00100_a59a6d27a9f99b9a4b296209d6b28c9bd}{plot} (1\+:numel(\hyperlink{a00100_a77a507e5a0b77cdca2f380c2a67dda92}{elapsed\+Time\+\_\+10\+Times10}), \hyperlink{a00100_a77a507e5a0b77cdca2f380c2a67dda92}{elapsed\+Time\+\_\+10\+Times10}, \textquotesingle{}g-\/\textquotesingle{}, \textquotesingle{}Line\+Width\textquotesingle{}, \hyperlink{a00100_a76b83ba444571bd585a06a5e6740202e}{My\+Line\+Width})
+\item 
+\hyperlink{a00100_af59f78b1aa20523e7fd963af6aba19ac}{plot} (1\+:numel(\hyperlink{a00100_abb7203de0010df4491d1db729b4985ac}{elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P}), \hyperlink{a00100_abb7203de0010df4491d1db729b4985ac}{elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P}, \textquotesingle{}g-\/-\/\textquotesingle{}, \textquotesingle{}Line\+Width\textquotesingle{}, \hyperlink{a00100_a76b83ba444571bd585a06a5e6740202e}{My\+Line\+Width})
+\item 
+\hyperlink{a00100_a5c84603e3a0c1eaf92f7b50ab7ccf7f2}{xlabel} (\textquotesingle{}Iterations\textquotesingle{}) ylabel(\textquotesingle{}Computational Time\mbox{[}s\mbox{]}\textquotesingle{}) \hyperlink{a00100_a6b5fce02da94e50d48e15f2c186a9525}{legend}(
+\item 
+northwest \hyperlink{a00100_a6b5fce02da94e50d48e15f2c186a9525}{legend} boxoff \hyperlink{a00100_ab3bb8d2ccba4f8c652d3aa7ea8cd0367}{title} (\textquotesingle{}Serial and parallel computational time after 1000 steps\textquotesingle{}) \hyperlink{a00107_adaccd24104cadc8933e48c3a5569e23f}{if}(\hyperlink{a00100_ae484b320b0f28c87f6742b7c5ee9e80d}{save\+Flag}) print(\textquotesingle{}-\/r600\textquotesingle{}
+\item 
+\hyperlink{a00100_a9a8e1837f52184441d209914b37780be}{board\+Cells}, \hyperlink{a00100_aa34a8c2af1a2f3a8758e70eafba9d319}{elapsed\+Time}(\+:, 1 \hyperlink{a00100_a76b83ba444571bd585a06a5e6740202e}{My\+Line\+Width} ()
+\item 
+hold on \hyperlink{a00100_ac7a35f0900e572fd6058bb3aae01992e}{plot} (\hyperlink{a00100_a9a8e1837f52184441d209914b37780be}{board\+Cells}, \hyperlink{a00100_aa34a8c2af1a2f3a8758e70eafba9d319}{elapsed\+Time}(\+:, 2), \textquotesingle{}bo\textquotesingle{}, \textquotesingle{}Line\+Width\textquotesingle{}, \hyperlink{a00100_a76b83ba444571bd585a06a5e6740202e}{My\+Line\+Width})
+\item 
+\hyperlink{a00100_a6b5fce02da94e50d48e15f2c186a9525}{legend} (\textquotesingle{}Serial\textquotesingle{},\textquotesingle{}Open\+M\+P\textquotesingle{},\textquotesingle{}\hyperlink{a00100_aecaf6a9545fa815deb4b8e64e144ce43}{Location}\textquotesingle{},\textquotesingle{}northwest\textquotesingle{}) legend boxoff \hyperlink{a00100_a9631c9680ea42ff07c77a814dbdc9052}{xlabel}(\textquotesingle{}Number of Cells\textquotesingle{}) ylabel(\textquotesingle{}Computational Time\mbox{[}s\mbox{]}\textquotesingle{}) \hyperlink{a00100_ab3bb8d2ccba4f8c652d3aa7ea8cd0367}{title}(\textquotesingle{}Comparison of serial and parallel computational time after 1000 steps\textquotesingle{}) \hyperlink{a00107_adaccd24104cadc8933e48c3a5569e23f}{if}(\hyperlink{a00100_ae484b320b0f28c87f6742b7c5ee9e80d}{save\+Flag}) print(\textquotesingle{}-\/r600\textquotesingle{}
+\item 
+hold on \hyperlink{a00100_a9631c9680ea42ff07c77a814dbdc9052}{xlabel} (\textquotesingle{}Number of Cells\textquotesingle{}) ylabel(\textquotesingle{}Open\+M\+P/Serial\textquotesingle{}) \hyperlink{a00100_ab3bb8d2ccba4f8c652d3aa7ea8cd0367}{title}(\textquotesingle{}Relative speed-\/up after 1000 steps\textquotesingle{}) \hyperlink{a00107_adaccd24104cadc8933e48c3a5569e23f}{if}(\hyperlink{a00100_ae484b320b0f28c87f6742b7c5ee9e80d}{save\+Flag}) print(\textquotesingle{}-\/r600\textquotesingle{}
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00100_a9a8e1837f52184441d209914b37780be}{board\+Cells}
+\item 
+\hyperlink{a00100_a8cc2e7240164328fdc3f0e5e21032c56}{N} = numel(\hyperlink{a00100_a9a8e1837f52184441d209914b37780be}{board\+Cells})
+\item 
+end \hyperlink{a00100_ab95225146f45d9e8e1089618cf68c6e1}{elapsed\+Time} = zeros(\hyperlink{a00100_a8cc2e7240164328fdc3f0e5e21032c56}{N},2)
+\item 
+for \hyperlink{a00100_a6f6ccfcf58b31cb6412107d9d5281426}{i}
+\item 
+\hyperlink{a00100_afdba98970961edb29f88241b9d99d890}{foo} = read\+Computational\+Time\+Of\+Board(\mbox{[}\textquotesingle{}Game\+History\+\_\+\textquotesingle{} board\+Sizes\{\hyperlink{a00107_a6f6ccfcf58b31cb6412107d9d5281426}{i}\} \textquotesingle{}\+\_\+\+Computational\+Time\+\_\+\+Open\+M\+P.\+txt\textquotesingle{}\mbox{]})
+\item 
+end \hyperlink{a00100_adb44ff1fb324f5ca58520511cca92ed7}{elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P} = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+200\+Times400\+\_\+\+Computational\+Time\+\_\+\+Open\+M\+P.\+txt\textquotesingle{})
+\item 
+\hyperlink{a00100_a03937bae300a959855cddd0d6d315fc0}{elapsed\+Time\+\_\+200\+Times400} = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+200\+Times400\+\_\+\+Computational\+Time.\+txt\textquotesingle{})
+\item 
+\hyperlink{a00100_a81a8ed9e2700c8561764b5a0bf578447}{elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P} = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+50\+Times100\+\_\+\+Computational\+Time\+\_\+\+Open\+M\+P.\+txt\textquotesingle{})
+\item 
+\hyperlink{a00100_ab5f5a5607349d43d137f2d3d9b6ac81f}{elapsed\+Time\+\_\+50\+Times100} = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+50\+Times100\+\_\+\+Computational\+Time.\+txt\textquotesingle{})
+\item 
+\hyperlink{a00100_abb7203de0010df4491d1db729b4985ac}{elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P} = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+10\+Times10\+\_\+\+Computational\+Time\+\_\+\+Open\+M\+P.\+txt\textquotesingle{})
+\item 
+\hyperlink{a00100_a77a507e5a0b77cdca2f380c2a67dda92}{elapsed\+Time\+\_\+10\+Times10} = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+10\+Times10\+\_\+\+Computational\+Time.\+txt\textquotesingle{})
+\item 
+\hyperlink{a00100_ade38533eb5b089781eff78d9eb5d1d3d}{default\+Axes\+Font\+Size}
+\item 
+\hyperlink{a00100_ae484b320b0f28c87f6742b7c5ee9e80d}{save\+Flag} = 1
+\item 
+\hyperlink{a00099_a090f64cc5f800295144741c9f4a82bd8}{close} all \hyperlink{a00100_a6cce1a930b797e0c16fc37e72611a982}{My\+Line\+Width} = 2
+\item 
+\hyperlink{a00100_a6d10479607daff38b7221efdedf24130}{interpreter}
+\item 
+\hyperlink{a00100_a66e032e6bf106a3a05fb033cce4141a9}{latex}
+\item 
+\hyperlink{a00100_aecaf6a9545fa815deb4b8e64e144ce43}{Location}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{a00100_a215005d36e08dd694707b52c8287c82c}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!elapsed\+Time@{elapsed\+Time}}
+\index{elapsed\+Time@{elapsed\+Time}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{elapsed\+Time}]{\setlength{\rightskip}{0pt plus 5cm}elapsed\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf i}}]{, }
+\item[{1}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a215005d36e08dd694707b52c8287c82c}
+\hypertarget{a00100_aa34a8c2af1a2f3a8758e70eafba9d319}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!elapsed\+Time@{elapsed\+Time}}
+\index{elapsed\+Time@{elapsed\+Time}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{elapsed\+Time}]{\setlength{\rightskip}{0pt plus 5cm}elapsed\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf i}}]{, }
+\item[{2}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_aa34a8c2af1a2f3a8758e70eafba9d319}
+\hypertarget{a00100_ae80046205ac111ac13350a8af924023c}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!evaluate\+Speed\+Up\+Of\+Open\+M\+P@{evaluate\+Speed\+Up\+Of\+Open\+M\+P}}
+\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P@{evaluate\+Speed\+Up\+Of\+Open\+M\+P}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{evaluate\+Speed\+Up\+Of\+Open\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}function evaluate\+Speed\+Up\+Of\+Open\+M\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00100_ae80046205ac111ac13350a8af924023c}
+\hypertarget{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!if@{if}}
+\index{if@{if}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{N$\sim$}]{ = {\ttfamily numel(boardSizes)}}
+\end{DoxyParamCaption}
+)}\label{a00100_a7dfde2690fc0e73598d08c98d98b42d9}
+\hypertarget{a00100_a6b5fce02da94e50d48e15f2c186a9525}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!legend@{legend}}
+\index{legend@{legend}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{legend}]{\setlength{\rightskip}{0pt plus 5cm}legend (
+\begin{DoxyParamCaption}
+\item[{\textquotesingle{}Serial\textquotesingle{}}]{, }
+\item[{\textquotesingle{}Open\+M\+P\textquotesingle{}}]{, }
+\item[{\textquotesingle{}{\bf Location}\textquotesingle{}}]{, }
+\item[{\textquotesingle{}northwest\textquotesingle{}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a6b5fce02da94e50d48e15f2c186a9525}
+\hypertarget{a00100_a76b83ba444571bd585a06a5e6740202e}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!My\+Line\+Width@{My\+Line\+Width}}
+\index{My\+Line\+Width@{My\+Line\+Width}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{My\+Line\+Width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf board\+Cells},{\bf elapsed\+Time}(\+:,1 My\+Line\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{a00100_a76b83ba444571bd585a06a5e6740202e}
+\hypertarget{a00100_a4563e54188162a00258468e4c35cd30c}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!plot@{plot}}
+\index{plot@{plot}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{plot}]{\setlength{\rightskip}{0pt plus 5cm}figure plot (
+\begin{DoxyParamCaption}
+\item[{1\+:}]{numelelapsed\+Time\+\_\+200\+Times400, }
+\item[{{\bf elapsed\+Time\+\_\+200\+Times400}}]{, }
+\item[{\textquotesingle{}r-\/\textquotesingle{}}]{, }
+\item[{\textquotesingle{}Line\+Width\textquotesingle{}}]{, }
+\item[{{\bf My\+Line\+Width}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a4563e54188162a00258468e4c35cd30c}
+\hypertarget{a00100_a8c0f7bd65e593cfe31ad2a224c8776ce}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!plot@{plot}}
+\index{plot@{plot}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{plot}]{\setlength{\rightskip}{0pt plus 5cm}hold on plot (
+\begin{DoxyParamCaption}
+\item[{1\+:}]{numelelapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P, }
+\item[{{\bf elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P}}]{, }
+\item[{\textquotesingle{}r-\/-\/\textquotesingle{}}]{, }
+\item[{\textquotesingle{}Line\+Width\textquotesingle{}}]{, }
+\item[{{\bf My\+Line\+Width}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a8c0f7bd65e593cfe31ad2a224c8776ce}
+\hypertarget{a00100_a89f0e0f783696278c9b904d8ab9052aa}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!plot@{plot}}
+\index{plot@{plot}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{plot}]{\setlength{\rightskip}{0pt plus 5cm}plot (
+\begin{DoxyParamCaption}
+\item[{1\+:}]{numelelapsed\+Time\+\_\+50\+Times100, }
+\item[{{\bf elapsed\+Time\+\_\+50\+Times100}}]{, }
+\item[{\textquotesingle{}b-\/\textquotesingle{}}]{, }
+\item[{\textquotesingle{}Line\+Width\textquotesingle{}}]{, }
+\item[{{\bf My\+Line\+Width}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a89f0e0f783696278c9b904d8ab9052aa}
+\hypertarget{a00100_a8e94e8cbeeb84bc0d82c00be8550d327}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!plot@{plot}}
+\index{plot@{plot}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{plot}]{\setlength{\rightskip}{0pt plus 5cm}plot (
+\begin{DoxyParamCaption}
+\item[{1\+:}]{numelelapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P, }
+\item[{{\bf elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P}}]{, }
+\item[{\textquotesingle{}b-\/-\/\textquotesingle{}}]{, }
+\item[{\textquotesingle{}Line\+Width\textquotesingle{}}]{, }
+\item[{{\bf My\+Line\+Width}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a8e94e8cbeeb84bc0d82c00be8550d327}
+\hypertarget{a00100_a59a6d27a9f99b9a4b296209d6b28c9bd}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!plot@{plot}}
+\index{plot@{plot}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{plot}]{\setlength{\rightskip}{0pt plus 5cm}plot (
+\begin{DoxyParamCaption}
+\item[{1\+:}]{numelelapsed\+Time\+\_\+10\+Times10, }
+\item[{{\bf elapsed\+Time\+\_\+10\+Times10}}]{, }
+\item[{\textquotesingle{}g-\/\textquotesingle{}}]{, }
+\item[{\textquotesingle{}Line\+Width\textquotesingle{}}]{, }
+\item[{{\bf My\+Line\+Width}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a59a6d27a9f99b9a4b296209d6b28c9bd}
+\hypertarget{a00100_af59f78b1aa20523e7fd963af6aba19ac}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!plot@{plot}}
+\index{plot@{plot}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{plot}]{\setlength{\rightskip}{0pt plus 5cm}plot (
+\begin{DoxyParamCaption}
+\item[{1\+:}]{numelelapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P, }
+\item[{{\bf elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P}}]{, }
+\item[{\textquotesingle{}g-\/-\/\textquotesingle{}}]{, }
+\item[{\textquotesingle{}Line\+Width\textquotesingle{}}]{, }
+\item[{{\bf My\+Line\+Width}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_af59f78b1aa20523e7fd963af6aba19ac}
+\hypertarget{a00100_ac7a35f0900e572fd6058bb3aae01992e}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!plot@{plot}}
+\index{plot@{plot}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{plot}]{\setlength{\rightskip}{0pt plus 5cm}hold on plot (
+\begin{DoxyParamCaption}
+\item[{{\bf board\+Cells}}]{, }
+\item[{{\bf elapsed\+Time}(\+:, 2)}]{, }
+\item[{\textquotesingle{}bo\textquotesingle{}}]{, }
+\item[{\textquotesingle{}Line\+Width\textquotesingle{}}]{, }
+\item[{{\bf My\+Line\+Width}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_ac7a35f0900e572fd6058bb3aae01992e}
+\hypertarget{a00100_a9f5744fcd94781c07dbabae4c710c761}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!set@{set}}
+\index{set@{set}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{set}]{\setlength{\rightskip}{0pt plus 5cm}set (
+\begin{DoxyParamCaption}
+\item[{0}]{, }
+\item[{\textquotesingle{}default\+Text\+Font\+Size\textquotesingle{}}]{, }
+\item[{20}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a9f5744fcd94781c07dbabae4c710c761}
+\hypertarget{a00100_a2460df035eb610714a3c3a48c9f03060}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!set@{set}}
+\index{set@{set}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{set}]{\setlength{\rightskip}{0pt plus 5cm}set (
+\begin{DoxyParamCaption}
+\item[{0}]{, }
+\item[{\textquotesingle{}Default\+Legend\+Font\+Size\textquotesingle{}}]{, }
+\item[{22}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a2460df035eb610714a3c3a48c9f03060}
+\hypertarget{a00100_ac1d3cd781817f4aab3a30fa75caa8eb3}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!set@{set}}
+\index{set@{set}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{set}]{\setlength{\rightskip}{0pt plus 5cm}set (
+\begin{DoxyParamCaption}
+\item[{0}]{, }
+\item[{\textquotesingle{}default\+Text\+Interpreter\textquotesingle{}}]{, }
+\item[{\textquotesingle{}{\bf latex}\textquotesingle{}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_ac1d3cd781817f4aab3a30fa75caa8eb3}
+\hypertarget{a00100_aea2a22e88db44fc95ff2349666eab45f}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!set@{set}}
+\index{set@{set}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{set}]{\setlength{\rightskip}{0pt plus 5cm}set (
+\begin{DoxyParamCaption}
+\item[{0}]{, }
+\item[{\textquotesingle{}defaultaxesfontname\textquotesingle{}}]{, }
+\item[{\textquotesingle{}Times New Roman\textquotesingle{}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_aea2a22e88db44fc95ff2349666eab45f}
+\hypertarget{a00100_ab3bb8d2ccba4f8c652d3aa7ea8cd0367}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!title@{title}}
+\index{title@{title}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{title}]{\setlength{\rightskip}{0pt plus 5cm}northwest {\bf legend} boxoff title (
+\begin{DoxyParamCaption}
+\item[{\textquotesingle{}Serial and parallel computational time after 1000 steps\textquotesingle{}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_ab3bb8d2ccba4f8c652d3aa7ea8cd0367}
+\hypertarget{a00100_a5c84603e3a0c1eaf92f7b50ab7ccf7f2}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{xlabel}]{\setlength{\rightskip}{0pt plus 5cm}xlabel (
+\begin{DoxyParamCaption}
+\item[{\textquotesingle{}Iterations\textquotesingle{}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a5c84603e3a0c1eaf92f7b50ab7ccf7f2}
+
+
+Definition at line 77 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_a9631c9680ea42ff07c77a814dbdc9052}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{xlabel}]{\setlength{\rightskip}{0pt plus 5cm}hold on xlabel (
+\begin{DoxyParamCaption}
+\item[{\textquotesingle{}Number of Cells\textquotesingle{}}]{}
+\end{DoxyParamCaption}
+)}\label{a00100_a9631c9680ea42ff07c77a814dbdc9052}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{a00100_a9a8e1837f52184441d209914b37780be}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!board\+Cells@{board\+Cells}}
+\index{board\+Cells@{board\+Cells}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{board\+Cells}]{\setlength{\rightskip}{0pt plus 5cm}board\+Cells}\label{a00100_a9a8e1837f52184441d209914b37780be}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= [...
+    100
+    200
+    500
+    1e3
+    5e3
+    10e3
+    20e3
+    40e3
+    60e3
+    80e3]
+\end{DoxyCode}
+
+
+Definition at line 16 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_ade38533eb5b089781eff78d9eb5d1d3d}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!default\+Axes\+Font\+Size@{default\+Axes\+Font\+Size}}
+\index{default\+Axes\+Font\+Size@{default\+Axes\+Font\+Size}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{default\+Axes\+Font\+Size}]{\setlength{\rightskip}{0pt plus 5cm}default\+Axes\+Font\+Size}\label{a00100_ade38533eb5b089781eff78d9eb5d1d3d}
+
+
+Definition at line 58 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_ab95225146f45d9e8e1089618cf68c6e1}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!elapsed\+Time@{elapsed\+Time}}
+\index{elapsed\+Time@{elapsed\+Time}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{elapsed\+Time}]{\setlength{\rightskip}{0pt plus 5cm}Post processing for unimportable {\bf data} No unimportable {\bf data} rules were applied during the so no post processing code is included To generate code which works for unimportable select unimportable cells in a {\bf file} and regenerate the script Allocate imported array to column variable names elapsed\+Time = zeros({\bf N},2)}\label{a00100_ab95225146f45d9e8e1089618cf68c6e1}
+
+
+Definition at line 34 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_a77a507e5a0b77cdca2f380c2a67dda92}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!elapsed\+Time\+\_\+10\+Times10@{elapsed\+Time\+\_\+10\+Times10}}
+\index{elapsed\+Time\+\_\+10\+Times10@{elapsed\+Time\+\_\+10\+Times10}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{elapsed\+Time\+\_\+10\+Times10}]{\setlength{\rightskip}{0pt plus 5cm}elapsed\+Time\+\_\+10\+Times10 = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+10\+Times10\+\_\+\+Computational\+Time.\+txt\textquotesingle{})}\label{a00100_a77a507e5a0b77cdca2f380c2a67dda92}
+
+
+Definition at line 52 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_abb7203de0010df4491d1db729b4985ac}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P@{elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P}}
+\index{elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P@{elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}elapsed\+Time\+\_\+10\+Times10\+\_\+\+Open\+M\+P = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+10\+Times10\+\_\+\+Computational\+Time\+\_\+\+Open\+M\+P.\+txt\textquotesingle{})}\label{a00100_abb7203de0010df4491d1db729b4985ac}
+
+
+Definition at line 51 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_a03937bae300a959855cddd0d6d315fc0}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!elapsed\+Time\+\_\+200\+Times400@{elapsed\+Time\+\_\+200\+Times400}}
+\index{elapsed\+Time\+\_\+200\+Times400@{elapsed\+Time\+\_\+200\+Times400}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{elapsed\+Time\+\_\+200\+Times400}]{\setlength{\rightskip}{0pt plus 5cm}elapsed\+Time\+\_\+200\+Times400 = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+200\+Times400\+\_\+\+Computational\+Time.\+txt\textquotesingle{})}\label{a00100_a03937bae300a959855cddd0d6d315fc0}
+
+
+Definition at line 46 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_adb44ff1fb324f5ca58520511cca92ed7}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P@{elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P}}
+\index{elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P@{elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}end elapsed\+Time\+\_\+200\+Times400\+\_\+\+Open\+M\+P = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+200\+Times400\+\_\+\+Computational\+Time\+\_\+\+Open\+M\+P.\+txt\textquotesingle{})}\label{a00100_adb44ff1fb324f5ca58520511cca92ed7}
+
+
+Definition at line 45 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_ab5f5a5607349d43d137f2d3d9b6ac81f}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!elapsed\+Time\+\_\+50\+Times100@{elapsed\+Time\+\_\+50\+Times100}}
+\index{elapsed\+Time\+\_\+50\+Times100@{elapsed\+Time\+\_\+50\+Times100}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{elapsed\+Time\+\_\+50\+Times100}]{\setlength{\rightskip}{0pt plus 5cm}elapsed\+Time\+\_\+50\+Times100 = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+50\+Times100\+\_\+\+Computational\+Time.\+txt\textquotesingle{})}\label{a00100_ab5f5a5607349d43d137f2d3d9b6ac81f}
+
+
+Definition at line 49 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_a81a8ed9e2700c8561764b5a0bf578447}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P@{elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P}}
+\index{elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P@{elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}elapsed\+Time\+\_\+50\+Times100\+\_\+\+Open\+M\+P = read\+Computational\+Time\+Of\+Board(\textquotesingle{}Game\+History\+\_\+50\+Times100\+\_\+\+Computational\+Time\+\_\+\+Open\+M\+P.\+txt\textquotesingle{})}\label{a00100_a81a8ed9e2700c8561764b5a0bf578447}
+
+
+Definition at line 48 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_afdba98970961edb29f88241b9d99d890}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!foo@{foo}}
+\index{foo@{foo}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{foo}]{\setlength{\rightskip}{0pt plus 5cm}foo = read\+Computational\+Time\+Of\+Board(\mbox{[}\textquotesingle{}Game\+History\+\_\+\textquotesingle{} board\+Sizes\{{\bf i}\} \textquotesingle{}\+\_\+\+Computational\+Time\+\_\+\+Open\+M\+P.\+txt\textquotesingle{}\mbox{]})}\label{a00100_afdba98970961edb29f88241b9d99d890}
+
+
+Definition at line 41 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_a6f6ccfcf58b31cb6412107d9d5281426}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!i@{i}}
+\index{i@{i}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{i}]{\setlength{\rightskip}{0pt plus 5cm}for i}\label{a00100_a6f6ccfcf58b31cb6412107d9d5281426}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=1:\hyperlink{a00100_a8cc2e7240164328fdc3f0e5e21032c56}{N}
+    disp(boardSizes\{\hyperlink{a00100_a6f6ccfcf58b31cb6412107d9d5281426}{i}\})
+    \hyperlink{a00100_afdba98970961edb29f88241b9d99d890}{foo} = readComputationalTimeOfBoard([\textcolor{stringliteral}{'GameHistory\_'} boardSizes\{\hyperlink{a00100_a6f6ccfcf58b31cb6412107d9d5281426}{i}\} \textcolor{stringliteral}{'\_ComputationalTime.txt'}])
+\end{DoxyCode}
+
+
+Definition at line 36 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_a6d10479607daff38b7221efdedf24130}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!interpreter@{interpreter}}
+\index{interpreter@{interpreter}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{interpreter}]{\setlength{\rightskip}{0pt plus 5cm}interpreter}\label{a00100_a6d10479607daff38b7221efdedf24130}
+
+
+Definition at line 83 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_a66e032e6bf106a3a05fb033cce4141a9}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!latex@{latex}}
+\index{latex@{latex}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{latex}]{\setlength{\rightskip}{0pt plus 5cm}latex}\label{a00100_a66e032e6bf106a3a05fb033cce4141a9}
+
+
+Definition at line 83 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_aecaf6a9545fa815deb4b8e64e144ce43}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!Location@{Location}}
+\index{Location@{Location}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{Location}]{\setlength{\rightskip}{0pt plus 5cm}Location}\label{a00100_aecaf6a9545fa815deb4b8e64e144ce43}
+
+
+Definition at line 83 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_a6cce1a930b797e0c16fc37e72611a982}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!My\+Line\+Width@{My\+Line\+Width}}
+\index{My\+Line\+Width@{My\+Line\+Width}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{My\+Line\+Width}]{\setlength{\rightskip}{0pt plus 5cm}\+: My\+Line\+Width = 2}\label{a00100_a6cce1a930b797e0c16fc37e72611a982}
+
+
+Definition at line 68 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_a8cc2e7240164328fdc3f0e5e21032c56}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!N@{N}}
+\index{N@{N}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{N}]{\setlength{\rightskip}{0pt plus 5cm}N = numel({\bf board\+Cells})}\label{a00100_a8cc2e7240164328fdc3f0e5e21032c56}
+
+
+Definition at line 28 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+
+\hypertarget{a00100_ae484b320b0f28c87f6742b7c5ee9e80d}{}\index{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}!save\+Flag@{save\+Flag}}
+\index{save\+Flag@{save\+Flag}!evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m@{evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m}}
+\paragraph[{save\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}save\+Flag = 1}\label{a00100_ae484b320b0f28c87f6742b7c5ee9e80d}
+
+
+Definition at line 64 of file evaluate\+Speed\+Up\+Of\+Open\+M\+P.\+m.
+

@@ -1,0 +1,192 @@
+\hypertarget{a00099}{}\subsection{create\+Video.\+m File Reference}
+\label{a00099}\index{create\+Video.\+m@{create\+Video.\+m}}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+function \hyperlink{a00099_a9db6f438a4447c1ad4956d8fc1924a36}{create\+Video} () dir
+\item 
+\hyperlink{a00099_ad133c1d4d5c6a212d68ee211b6cdd200}{open} (\hyperlink{a00099_a90c346df14c7ec8c77240e20732f2ac1}{output\+Video})
+\item 
+figure \hyperlink{a00099_ab0e1a129bba9d8649f7f060184ceaa1e}{imagesc} (1\+:\hyperlink{a00107_a74742cb5c8e2ac354a60cb73383d8176}{rows},\+:)
+\item 
+\hyperlink{a00099_a797333cf5a0813b58977150b073cb0ea}{colormap} (gray)
+\item 
+Capture figure s content \hyperlink{a00099_aaf1687c3c0df44c91804f17e3af61452}{write\+Video} (\hyperlink{a00099_a90c346df14c7ec8c77240e20732f2ac1}{output\+Video}, frame.\+cdata)
+\item 
+The actual pixel values are in cdata \hyperlink{a00099_afd04cafb8eb12e61829c971063bda801}{pause} (0.\+2)\%Just used to see the actual movie end \hyperlink{a00099_a090f64cc5f800295144741c9f4a82bd8}{close}(gcf)
+\item 
+\hyperlink{a00099_a090f64cc5f800295144741c9f4a82bd8}{close} (\hyperlink{a00099_a90c346df14c7ec8c77240e20732f2ac1}{output\+Video})
+\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00099_a2ff994e16bf9521154de4cf659a3b689}{filename} = \textquotesingle{}Game\+History\+\_\+200\+Times400.\+txt\textquotesingle{}
+\item 
+\hyperlink{a00099_a9d3d9048db16a7eee539e93e3618cbe7}{B} = dlmread(\mbox{[}dir \hyperlink{a00107_a4a32877dda2cdbef8aa5f01eacc16f0c}{filename}\mbox{]})
+\item 
+\hyperlink{a00099_a6093167544fa2acb408ee7af13b715c0}{number\+Of\+Boards} = \hyperlink{a00099_a9d3d9048db16a7eee539e93e3618cbe7}{B}(1,1)
+\item 
+invert colours of black and white \hyperlink{a00099_ab56a9d9a5877fa9746152fae2c6a74dc}{rows} = size(\hyperlink{a00099_a9d3d9048db16a7eee539e93e3618cbe7}{B},1)/\hyperlink{a00099_a6093167544fa2acb408ee7af13b715c0}{number\+Of\+Boards}
+\item 
+\hyperlink{a00099_aa0f5c667e1c3e498fdb0a33ed98dd988}{columns} = size(\hyperlink{a00099_a9d3d9048db16a7eee539e93e3618cbe7}{B},2)
+\item 
+\hyperlink{a00099_a90c346df14c7ec8c77240e20732f2ac1}{output\+Video} = Video\+Writer(\textquotesingle{}../Conways\+Game\+Of\+Life.\+avi\textquotesingle{})
+\item 
+\hyperlink{a00099_a90c346df14c7ec8c77240e20732f2ac1}{output\+Video} \hyperlink{a00099_a67157b1672f9243078fb788d8987bda8}{Frame\+Rate} = 10
+\item 
+\hyperlink{a00099_a90c346df14c7ec8c77240e20732f2ac1}{output\+Video} \hyperlink{a00099_ac6ff3e0e8f9b0c2916f1f686c39ea2af}{Quality} = 100
+\item 
+\hyperlink{a00099_a90c346df14c7ec8c77240e20732f2ac1}{output\+Video} \hyperlink{a00099_ab734dfc6b1d672d82e0a028d0a6fe4c2}{Height} = \hyperlink{a00107_a616e3ce2d5365d3d3c41f5d00d4a1985}{columns}$\ast$scale
+\item 
+\hyperlink{a00099_a90c346df14c7ec8c77240e20732f2ac1}{output\+Video} \hyperlink{a00099_a82f73784da270910a261ea2f2f89b249}{Width} = \hyperlink{a00107_a74742cb5c8e2ac354a60cb73383d8176}{rows}$\ast$scale
+\item 
+for \hyperlink{a00099_ac86694252f8dfdb19aaeadc4b7c342c6}{j}
+\item 
+\hyperlink{a00099_a943f49763dd36e31fc7ea8604fcad789}{frame} = getframe(gcf)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{a00099_a090f64cc5f800295144741c9f4a82bd8}{}\index{create\+Video.\+m@{create\+Video.\+m}!close@{close}}
+\index{close@{close}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{close}]{\setlength{\rightskip}{0pt plus 5cm}close (
+\begin{DoxyParamCaption}
+\item[{{\bf output\+Video}}]{}
+\end{DoxyParamCaption}
+)}\label{a00099_a090f64cc5f800295144741c9f4a82bd8}
+\hypertarget{a00099_a797333cf5a0813b58977150b073cb0ea}{}\index{create\+Video.\+m@{create\+Video.\+m}!colormap@{colormap}}
+\index{colormap@{colormap}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{colormap}]{\setlength{\rightskip}{0pt plus 5cm}colormap (
+\begin{DoxyParamCaption}
+\item[{gray}]{}
+\end{DoxyParamCaption}
+)}\label{a00099_a797333cf5a0813b58977150b073cb0ea}
+\hypertarget{a00099_a9db6f438a4447c1ad4956d8fc1924a36}{}\index{create\+Video.\+m@{create\+Video.\+m}!create\+Video@{create\+Video}}
+\index{create\+Video@{create\+Video}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{create\+Video}]{\setlength{\rightskip}{0pt plus 5cm}function create\+Video (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00099_a9db6f438a4447c1ad4956d8fc1924a36}
+\hypertarget{a00099_ab0e1a129bba9d8649f7f060184ceaa1e}{}\index{create\+Video.\+m@{create\+Video.\+m}!imagesc@{imagesc}}
+\index{imagesc@{imagesc}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{imagesc}]{\setlength{\rightskip}{0pt plus 5cm}figure imagesc (
+\begin{DoxyParamCaption}
+\item[{1\+:{\bf rows}}]{, }
+\item[{\+:}]{}
+\end{DoxyParamCaption}
+)}\label{a00099_ab0e1a129bba9d8649f7f060184ceaa1e}
+\hypertarget{a00099_ad133c1d4d5c6a212d68ee211b6cdd200}{}\index{create\+Video.\+m@{create\+Video.\+m}!open@{open}}
+\index{open@{open}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{open}]{\setlength{\rightskip}{0pt plus 5cm}open (
+\begin{DoxyParamCaption}
+\item[{{\bf output\+Video}}]{}
+\end{DoxyParamCaption}
+)}\label{a00099_ad133c1d4d5c6a212d68ee211b6cdd200}
+\hypertarget{a00099_afd04cafb8eb12e61829c971063bda801}{}\index{create\+Video.\+m@{create\+Video.\+m}!pause@{pause}}
+\index{pause@{pause}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{pause}]{\setlength{\rightskip}{0pt plus 5cm}The actual pixel values are in cdata pause (
+\begin{DoxyParamCaption}
+\item[{0.}]{2}
+\end{DoxyParamCaption}
+)}\label{a00099_afd04cafb8eb12e61829c971063bda801}
+\hypertarget{a00099_aaf1687c3c0df44c91804f17e3af61452}{}\index{create\+Video.\+m@{create\+Video.\+m}!write\+Video@{write\+Video}}
+\index{write\+Video@{write\+Video}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{write\+Video}]{\setlength{\rightskip}{0pt plus 5cm}Capture figure s content write\+Video (
+\begin{DoxyParamCaption}
+\item[{{\bf output\+Video}}]{, }
+\item[{frame.}]{cdata}
+\end{DoxyParamCaption}
+)}\label{a00099_aaf1687c3c0df44c91804f17e3af61452}
+
+
+\subsubsection{Variable Documentation}
+\hypertarget{a00099_a9d3d9048db16a7eee539e93e3618cbe7}{}\index{create\+Video.\+m@{create\+Video.\+m}!B@{B}}
+\index{B@{B}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{B}]{\setlength{\rightskip}{0pt plus 5cm}B = dlmread(\mbox{[}dir {\bf filename}\mbox{]})}\label{a00099_a9d3d9048db16a7eee539e93e3618cbe7}
+
+
+Definition at line 6 of file create\+Video.\+m.
+
+\hypertarget{a00099_aa0f5c667e1c3e498fdb0a33ed98dd988}{}\index{create\+Video.\+m@{create\+Video.\+m}!columns@{columns}}
+\index{columns@{columns}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{columns}]{\setlength{\rightskip}{0pt plus 5cm}$\ast$$\ast$$\ast$Generate numbered board for unit columns = size({\bf B},2)}\label{a00099_aa0f5c667e1c3e498fdb0a33ed98dd988}
+
+
+Definition at line 14 of file create\+Video.\+m.
+
+\hypertarget{a00099_a2ff994e16bf9521154de4cf659a3b689}{}\index{create\+Video.\+m@{create\+Video.\+m}!filename@{filename}}
+\index{filename@{filename}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{filename}]{\setlength{\rightskip}{0pt plus 5cm}filename = \textquotesingle{}Game\+History\+\_\+200\+Times400.\+txt\textquotesingle{}}\label{a00099_a2ff994e16bf9521154de4cf659a3b689}
+
+
+Definition at line 4 of file create\+Video.\+m.
+
+\hypertarget{a00099_a943f49763dd36e31fc7ea8604fcad789}{}\index{create\+Video.\+m@{create\+Video.\+m}!frame@{frame}}
+\index{frame@{frame}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{frame}]{\setlength{\rightskip}{0pt plus 5cm}frame = getframe(gcf)}\label{a00099_a943f49763dd36e31fc7ea8604fcad789}
+
+
+Definition at line 30 of file create\+Video.\+m.
+
+\hypertarget{a00099_a67157b1672f9243078fb788d8987bda8}{}\index{create\+Video.\+m@{create\+Video.\+m}!Frame\+Rate@{Frame\+Rate}}
+\index{Frame\+Rate@{Frame\+Rate}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{Frame\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf output\+Video} Frame\+Rate = 10}\label{a00099_a67157b1672f9243078fb788d8987bda8}
+
+
+Definition at line 17 of file create\+Video.\+m.
+
+\hypertarget{a00099_ab734dfc6b1d672d82e0a028d0a6fe4c2}{}\index{create\+Video.\+m@{create\+Video.\+m}!Height@{Height}}
+\index{Height@{Height}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{Height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf output\+Video} Height = {\bf columns}$\ast$scale}\label{a00099_ab734dfc6b1d672d82e0a028d0a6fe4c2}
+
+
+Definition at line 19 of file create\+Video.\+m.
+
+\hypertarget{a00099_ac86694252f8dfdb19aaeadc4b7c342c6}{}\index{create\+Video.\+m@{create\+Video.\+m}!j@{j}}
+\index{j@{j}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{j}]{\setlength{\rightskip}{0pt plus 5cm}for j}\label{a00099_ac86694252f8dfdb19aaeadc4b7c342c6}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= 1:\hyperlink{a00099_a6093167544fa2acb408ee7af13b715c0}{numberOfBoards}
+    fig=\hyperlink{a00099_ab0e1a129bba9d8649f7f060184ceaa1e}{imagesc}(\hyperlink{a00099_a9d3d9048db16a7eee539e93e3618cbe7}{B}((\hyperlink{a00099_ac86694252f8dfdb19aaeadc4b7c342c6}{j}-1)*\hyperlink{a00099_ab56a9d9a5877fa9746152fae2c6a74dc}{rows}+1 : \hyperlink{a00099_ac86694252f8dfdb19aaeadc4b7c342c6}{j}*\hyperlink{a00099_ab56a9d9a5877fa9746152fae2c6a74dc}{rows}, :))
+\end{DoxyCode}
+
+
+Definition at line 26 of file create\+Video.\+m.
+
+\hypertarget{a00099_a6093167544fa2acb408ee7af13b715c0}{}\index{create\+Video.\+m@{create\+Video.\+m}!number\+Of\+Boards@{number\+Of\+Boards}}
+\index{number\+Of\+Boards@{number\+Of\+Boards}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{number\+Of\+Boards}]{\setlength{\rightskip}{0pt plus 5cm}number\+Of\+Boards = {\bf B}(1,1)}\label{a00099_a6093167544fa2acb408ee7af13b715c0}
+
+
+Definition at line 8 of file create\+Video.\+m.
+
+\hypertarget{a00099_a90c346df14c7ec8c77240e20732f2ac1}{}\index{create\+Video.\+m@{create\+Video.\+m}!output\+Video@{output\+Video}}
+\index{output\+Video@{output\+Video}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{output\+Video}]{\setlength{\rightskip}{0pt plus 5cm}output\+Video = Video\+Writer(\textquotesingle{}../Conways\+Game\+Of\+Life.\+avi\textquotesingle{})}\label{a00099_a90c346df14c7ec8c77240e20732f2ac1}
+
+
+Definition at line 16 of file create\+Video.\+m.
+
+\hypertarget{a00099_ac6ff3e0e8f9b0c2916f1f686c39ea2af}{}\index{create\+Video.\+m@{create\+Video.\+m}!Quality@{Quality}}
+\index{Quality@{Quality}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{Quality}]{\setlength{\rightskip}{0pt plus 5cm}{\bf output\+Video} Quality = 100}\label{a00099_ac6ff3e0e8f9b0c2916f1f686c39ea2af}
+
+
+Definition at line 18 of file create\+Video.\+m.
+
+\hypertarget{a00099_ab56a9d9a5877fa9746152fae2c6a74dc}{}\index{create\+Video.\+m@{create\+Video.\+m}!rows@{rows}}
+\index{rows@{rows}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{rows}]{\setlength{\rightskip}{0pt plus 5cm}invert colours of black and white rows = size({\bf B},1)/{\bf number\+Of\+Boards}}\label{a00099_ab56a9d9a5877fa9746152fae2c6a74dc}
+
+
+Definition at line 13 of file create\+Video.\+m.
+
+\hypertarget{a00099_a82f73784da270910a261ea2f2f89b249}{}\index{create\+Video.\+m@{create\+Video.\+m}!Width@{Width}}
+\index{Width@{Width}!create\+Video.\+m@{create\+Video.\+m}}
+\paragraph[{Width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf output\+Video} Width = {\bf rows}$\ast$scale}\label{a00099_a82f73784da270910a261ea2f2f89b249}
+
+
+Definition at line 20 of file create\+Video.\+m.
+

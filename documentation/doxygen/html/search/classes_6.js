@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['icontext',['IContext',['../a00031.html',1,'Catch']]],
+  ['iexceptiontranslator',['IExceptionTranslator',['../a00032.html',1,'Catch']]],
+  ['iexceptiontranslatorregistry',['IExceptionTranslatorRegistry',['../a00033.html',1,'Catch']]],
+  ['igenerator',['IGenerator',['../a00034.html',1,'Catch']]],
+  ['igeneratorinfo',['IGeneratorInfo',['../a00035.html',1,'Catch']]],
+  ['igeneratorsfortest',['IGeneratorsForTest',['../a00036.html',1,'Catch']]],
+  ['imutablecontext',['IMutableContext',['../a00037.html',1,'Catch']]],
+  ['imutableregistryhub',['IMutableRegistryHub',['../a00038.html',1,'Catch']]],
+  ['iregistryhub',['IRegistryHub',['../a00039.html',1,'Catch']]],
+  ['iresultcapture',['IResultCapture',['../a00040.html',1,'Catch']]],
+  ['irunner',['IRunner',['../a00041.html',1,'Catch']]],
+  ['ishared',['IShared',['../a00042.html',1,'Catch']]],
+  ['isstreaminsertable',['IsStreamInsertable',['../a00043.html',1,'Catch::Detail']]],
+  ['itagaliasregistry',['ITagAliasRegistry',['../a00044.html',1,'Catch']]],
+  ['itestcase',['ITestCase',['../a00045.html',1,'Catch']]],
+  ['itestcaseregistry',['ITestCaseRegistry',['../a00046.html',1,'Catch']]]
+];

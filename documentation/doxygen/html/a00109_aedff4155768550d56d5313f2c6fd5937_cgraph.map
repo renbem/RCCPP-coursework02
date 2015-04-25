@@ -1,0 +1,6 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$a00009.html#a4ec848a39465f40ccb1e371f6eba10d9" title="Board::getRows" alt="" coords="187,5,303,31"/>
+<area shape="rect" id="node3" href="$a00009.html#a506e819879ada7d016090c0c3f752e2c" title="Board::getColumns" alt="" coords="177,55,313,80"/>
+<area shape="rect" id="node4" href="$a00009.html#aba3e60929ecd1a1867118e907c2078af" title="Board::determineNeighbour\lCells" alt="" coords="152,104,338,143"/>
+<area shape="rect" id="node5" href="$a00109.html#a5e575afd978c261dd5973eaa88c3620f" title="getElementFrom2D" alt="" coords="177,167,314,192"/>
+</map>

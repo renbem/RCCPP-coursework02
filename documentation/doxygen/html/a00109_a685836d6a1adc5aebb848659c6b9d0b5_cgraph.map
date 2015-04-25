@@ -1,0 +1,9 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$a00030.html#ae3e272f1096346f3a92cdacbaa0a42e3" title="Game::computeNextStep" alt="" coords="164,88,335,113"/>
+<area shape="rect" id="node3" href="$a00009.html#a4ec848a39465f40ccb1e371f6eba10d9" title="Board::getRows" alt="" coords="430,5,546,31"/>
+<area shape="rect" id="node4" href="$a00009.html#a506e819879ada7d016090c0c3f752e2c" title="Board::getColumns" alt="" coords="420,167,556,192"/>
+<area shape="rect" id="node7" href="$a00030.html#a29671bb1df74ec1a6f88df789c76e8d7" title="Game::getCurrentBoard" alt="" coords="167,189,331,215"/>
+<area shape="rect" id="node8" href="$a00009.html#a8246ade37e9231a374a5317a11843f7d" title="Board::getStatusOfBoardCell" alt="" coords="152,239,346,264"/>
+<area shape="rect" id="node5" href="$a00009.html#aba3e60929ecd1a1867118e907c2078af" title="Board::determineNeighbour\lCells" alt="" coords="395,55,580,93"/>
+<area shape="rect" id="node6" href="$a00009.html#a44a834577815ef24c8ca9aff48485207" title="Board::applyTransitionRules" alt="" coords="394,117,582,143"/>
+</map>

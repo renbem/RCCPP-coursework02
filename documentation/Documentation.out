@@ -1,0 +1,11 @@
+\BOOKMARK [0][-]{chapter.1}{Conways Game of Life}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Implementation}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Structure of project-folder}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Choice of design}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.2.1}{Parallelisation}{section.2.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.2}{Unit tests}{section.2.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Build, run and test}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.3.1}{Build instructions}{section.2.3}% 8
+\BOOKMARK [2][-]{subsection.2.3.2}{Running the programme}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.3}{Run unit tests}{section.2.3}% 10
+\BOOKMARK [1][-]{section.2.4}{Results}{chapter.2}% 11

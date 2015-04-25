@@ -1,0 +1,355 @@
+\hypertarget{a00120}{}\subsection{Catch\+:\+:Internal Namespace Reference}
+\label{a00120}\index{Catch\+::\+Internal@{Catch\+::\+Internal}}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{a00018}{Evaluator}
+\item 
+struct \hyperlink{a00019}{Evaluator$<$ T1, T2, Is\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00020}{Evaluator$<$ T1, T2, Is\+Greater\+Than $>$}
+\item 
+struct \hyperlink{a00021}{Evaluator$<$ T1, T2, Is\+Greater\+Than\+Or\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00022}{Evaluator$<$ T1, T2, Is\+Less\+Than $>$}
+\item 
+struct \hyperlink{a00023}{Evaluator$<$ T1, T2, Is\+Less\+Than\+Or\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00024}{Evaluator$<$ T1, T2, Is\+Not\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00056}{Operator\+Traits}
+\item 
+struct \hyperlink{a00057}{Operator\+Traits$<$ Is\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00058}{Operator\+Traits$<$ Is\+Greater\+Than $>$}
+\item 
+struct \hyperlink{a00059}{Operator\+Traits$<$ Is\+Greater\+Than\+Or\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00060}{Operator\+Traits$<$ Is\+Less\+Than $>$}
+\item 
+struct \hyperlink{a00061}{Operator\+Traits$<$ Is\+Less\+Than\+Or\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00062}{Operator\+Traits$<$ Is\+Not\+Equal\+To $>$}
+\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00120_ae3f96598a7858155750bf38e7295d83e}{Operator} \{ \\*
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{Is\+Equal\+To}, 
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{Is\+Not\+Equal\+To}, 
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}{Is\+Less\+Than}, 
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}{Is\+Greater\+Than}, 
+\\*
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}{Is\+Less\+Than\+Or\+Equal\+To}, 
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}{Is\+Greater\+Than\+Or\+Equal\+To}
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \hyperlink{a00120_adde98c1a650e94615e2b37ab0b3734e2}{op\+Cast} (T const \&\hyperlink{a00107_aaccc9105df5383111407fd5b41255e23}{t})
+\item 
+{\footnotesize template$<$Operator Op, typename T1 , typename T2 $>$ }\\bool \hyperlink{a00120_a3849d993997f2b708281ff02e77dfecf}{apply\+Evaluator} (T1 const \&lhs, T2 const \&rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T1 , typename T2 $>$ }\\bool \hyperlink{a00120_a64ae04769c4583b9d4027c792b496c7d}{compare} (T1 const \&lhs, T2 const \&rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a171aec1826898b877980a2b15fe5f735}{compare} (unsigned int lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_aa2698c33ec87b16aff5c844165483a7a}{compare} (unsigned long lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_ad68724393ee3d7629001a2997f6134cc}{compare} (unsigned char lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_ac2af7b6757f9bb3539bb78acff5c4649}{compare} (unsigned int lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_ace20062a489a8a7049fe224d62e644a7}{compare} (unsigned long lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a640e0cce9260a912842bee58db501dc5}{compare} (unsigned char lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a17c92ed4b6d88a9f8bbcbc52544fe40f}{compare} (int lhs, unsigned int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_aac7a6452ed0d324031ceb7b4f3a3b61c}{compare} (int lhs, unsigned long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a7e82d987f62b9822107027c72a55fa6b}{compare} (int lhs, unsigned char rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a0b4783ede1901e5c1baf8ff909bcce8d}{compare} (long lhs, unsigned int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_ae9aec44a08d9cbb0d3dd46d438b50d2c}{compare} (long lhs, unsigned long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a79664b5f5f497fba57bd156e098de1f2}{compare} (long lhs, unsigned char rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{a00120_a829570ad9e724c687aa42190a696032b}{compare} (long lhs, T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{a00120_a3f89c65fdb06aa7b648c5acf0ca107a9}{compare} (T $\ast$lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{a00120_a4f30c29e4adb62c7e209e5b988e59397}{compare} (int lhs, T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{a00120_a95361ddae55c9a390e6510bdadccb1fc}{compare} (T $\ast$lhs, int rhs)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Enumeration Type Documentation}
+\hypertarget{a00120_ae3f96598a7858155750bf38e7295d83e}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!Operator@{Operator}}
+\index{Operator@{Operator}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{Operator}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Catch\+::\+Internal\+::\+Operator}}\label{a00120_ae3f96598a7858155750bf38e7295d83e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Is\+Equal\+To@{Is\+Equal\+To}!Catch\+::\+Internal@{Catch\+::\+Internal}}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!Is\+Equal\+To@{Is\+Equal\+To}}\item[{\em 
+\hypertarget{a00120_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{}Is\+Equal\+To\label{a00120_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}
+}]\index{Is\+Not\+Equal\+To@{Is\+Not\+Equal\+To}!Catch\+::\+Internal@{Catch\+::\+Internal}}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!Is\+Not\+Equal\+To@{Is\+Not\+Equal\+To}}\item[{\em 
+\hypertarget{a00120_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{}Is\+Not\+Equal\+To\label{a00120_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}
+}]\index{Is\+Less\+Than@{Is\+Less\+Than}!Catch\+::\+Internal@{Catch\+::\+Internal}}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!Is\+Less\+Than@{Is\+Less\+Than}}\item[{\em 
+\hypertarget{a00120_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}{}Is\+Less\+Than\label{a00120_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}
+}]\index{Is\+Greater\+Than@{Is\+Greater\+Than}!Catch\+::\+Internal@{Catch\+::\+Internal}}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!Is\+Greater\+Than@{Is\+Greater\+Than}}\item[{\em 
+\hypertarget{a00120_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}{}Is\+Greater\+Than\label{a00120_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}
+}]\index{Is\+Less\+Than\+Or\+Equal\+To@{Is\+Less\+Than\+Or\+Equal\+To}!Catch\+::\+Internal@{Catch\+::\+Internal}}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!Is\+Less\+Than\+Or\+Equal\+To@{Is\+Less\+Than\+Or\+Equal\+To}}\item[{\em 
+\hypertarget{a00120_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}{}Is\+Less\+Than\+Or\+Equal\+To\label{a00120_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}
+}]\index{Is\+Greater\+Than\+Or\+Equal\+To@{Is\+Greater\+Than\+Or\+Equal\+To}!Catch\+::\+Internal@{Catch\+::\+Internal}}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!Is\+Greater\+Than\+Or\+Equal\+To@{Is\+Greater\+Than\+Or\+Equal\+To}}\item[{\em 
+\hypertarget{a00120_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}{}Is\+Greater\+Than\+Or\+Equal\+To\label{a00120_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 790 of file catch.\+hpp.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{a00120_a3849d993997f2b708281ff02e77dfecf}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!apply\+Evaluator@{apply\+Evaluator}}
+\index{apply\+Evaluator@{apply\+Evaluator}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{apply\+Evaluator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T1 , typename T2 $>$ bool Catch\+::\+Internal\+::apply\+Evaluator (
+\begin{DoxyParamCaption}
+\item[{T1 const \&}]{lhs, }
+\item[{T2 const \&}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a3849d993997f2b708281ff02e77dfecf}
+
+
+Definition at line 858 of file catch.\+hpp.
+
+\hypertarget{a00120_a64ae04769c4583b9d4027c792b496c7d}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T1 , typename T2 $>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{T1 const \&}]{lhs, }
+\item[{T2 const \&}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a64ae04769c4583b9d4027c792b496c7d}
+
+
+Definition at line 867 of file catch.\+hpp.
+
+\hypertarget{a00120_a171aec1826898b877980a2b15fe5f735}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a171aec1826898b877980a2b15fe5f735}
+
+
+Definition at line 872 of file catch.\+hpp.
+
+\hypertarget{a00120_aa2698c33ec87b16aff5c844165483a7a}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_aa2698c33ec87b16aff5c844165483a7a}
+
+
+Definition at line 875 of file catch.\+hpp.
+
+\hypertarget{a00120_ad68724393ee3d7629001a2997f6134cc}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_ad68724393ee3d7629001a2997f6134cc}
+
+
+Definition at line 878 of file catch.\+hpp.
+
+\hypertarget{a00120_ac2af7b6757f9bb3539bb78acff5c4649}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{lhs, }
+\item[{long}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_ac2af7b6757f9bb3539bb78acff5c4649}
+
+
+Definition at line 883 of file catch.\+hpp.
+
+\hypertarget{a00120_ace20062a489a8a7049fe224d62e644a7}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{lhs, }
+\item[{long}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_ace20062a489a8a7049fe224d62e644a7}
+
+
+Definition at line 886 of file catch.\+hpp.
+
+\hypertarget{a00120_a640e0cce9260a912842bee58db501dc5}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{lhs, }
+\item[{long}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a640e0cce9260a912842bee58db501dc5}
+
+
+Definition at line 889 of file catch.\+hpp.
+
+\hypertarget{a00120_a17c92ed4b6d88a9f8bbcbc52544fe40f}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{unsigned int}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a17c92ed4b6d88a9f8bbcbc52544fe40f}
+
+
+Definition at line 894 of file catch.\+hpp.
+
+\hypertarget{a00120_aac7a6452ed0d324031ceb7b4f3a3b61c}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{unsigned long}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_aac7a6452ed0d324031ceb7b4f3a3b61c}
+
+
+Definition at line 897 of file catch.\+hpp.
+
+\hypertarget{a00120_a7e82d987f62b9822107027c72a55fa6b}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{unsigned char}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a7e82d987f62b9822107027c72a55fa6b}
+
+
+Definition at line 900 of file catch.\+hpp.
+
+\hypertarget{a00120_a0b4783ede1901e5c1baf8ff909bcce8d}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{long}]{lhs, }
+\item[{unsigned int}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a0b4783ede1901e5c1baf8ff909bcce8d}
+
+
+Definition at line 905 of file catch.\+hpp.
+
+\hypertarget{a00120_ae9aec44a08d9cbb0d3dd46d438b50d2c}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{long}]{lhs, }
+\item[{unsigned long}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_ae9aec44a08d9cbb0d3dd46d438b50d2c}
+
+
+Definition at line 908 of file catch.\+hpp.
+
+\hypertarget{a00120_a79664b5f5f497fba57bd156e098de1f2}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op$>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{long}]{lhs, }
+\item[{unsigned char}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a79664b5f5f497fba57bd156e098de1f2}
+
+
+Definition at line 911 of file catch.\+hpp.
+
+\hypertarget{a00120_a829570ad9e724c687aa42190a696032b}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{long}]{lhs, }
+\item[{T $\ast$}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a829570ad9e724c687aa42190a696032b}
+
+
+Definition at line 916 of file catch.\+hpp.
+
+\hypertarget{a00120_a3f89c65fdb06aa7b648c5acf0ca107a9}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{lhs, }
+\item[{long}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a3f89c65fdb06aa7b648c5acf0ca107a9}
+
+
+Definition at line 919 of file catch.\+hpp.
+
+\hypertarget{a00120_a4f30c29e4adb62c7e209e5b988e59397}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{int}]{lhs, }
+\item[{T $\ast$}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a4f30c29e4adb62c7e209e5b988e59397}
+
+
+Definition at line 924 of file catch.\+hpp.
+
+\hypertarget{a00120_a95361ddae55c9a390e6510bdadccb1fc}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!compare@{compare}}
+\index{compare@{compare}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{compare}]{\setlength{\rightskip}{0pt plus 5cm}template$<$Operator Op, typename T $>$ bool Catch\+::\+Internal\+::compare (
+\begin{DoxyParamCaption}
+\item[{T $\ast$}]{lhs, }
+\item[{int}]{rhs}
+\end{DoxyParamCaption}
+)}\label{a00120_a95361ddae55c9a390e6510bdadccb1fc}
+
+
+Definition at line 927 of file catch.\+hpp.
+
+\hypertarget{a00120_adde98c1a650e94615e2b37ab0b3734e2}{}\index{Catch\+::\+Internal@{Catch\+::\+Internal}!op\+Cast@{op\+Cast}}
+\index{op\+Cast@{op\+Cast}!Catch\+::\+Internal@{Catch\+::\+Internal}}
+\paragraph[{op\+Cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T\& Catch\+::\+Internal\+::op\+Cast (
+\begin{DoxyParamCaption}
+\item[{T const \&}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{a00120_adde98c1a650e94615e2b37ab0b3734e2}
+
+
+Definition at line 808 of file catch.\+hpp.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00120_adde98c1a650e94615e2b37ab0b3734e2_icgraph}
+\end{center}
+\end{figure}
+
+

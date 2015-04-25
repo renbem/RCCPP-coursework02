@@ -1,0 +1,10 @@
+<map id="main.cc" name="main.cc">
+<area shape="rect" id="node5" href="$a00106.html" title="Game.h" alt="" coords="466,79,535,104"/>
+<area shape="rect" id="node12" href="$a00111.html" title="MyException.h" alt="" coords="847,239,956,264"/>
+<area shape="rect" id="node15" href="$a00116.html" title="writeComputationalTimeResults\lToFile.h" alt="" coords="624,152,833,191"/>
+<area shape="rect" id="node16" href="$a00113.html" title="readCommandLine.h" alt="" coords="917,159,1063,184"/>
+<area shape="rect" id="node6" href="$a00093.html" title="Board.h" alt="" coords="414,159,482,184"/>
+<area shape="rect" id="node11" href="$a00096.html" title="Cell.h" alt="" coords="353,239,408,264"/>
+<area shape="rect" id="node14" href="$a00102.html" title="ExceptionBoardAccess.h" alt="" coords="432,239,601,264"/>
+<area shape="rect" id="node18" href="$a00104.html" title="ExceptionCommandLine.h" alt="" coords="1032,239,1209,264"/>
+</map>

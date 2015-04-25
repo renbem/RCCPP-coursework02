@@ -1,0 +1,111 @@
+\documentclass[%
+	11pt,%
+	a4paper,%
+	twoside,
+	%bibtotoc,%
+	%liststotoc%
+	]{scrreprt}
+
+
+\input{00_Packages}
+\input{00_Macros}
+\input{00_Environments}
+
+%---Page Setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%---Define page:
+\usepackage{geometry}
+% % \geometry{hmargin=3cm, top=2cm, bottom=2cm, head=1cm, headsep=1cm, footskip=1.5cm, includeheadfoot,bindingoffset=1cm}
+\geometry{
+	a4paper,
+	textwidth = 17cm, 
+	top = 1.5cm, 
+	bottom = 2cm, 
+	head = 1cm, 
+	headsep = 1cm, 
+	footskip = 1.5cm, 
+	includeheadfoot, 
+	bindingoffset = 1.2cm
+} %bindinoffset=1.2cm, dann mittig
+% % includeheadfoot: Kopf-und Fusszeile in Seitenabmessungen miteinbezogen.
+
+%---Kopf- und Fusszeile:
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markboth{\thesection.\ #1}{}}
+\renewcommand{\subsectionmark}[1]{\markright{\thesubsection.\ #1}{}}
+% \lhead{\leftmark}
+% \chead{}
+% \rhead{\rightmark}
+% \lfoot{}
+% \cfoot{\thepage}
+% \rfoot{}
+
+\fancyhead{}
+\fancyhead[LE]{\slshape \leftmark} 	%bzw. LE,L0
+\fancyhead[RO]{\slshape \rightmark} %bzw. RO
+\fancyfoot[C]{\thepage}
+%\fancyfoot[LO]{Michael Ebner}
+
+
+% \usepackage{footnote}
+%notwendig um mittels \begin{savenotes}..\end{savenotes} footnotes in table-Umgebung am Seitenende auszugeben.
+%Besser am Ende laden, da es sonst zu Konflikten mit anderen Packages kommen kann.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Dokumentbeginn
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%---Kopf- und Fusszeile:-----------------------------------------------------------------------------------------------------
+\pagestyle{fancy}
+%\renewcommand{\sectionmark}[1]{\markboth{\thesection.\ #1}{}}
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection.\ #1}{}}
+\lhead{\leftmark}
+\chead{}
+\rhead{\rightmark}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+%---Dokumentbeschriftungen:
+\title{Parallel Implementation of the Game of Life}
+\subject{MPHYG002: Research Computing with C++}
+\author{Michael Ebner\\(Student Number: 15001660)}
+%\publishers{Betreut durch Dipl.-Ing. Andreas K\"orner}
+
+
+%---Title page(s)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{roman}
+\maketitle           
+\thispagestyle{empty} 
+\cleardoublepage
+
+\pagestyle{plain}     %keine Kopfzeile auf Inhaltsverzeichnisseite
+\tableofcontents      
+\cleardoublepage
+
+\pagestyle{fancy}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+%---Eigentlicher Dokumentbeginn:---------------------------------------------------------------------------------------------
+\input{01_ConwaysGameOfLife}
+\input{02_Implementation}
+
+\cleardoublepage
+
+%---Appendix*
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\appendix
+%\input{99_Appendix}
+
+\cleardoublepage
+
+%---Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{apalike} %other types: apalike, alpha, siam, abbrv, plain
+%\bibliography{Bibliography.bib}
+\end{document}

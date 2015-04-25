@@ -1,0 +1,262 @@
+\hypertarget{a00009}{}\subsection{Board Class Reference}
+\label{a00009}\index{Board@{Board}}
+
+
+Implementation of the board class.  
+
+
+
+
+{\ttfamily \#include $<$Board.\+h$>$}
+
+
+
+Collaboration diagram for Board\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{a00155}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00009_a3ecf2f7109b2a94636cf28ba866c97a8}{Board} (std\+::string infile)
+\begin{DoxyCompactList}\small\item\em Implementation of the board class. \end{DoxyCompactList}\item 
+\hyperlink{a00009_af73f45730119a1fd8f6670f53f959e68}{$\sim$\+Board} ()
+\item 
+void \hyperlink{a00009_ae14af0610917234d129937c7f13100ef}{disp\+Board} ()
+\item 
+void \hyperlink{a00009_ac3e0bf4f63d1954592ca8c5b2be0dded}{save\+Board} (std\+::string outfile)
+\item 
+unsigned int \hyperlink{a00009_a4ec848a39465f40ccb1e371f6eba10d9}{get\+Rows} ()
+\item 
+unsigned int \hyperlink{a00009_a506e819879ada7d016090c0c3f752e2c}{get\+Columns} ()
+\item 
+bool \hyperlink{a00009_a8246ade37e9231a374a5317a11843f7d}{get\+Status\+Of\+Board\+Cell} (unsigned int, unsigned int)
+\item 
+std\+::vector$<$ \hyperlink{a00011}{Cell} $>$ \hyperlink{a00009_aba3e60929ecd1a1867118e907c2078af}{determine\+Neighbour\+Cells} (unsigned int, unsigned int)
+\item 
+void \hyperlink{a00009_a44a834577815ef24c8ca9aff48485207}{apply\+Transition\+Rules} (unsigned int, unsigned int, std\+::vector$<$ \hyperlink{a00011}{Cell} $>$)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Implementation of the board class. 
+
+\hyperlink{a00009}{Board} represents the grid of the game.
+
+\begin{DoxyAuthor}{Author}
+Michael Ebner 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2015 
+\end{DoxyDate}
+
+
+Definition at line 27 of file Board.\+h.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{a00009_a3ecf2f7109b2a94636cf28ba866c97a8}{}\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\paragraph[{Board}]{\setlength{\rightskip}{0pt plus 5cm}Board\+::\+Board (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{infile}
+\end{DoxyParamCaption}
+)}\label{a00009_a3ecf2f7109b2a94636cf28ba866c97a8}
+
+
+Implementation of the board class. 
+
+\hyperlink{a00009}{Board} represents the grid of the game.
+
+\begin{DoxyAuthor}{Author}
+Michael Ebner 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2015 
+\end{DoxyDate}
+
+
+Definition at line 14 of file Board.\+cc.
+
+\hypertarget{a00009_af73f45730119a1fd8f6670f53f959e68}{}\index{Board@{Board}!````~Board@{$\sim$\+Board}}
+\index{````~Board@{$\sim$\+Board}!Board@{Board}}
+\paragraph[{$\sim$\+Board}]{\setlength{\rightskip}{0pt plus 5cm}Board\+::$\sim$\+Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00009_af73f45730119a1fd8f6670f53f959e68}
+
+
+Definition at line 30 of file Board.\+cc.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{a00009_a44a834577815ef24c8ca9aff48485207}{}\index{Board@{Board}!apply\+Transition\+Rules@{apply\+Transition\+Rules}}
+\index{apply\+Transition\+Rules@{apply\+Transition\+Rules}!Board@{Board}}
+\paragraph[{apply\+Transition\+Rules}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::apply\+Transition\+Rules (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{irow, }
+\item[{unsigned int}]{icol, }
+\item[{std\+::vector$<$ {\bf Cell} $>$}]{neighbour\+Cells}
+\end{DoxyParamCaption}
+)}\label{a00009_a44a834577815ef24c8ca9aff48485207}
+
+
+Definition at line 154 of file Board.\+cc.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00009_a44a834577815ef24c8ca9aff48485207_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00009_aba3e60929ecd1a1867118e907c2078af}{}\index{Board@{Board}!determine\+Neighbour\+Cells@{determine\+Neighbour\+Cells}}
+\index{determine\+Neighbour\+Cells@{determine\+Neighbour\+Cells}!Board@{Board}}
+\paragraph[{determine\+Neighbour\+Cells}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Cell} $>$ Board\+::determine\+Neighbour\+Cells (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{irow, }
+\item[{unsigned int}]{icol}
+\end{DoxyParamCaption}
+)}\label{a00009_aba3e60929ecd1a1867118e907c2078af}
+
+
+Definition at line 128 of file Board.\+cc.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00009_aba3e60929ecd1a1867118e907c2078af_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00009_ae14af0610917234d129937c7f13100ef}{}\index{Board@{Board}!disp\+Board@{disp\+Board}}
+\index{disp\+Board@{disp\+Board}!Board@{Board}}
+\paragraph[{disp\+Board}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::disp\+Board (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00009_ae14af0610917234d129937c7f13100ef}
+
+
+Definition at line 34 of file Board.\+cc.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00009_ae14af0610917234d129937c7f13100ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00009_a506e819879ada7d016090c0c3f752e2c}{}\index{Board@{Board}!get\+Columns@{get\+Columns}}
+\index{get\+Columns@{get\+Columns}!Board@{Board}}
+\paragraph[{get\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Board\+::get\+Columns (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00009_a506e819879ada7d016090c0c3f752e2c}
+
+
+Definition at line 70 of file Board.\+cc.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00009_a506e819879ada7d016090c0c3f752e2c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00009_a4ec848a39465f40ccb1e371f6eba10d9}{}\index{Board@{Board}!get\+Rows@{get\+Rows}}
+\index{get\+Rows@{get\+Rows}!Board@{Board}}
+\paragraph[{get\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Board\+::get\+Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{a00009_a4ec848a39465f40ccb1e371f6eba10d9}
+
+
+Definition at line 66 of file Board.\+cc.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00009_a4ec848a39465f40ccb1e371f6eba10d9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00009_a8246ade37e9231a374a5317a11843f7d}{}\index{Board@{Board}!get\+Status\+Of\+Board\+Cell@{get\+Status\+Of\+Board\+Cell}}
+\index{get\+Status\+Of\+Board\+Cell@{get\+Status\+Of\+Board\+Cell}!Board@{Board}}
+\paragraph[{get\+Status\+Of\+Board\+Cell}]{\setlength{\rightskip}{0pt plus 5cm}bool Board\+::get\+Status\+Of\+Board\+Cell (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{irow, }
+\item[{unsigned int}]{icol}
+\end{DoxyParamCaption}
+)}\label{a00009_a8246ade37e9231a374a5317a11843f7d}
+
+
+Definition at line 74 of file Board.\+cc.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{a00009_a8246ade37e9231a374a5317a11843f7d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00009_ac3e0bf4f63d1954592ca8c5b2be0dded}{}\index{Board@{Board}!save\+Board@{save\+Board}}
+\index{save\+Board@{save\+Board}!Board@{Board}}
+\paragraph[{save\+Board}]{\setlength{\rightskip}{0pt plus 5cm}void Board\+::save\+Board (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{outfile}
+\end{DoxyParamCaption}
+)}\label{a00009_ac3e0bf4f63d1954592ca8c5b2be0dded}
+
+
+Definition at line 46 of file Board.\+cc.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00009_ac3e0bf4f63d1954592ca8c5b2be0dded_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00093}{Board.\+h}\item 
+\hyperlink{a00092}{Board.\+cc}\end{DoxyCompactItemize}

@@ -1,0 +1,1842 @@
+\hypertarget{a00094}{}\subsection{catch.\+hpp File Reference}
+\label{a00094}\index{catch.\+hpp@{catch.\+hpp}}
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$cstddef$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+Include dependency graph for catch.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00129}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{a00130}
+\end{center}
+\end{figure}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{a00054}{Catch\+::\+Non\+Copyable}
+\item 
+class \hyperlink{a00070}{Catch\+::\+Safe\+Bool}
+\item 
+struct \hyperlink{a00064}{Catch\+::pluralise}
+\item 
+struct \hyperlink{a00075}{Catch\+::\+Source\+Line\+Info}
+\item 
+struct \hyperlink{a00077}{Catch\+::\+Stream\+End\+Stop}
+\item 
+class \hyperlink{a00055}{Catch\+::\+Not\+Implemented\+Exception}
+\item 
+struct \hyperlink{a00035}{Catch\+::\+I\+Generator\+Info}
+\item 
+struct \hyperlink{a00036}{Catch\+::\+I\+Generators\+For\+Test}
+\item 
+class \hyperlink{a00065}{Catch\+::\+Ptr$<$ T $>$}
+\item 
+struct \hyperlink{a00042}{Catch\+::\+I\+Shared}
+\item 
+struct \hyperlink{a00074}{Catch\+::\+Shared\+Impl$<$ T $>$}
+\item 
+struct \hyperlink{a00031}{Catch\+::\+I\+Context}
+\item 
+struct \hyperlink{a00037}{Catch\+::\+I\+Mutable\+Context}
+\item 
+struct \hyperlink{a00045}{Catch\+::\+I\+Test\+Case}
+\item 
+struct \hyperlink{a00046}{Catch\+::\+I\+Test\+Case\+Registry}
+\item 
+class \hyperlink{a00051}{Catch\+::\+Method\+Test\+Case$<$ C $>$}
+\item 
+struct \hyperlink{a00053}{Catch\+::\+Name\+And\+Desc}
+\item 
+struct \hyperlink{a00007}{Catch\+::\+Auto\+Reg}
+\item 
+struct \hyperlink{a00069}{Catch\+::\+Result\+Was}
+\item 
+struct \hyperlink{a00068}{Catch\+::\+Result\+Disposition}
+\item 
+struct \hyperlink{a00004}{Catch\+::\+Assertion\+Info}
+\item 
+struct \hyperlink{a00006}{Catch\+::\+Assertion\+Result\+Data}
+\item 
+class \hyperlink{a00005}{Catch\+::\+Assertion\+Result}
+\item 
+struct \hyperlink{a00087}{Catch\+::\+Test\+Failure\+Exception}
+\item 
+class \hyperlink{a00028}{Catch\+::\+Expression\+Lhs$<$ T $>$}
+\item 
+struct \hyperlink{a00014}{Catch\+::\+Copyable\+Stream}
+\item 
+class \hyperlink{a00067}{Catch\+::\+Result\+Builder}
+\item 
+struct \hyperlink{a00056}{Catch\+::\+Internal\+::\+Operator\+Traits$<$ Op $>$}
+\item 
+struct \hyperlink{a00057}{Catch\+::\+Internal\+::\+Operator\+Traits$<$ Is\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00062}{Catch\+::\+Internal\+::\+Operator\+Traits$<$ Is\+Not\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00060}{Catch\+::\+Internal\+::\+Operator\+Traits$<$ Is\+Less\+Than $>$}
+\item 
+struct \hyperlink{a00058}{Catch\+::\+Internal\+::\+Operator\+Traits$<$ Is\+Greater\+Than $>$}
+\item 
+struct \hyperlink{a00061}{Catch\+::\+Internal\+::\+Operator\+Traits$<$ Is\+Less\+Than\+Or\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00059}{Catch\+::\+Internal\+::\+Operator\+Traits$<$ Is\+Greater\+Than\+Or\+Equal\+To $>$}
+\item 
+class \hyperlink{a00018}{Catch\+::\+Internal\+::\+Evaluator$<$ T1, T2, Op $>$}
+\item 
+struct \hyperlink{a00019}{Catch\+::\+Internal\+::\+Evaluator$<$ T1, T2, Is\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00024}{Catch\+::\+Internal\+::\+Evaluator$<$ T1, T2, Is\+Not\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00022}{Catch\+::\+Internal\+::\+Evaluator$<$ T1, T2, Is\+Less\+Than $>$}
+\item 
+struct \hyperlink{a00020}{Catch\+::\+Internal\+::\+Evaluator$<$ T1, T2, Is\+Greater\+Than $>$}
+\item 
+struct \hyperlink{a00021}{Catch\+::\+Internal\+::\+Evaluator$<$ T1, T2, Is\+Greater\+Than\+Or\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00023}{Catch\+::\+Internal\+::\+Evaluator$<$ T1, T2, Is\+Less\+Than\+Or\+Equal\+To $>$}
+\item 
+struct \hyperlink{a00090}{Catch\+::\+True\+Type}
+\item 
+struct \hyperlink{a00029}{Catch\+::\+False\+Type}
+\item 
+struct \hyperlink{a00010}{Catch\+::\+Detail\+::\+Borg\+Type}
+\item 
+struct \hyperlink{a00043}{Catch\+::\+Detail\+::\+Is\+Stream\+Insertable$<$ T $>$}
+\item 
+struct \hyperlink{a00082}{Catch\+::\+Detail\+::\+String\+Maker\+Base$<$ C $>$}
+\item 
+struct \hyperlink{a00083}{Catch\+::\+Detail\+::\+String\+Maker\+Base$<$ true $>$}
+\item 
+struct \hyperlink{a00078}{Catch\+::\+String\+Maker$<$ T $>$}
+\item 
+struct \hyperlink{a00081}{Catch\+::\+String\+Maker$<$ T $\ast$ $>$}
+\item 
+struct \hyperlink{a00079}{Catch\+::\+String\+Maker$<$ R C\+::$\ast$ $>$}
+\item 
+struct \hyperlink{a00080}{Catch\+::\+String\+Maker$<$ std\+::vector$<$ T, Allocator $>$ $>$}
+\item 
+class \hyperlink{a00028}{Catch\+::\+Expression\+Lhs$<$ T $>$}
+\item 
+struct \hyperlink{a00050}{Catch\+::\+Message\+Info}
+\item 
+struct \hyperlink{a00049}{Catch\+::\+Message\+Builder}
+\item 
+class \hyperlink{a00071}{Catch\+::\+Scoped\+Message}
+\item 
+struct \hyperlink{a00040}{Catch\+::\+I\+Result\+Capture}
+\item 
+struct \hyperlink{a00041}{Catch\+::\+I\+Runner}
+\item 
+struct \hyperlink{a00073}{Catch\+::\+Section\+Info}
+\item 
+struct \hyperlink{a00015}{Catch\+::\+Counts}
+\item 
+struct \hyperlink{a00089}{Catch\+::\+Totals}
+\item 
+class \hyperlink{a00088}{Catch\+::\+Timer}
+\item 
+class \hyperlink{a00072}{Catch\+::\+Section}
+\item 
+struct \hyperlink{a00034}{Catch\+::\+I\+Generator$<$ T $>$}
+\item 
+class \hyperlink{a00008}{Catch\+::\+Between\+Generator$<$ T $>$}
+\item 
+class \hyperlink{a00091}{Catch\+::\+Values\+Generator$<$ T $>$}
+\item 
+class \hyperlink{a00012}{Catch\+::\+Composite\+Generator$<$ T $>$}
+\item 
+struct \hyperlink{a00039}{Catch\+::\+I\+Registry\+Hub}
+\item 
+struct \hyperlink{a00038}{Catch\+::\+I\+Mutable\+Registry\+Hub}
+\item 
+struct \hyperlink{a00032}{Catch\+::\+I\+Exception\+Translator}
+\item 
+struct \hyperlink{a00033}{Catch\+::\+I\+Exception\+Translator\+Registry}
+\item 
+class \hyperlink{a00027}{Catch\+::\+Exception\+Translator\+Registrar}
+\item 
+class \hyperlink{a00003}{Catch\+::\+Detail\+::\+Approx}
+\item 
+struct \hyperlink{a00047}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher$<$ Expression\+T $>$}
+\item 
+struct \hyperlink{a00048}{Catch\+::\+Matchers\+::\+Impl\+::\+Matcher\+Impl$<$ Derived\+T, Expression\+T $>$}
+\item 
+class \hyperlink{a00001}{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+All\+Of$<$ Expression\+T $>$}
+\item 
+class \hyperlink{a00002}{Catch\+::\+Matchers\+::\+Impl\+::\+Generic\+::\+Any\+Of$<$ Expression\+T $>$}
+\item 
+struct \hyperlink{a00017}{Catch\+::\+Matchers\+::\+Impl\+::\+Std\+String\+::\+Equals}
+\item 
+struct \hyperlink{a00013}{Catch\+::\+Matchers\+::\+Impl\+::\+Std\+String\+::\+Contains}
+\item 
+struct \hyperlink{a00076}{Catch\+::\+Matchers\+::\+Impl\+::\+Std\+String\+::\+Starts\+With}
+\item 
+struct \hyperlink{a00016}{Catch\+::\+Matchers\+::\+Impl\+::\+Std\+String\+::\+Ends\+With}
+\item 
+struct \hyperlink{a00084}{Catch\+::\+Tag\+Alias}
+\item 
+struct \hyperlink{a00066}{Catch\+::\+Registrar\+For\+Tag\+Aliases}
+\item 
+class \hyperlink{a00063}{Catch\+::\+Option$<$ T $>$}
+\item 
+struct \hyperlink{a00044}{Catch\+::\+I\+Tag\+Alias\+Registry}
+\item 
+struct \hyperlink{a00086}{Catch\+::\+Test\+Case\+Info}
+\item 
+class \hyperlink{a00085}{Catch\+::\+Test\+Case}
+\end{DoxyCompactItemize}
+\subsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{a00117}{Catch}
+\item 
+ \hyperlink{a00120}{Catch\+::\+Internal}
+\item 
+ \hyperlink{a00118}{Catch\+::\+Detail}
+\item 
+ \hyperlink{a00119}{Catch\+::\+Generators}
+\item 
+ \hyperlink{a00121}{Catch\+::\+Matchers}
+\item 
+ \hyperlink{a00122}{Catch\+::\+Matchers\+::\+Impl}
+\item 
+ \hyperlink{a00123}{Catch\+::\+Matchers\+::\+Impl\+::\+Generic}
+\item 
+ \hyperlink{a00124}{Catch\+::\+Matchers\+::\+Impl\+::\+Std\+String}
+\end{DoxyCompactItemize}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00094_a24243dc93e4f452db07fb6514bb9e749}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a5eead7e2b722a8372e8a09843f099634}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a62f025f954221470c23a77e90ffacd56}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a27b42830f93b62d65bd7c15fb3acd0d0}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a7c21e89d8b7727757ce9ca2b848f1cda}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E2}(name,  line)~name\#\#line
+\item 
+\#define \hyperlink{a00094_a1b51a086ea21a750bd306ac0ed4d2a95}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E}(name,  line)~\hyperlink{a00094_a7c21e89d8b7727757ce9ca2b848f1cda}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E2}( name, line )
+\item 
+\#define \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}(name)~\hyperlink{a00094_a1b51a086ea21a750bd306ac0ed4d2a95}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E}( name, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )
+\item 
+\#define \hyperlink{a00094_af5d658c0f6223019fd91fda2dc8bff78}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y2}(expr)~\#expr
+\item 
+\#define \hyperlink{a00094_ae5403b344db1b68faf372ad1dbcb5791}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y}(expr)~\hyperlink{a00094_af5d658c0f6223019fd91fda2dc8bff78}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y2}( expr )
+\item 
+\#define \hyperlink{a00094_ae20e90c8b19224675d022f94b534ef6b}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+E\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a0408e94ca73880d41f38852b68eadb3c}{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T}~throw()
+\item 
+\#define \hyperlink{a00094_a61ef049189c00120bf4d1641477e509c}{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+\+I\+S}(x)
+\item 
+\#define \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O}~\+::\hyperlink{a00075}{Catch\+::\+Source\+Line\+Info}( \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, static\+\_\+cast$<$std\+::size\+\_\+t$>$( \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ ) )
+\item 
+\#define \hyperlink{a00094_a05b6c8a530fa2e5b397add8966522777}{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+O\+R}(msg)~\+::\hyperlink{a00117_a702b612f683d154c466ea8297ed4a20d}{Catch\+::throw\+Logic\+Error}( msg, \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O} );
+\item 
+\#define \hyperlink{a00094_ae717ef7d955c82073b1aae5a1d2de0ae}{C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D}~throw \hyperlink{a00055}{Catch\+::\+Not\+Implemented\+Exception}( \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O} )
+\item 
+\#define \hyperlink{a00094_a07a1c68dee179942c1aede4f9b304543}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a70327cb83c2141b3b54e9549418021ad}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_af6024c3338ada36de16549522ec8f4dd}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+T\+R\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a202df3911846a6f2281d940b29b84824}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a57d04225b51dece606932db63aebeb5f}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a1cb98d355207a372c71f19ea989eb0cc}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E}(Name,  Desc)
+\item 
+\#define \hyperlink{a00094_a668f4d27507d64accd74ca9fb5c66176}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}(Qualified\+Method,  Name,  Desc)~namespace\{ \hyperlink{a00007}{Catch\+::\+Auto\+Reg} \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}( auto\+Registrar )( \&Qualified\+Method, \char`\"{}\&\char`\"{} \#Qualified\+Method, \hyperlink{a00053}{Catch\+::\+Name\+And\+Desc}( Name, Desc ), \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O} ); \}
+\item 
+\#define \hyperlink{a00094_a46bb9f683226dfa2c857dd62af7aa106}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}(Class\+Name,  Test\+Name,  Desc)
+\item 
+\#define \hyperlink{a00094_af06e9a04b0106596b7645d81e1aba5c0}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a41060a914a029983a3a9db8d50724329}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+B\+U\+I\+L\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_aac869d5d0c85bfa60806c9c82dde6288}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_aa5118eb771d1cdf1a14bce53296675dc}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+R\+E\+S\+U\+L\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_adadd64d692f8420a4e553145d3d401db}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+L\+H\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a5182533b90ae6028b4003ee34ea3c317}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_ac25416dc686629ad60493262cc42c451}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+S\+T\+R\+I\+N\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a5b7548a20bcce22bb178bad3c80c4f7d}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+F\+I\+N\+A\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a0e15a2d360f827455b6ef757290ada34}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a465bc09c8d9805aad7642381df6cae5f}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_ad762c0f54e0f59a5d1e1326ca378a0ff}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_aaf8c6350ab325682f46e786bfef3b622}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a89636e916d8b61c85c63ea5a75b1e6fd}{C\+A\+T\+C\+H\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+N\+T\+O\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R}()~\hyperlink{a00117_a129be2186a2f6546206ec52c4bf2156f}{Catch\+::always\+True}();
+\item 
+\#define \hyperlink{a00094_a8a69d5371df35756eb6ad9b47bcf3e94}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+U\+N\+N\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+A\+C\+T}(result\+Builder)
+\item 
+\#define \hyperlink{a00094_abd733b3fcbeffd2ca83afaeecc838972}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}(expr,  result\+Disposition,  macro\+Name)
+\item 
+\#define \hyperlink{a00094_a0464f43bb9cdca1e645640677f26cb13}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+F}(expr,  result\+Disposition,  macro\+Name)
+\item 
+\#define \hyperlink{a00094_a82505ae0c9e3c7f5bf9c2a07d6503a45}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+L\+S\+E}(expr,  result\+Disposition,  macro\+Name)
+\item 
+\#define \hyperlink{a00094_aaa38ad6989965be6130366ea0892f1da}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W}(expr,  result\+Disposition,  macro\+Name)
+\item 
+\#define \hyperlink{a00094_a60549afdb2a4590fc8da21c56c11ba5b}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S}(expr,  result\+Disposition,  macro\+Name)
+\item 
+\#define \hyperlink{a00094_a2f6f8a62aaedd398df98f11b6ab3d8eb}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}(expr,  exception\+Type,  result\+Disposition,  macro\+Name)
+\item 
+\#define \hyperlink{a00094_aee1ba712b8d150dd3ad51899e24d52e8}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}(message\+Type,  result\+Disposition,  macro\+Name,  log)
+\item 
+\#define \hyperlink{a00094_a08b133553db6141c660d7cb89229a4ad}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}(log,  macro\+Name)~\hyperlink{a00071}{Catch\+::\+Scoped\+Message} \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}( scoped\+Message ) = \hyperlink{a00049}{Catch\+::\+Message\+Builder}( macro\+Name, \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O}, \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efa30222063929ca1b6318faa78e8242f1c}{Catch\+::\+Result\+Was\+::\+Info} ) $<$$<$ log;
+\item 
+\#define \hyperlink{a00094_a243c8e2802ce58df247f51bcb8a15650}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}(arg,  matcher,  result\+Disposition,  macro\+Name)
+\item 
+\#define \hyperlink{a00094_a8d1f899b4d3552159fecfb94489a987c}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a81c64c1b655f2696bb14eca5538fac46}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a8acf596db7161876a50fa22d20195502}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+T\+A\+L\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a407db4a5c791398e2c3bf6b2aa709117}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a24b4f679939a83cbda4a5c92557d77fa}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N}(name,  desc)~\hyperlink{a00107_adaccd24104cadc8933e48c3a5569e23f}{if}( \hyperlink{a00072}{Catch\+::\+Section} const\& \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}( catch\+\_\+internal\+\_\+\+Section ) = \hyperlink{a00073}{Catch\+::\+Section\+Info}( \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O}, name, desc ) )
+\item 
+\#define \hyperlink{a00094_a871c039e801b57ac15d606dc25c3519d}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a0c14d11e8296418378f06dfff9233aaf}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R2}(line)~\#line
+\item 
+\#define \hyperlink{a00094_a0ff459dc5f7a595c42c49bb2cf973eff}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R}(line)~\hyperlink{a00094_a0c14d11e8296418378f06dfff9233aaf}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R2}( line )
+\item 
+\#define \hyperlink{a00094_af900fcf078aaaf0fc27acc951e12dd6c}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E}(expr)~expr.\+set\+File\+Info( \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+ \char`\"{}(\char`\"{} \hyperlink{a00094_a0ff459dc5f7a595c42c49bb2cf973eff}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R}( \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ ) \char`\"{})\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a9f31ada8e1aac0a38d7a7e2cfb6968b5}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a57cf77eef2160d800daa6c6a77ee3b51}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+U\+B\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a109d814750b0a695e2b66e9c53e748c0}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}(signature)
+\item 
+\#define \hyperlink{a00094_ac4e861fe31efada5e2470f4aba857224}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+P\+P\+R\+O\+X\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a9345188bea461b3084194d7ec2824101}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+A\+T\+C\+H\+E\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a81d9db69cb4be6ddd3888ad919273a47}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_a015a212804c0b8a41c767acf24284ba3}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_af7f9d4a12274e1ccf4b1021e5d35e0c5}{C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S}(alias,  spec)~namespace\{ \hyperlink{a00066}{Catch\+::\+Registrar\+For\+Tag\+Aliases} \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}( Auto\+Register\+Tag\+Alias )( alias, spec, \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O} ); \}
+\item 
+\#define \hyperlink{a00094_a898dc40c2fe76409f8b4ccd1d4fb4a9a}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_ac7156c930a04d3362065f3e3e7365de0}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\item 
+\#define \hyperlink{a00094_ad9f2db71e103991db7d6f001a955285f}{R\+E\+Q\+U\+I\+R\+E}(expr)~\hyperlink{a00094_abd733b3fcbeffd2ca83afaeecc838972}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a8b0e7081fa7227e55b6a195a940cb8c1}{R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+S\+E}(expr)~\hyperlink{a00094_abd733b3fcbeffd2ca83afaeecc838972}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Catch\+::\+Result\+Disposition\+::\+Normal} $\vert$ \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8a9980604245f19884691f941dec03eeb8}{Catch\+::\+Result\+Disposition\+::\+False\+Test}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+S\+E\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a7d8d2d630f08ecda4a8ddf20d011814f}{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S}(expr)~\hyperlink{a00094_a60549afdb2a4590fc8da21c56c11ba5b}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\char`\"{} )
+\item 
+\#define \hyperlink{a00094_ae24a059e3c28ff3eea69be48282f5f81}{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}(expr,  exception\+Type)~\hyperlink{a00094_a2f6f8a62aaedd398df98f11b6ab3d8eb}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}( expr, exception\+Type, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S\char`\"{} )
+\item 
+\#define \hyperlink{a00094_aaf314e5b53e024051ea5d0a9eb6d75a9}{R\+E\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+H\+R\+O\+W}(expr)~\hyperlink{a00094_aaa38ad6989965be6130366ea0892f1da}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+H\+R\+O\+W\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a4d20f8c0701894cac4dab32c899d9789}{C\+H\+E\+C\+K}(expr)~\hyperlink{a00094_abd733b3fcbeffd2ca83afaeecc838972}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a8e6db07fea42f6472f431a940ff462bf}{C\+H\+E\+C\+K\+\_\+\+F\+A\+L\+S\+E}(expr)~\hyperlink{a00094_abd733b3fcbeffd2ca83afaeecc838972}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure} $\vert$ \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8a9980604245f19884691f941dec03eeb8}{Catch\+::\+Result\+Disposition\+::\+False\+Test}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+F\+A\+L\+S\+E\char`\"{} )
+\item 
+\#define \hyperlink{a00094_acf5256555bbf08fa5105f50242111dbb}{C\+H\+E\+C\+K\+E\+D\+\_\+\+I\+F}(expr)~\hyperlink{a00094_a0464f43bb9cdca1e645640677f26cb13}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+F}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+E\+D\+\_\+\+I\+F\char`\"{} )
+\item 
+\#define \hyperlink{a00094_adabf2ab3d775d62ecc87ac74c235d303}{C\+H\+E\+C\+K\+E\+D\+\_\+\+E\+L\+S\+E}(expr)~\hyperlink{a00094_a82505ae0c9e3c7f5bf9c2a07d6503a45}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+L\+S\+E}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+E\+D\+\_\+\+E\+L\+S\+E\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a50639cc19bf82ae5ce1c8d08d628784c}{C\+H\+E\+C\+K\+\_\+\+N\+O\+F\+A\+I\+L}(expr)~\hyperlink{a00094_abd733b3fcbeffd2ca83afaeecc838972}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure} $\vert$ \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8a1a88eb6004bddee4ccae4b421991bf54}{Catch\+::\+Result\+Disposition\+::\+Suppress\+Fail}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+N\+O\+F\+A\+I\+L\char`\"{} )
+\item 
+\#define \hyperlink{a00094_ab35bfeeeae3c3cb223f550f1d6e9a396}{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S}(expr)~\hyperlink{a00094_a60549afdb2a4590fc8da21c56c11ba5b}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a1fb6439098d2a12bb69188034e03baf2}{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}(expr,  exception\+Type)~\hyperlink{a00094_a2f6f8a62aaedd398df98f11b6ab3d8eb}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}( expr, exception\+Type, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a6c1cf3811206fc694cbba31364b61d87}{C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+H\+R\+O\+W}(expr)~\hyperlink{a00094_aaa38ad6989965be6130366ea0892f1da}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W}( expr, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+H\+R\+O\+W\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a5b8c33c63e0804d4458e2c761370b75d}{C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}(arg,  matcher)~\hyperlink{a00094_a243c8e2802ce58df247f51bcb8a15650}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}( arg, matcher, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T\char`\"{} )
+\item 
+\#define \hyperlink{a00094_ac1354db6f3e9c1e0a8eda0eea7ff1f0a}{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+A\+T}(arg,  matcher)~\hyperlink{a00094_a243c8e2802ce58df247f51bcb8a15650}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}( arg, matcher, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+A\+T\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a3ae64706314066fdc8b6c8029a915aa7}{I\+N\+F\+O}(msg)~\hyperlink{a00094_a08b133553db6141c660d7cb89229a4ad}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}( msg, \char`\"{}I\+N\+F\+O\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a108d6c5c51dd46e82a62b262394f0242}{W\+A\+R\+N}(msg)~\hyperlink{a00094_aee1ba712b8d150dd3ad51899e24d52e8}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}( \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efa67e9d36ba0f04a60a19896834d840c21}{Catch\+::\+Result\+Was\+::\+Warning}, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}W\+A\+R\+N\char`\"{}, msg )
+\item 
+\#define \hyperlink{a00094_a35fb0dbec68e4116010eb55d4e1aed42}{S\+C\+O\+P\+E\+D\+\_\+\+I\+N\+F\+O}(msg)~\hyperlink{a00094_a08b133553db6141c660d7cb89229a4ad}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}( msg, \char`\"{}I\+N\+F\+O\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a88df55a964a20b22fec4d74235ed7651}{C\+A\+P\+T\+U\+R\+E}(msg)~\hyperlink{a00094_a08b133553db6141c660d7cb89229a4ad}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}( \#msg \char`\"{} \+:= \char`\"{} $<$$<$ msg, \char`\"{}C\+A\+P\+T\+U\+R\+E\char`\"{} )
+\item 
+\#define \hyperlink{a00094_ac0f6898b30b544cafa4f575aa5df2499}{S\+C\+O\+P\+E\+D\+\_\+\+C\+A\+P\+T\+U\+R\+E}(msg)~\hyperlink{a00094_a08b133553db6141c660d7cb89229a4ad}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}( \#msg \char`\"{} \+:= \char`\"{} $<$$<$ msg, \char`\"{}C\+A\+P\+T\+U\+R\+E\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a4306f112aa064372e584f2af283f24e9}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}(name,  description)~\hyperlink{a00094_a1cb98d355207a372c71f19ea989eb0cc}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E}( name, description )
+\item 
+\#define \hyperlink{a00094_a883fb6fc28b7dbda0fcefb2dd626546f}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}(class\+Name,  name,  description)~\hyperlink{a00094_a46bb9f683226dfa2c857dd62af7aa106}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}( class\+Name, name, description )
+\item 
+\#define \hyperlink{a00094_a7cbb972e639dfcccaa0f479715b35be2}{M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}(method,  name,  description)~\hyperlink{a00094_a668f4d27507d64accd74ca9fb5c66176}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}( method, name, description )
+\item 
+\#define \hyperlink{a00094_afcb669b40babf8726c969fce8d2cd94b}{S\+E\+C\+T\+I\+O\+N}(name,  description)~\hyperlink{a00094_a24b4f679939a83cbda4a5c92557d77fa}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N}( name, description )
+\item 
+\#define \hyperlink{a00094_a292ad803e75cf5ca00676b8595513ace}{F\+A\+I\+L}(msg)~\hyperlink{a00094_aee1ba712b8d150dd3ad51899e24d52e8}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}( \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efacecfc052e2499499b13304249303cc36}{Catch\+::\+Result\+Was\+::\+Explicit\+Failure}, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}F\+A\+I\+L\char`\"{}, msg )
+\item 
+\#define \hyperlink{a00094_a3d0d5d38dd75c7ffebcc8c6e1e03d2ce}{S\+U\+C\+C\+E\+E\+D}(msg)~\hyperlink{a00094_aee1ba712b8d150dd3ad51899e24d52e8}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}( \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efae7cbe89bb9ec7ece9b44d48b63d01b63}{Catch\+::\+Result\+Was\+::\+Ok}, \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}S\+U\+C\+C\+E\+E\+D\char`\"{}, msg )
+\item 
+\#define \hyperlink{a00094_ab41cb63be394c30d48fa579bf8352f18}{A\+N\+O\+N\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}()~\hyperlink{a00094_a1cb98d355207a372c71f19ea989eb0cc}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E}( \char`\"{}\char`\"{}, \char`\"{}\char`\"{} )
+\item 
+\#define \hyperlink{a00094_acadc9d11edc5137e12476268d11cbb23}{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R}(name,  reporter\+Type)~I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R( name, reporter\+Type )
+\item 
+\#define \hyperlink{a00094_a1adc4854d9c6a32af14aa1ddee5b87ef}{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R}(name,  reporter\+Type)~I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R( name, reporter\+Type )
+\item 
+\#define \hyperlink{a00094_af66c8a03872c4e1a9f412475f83adbe8}{G\+E\+N\+E\+R\+A\+T\+E}(expr)~\hyperlink{a00094_af900fcf078aaaf0fc27acc951e12dd6c}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E}( expr )
+\item 
+\#define \hyperlink{a00094_a094602ff56422c96e501eaaef1ef8c12}{C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}(signature)~\hyperlink{a00094_a109d814750b0a695e2b66e9c53e748c0}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}( signature )
+\item 
+\#define \hyperlink{a00094_a9f0ab245cdba000deb91cdfb16808059}{S\+C\+E\+N\+A\+R\+I\+O}(name,  tags)~\hyperlink{a00109_adc967649a56c42f3977c8b7e71cc67e9}{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}( \char`\"{}Scenario\+: \char`\"{} name, tags )
+\item 
+\#define \hyperlink{a00094_af3463f70ca99312394bb2850802e7fb3}{S\+C\+E\+N\+A\+R\+I\+O\+\_\+\+M\+E\+T\+H\+O\+D}(class\+Name,  name,  tags)~\hyperlink{a00094_a46bb9f683226dfa2c857dd62af7aa106}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}( class\+Name, \char`\"{}Scenario\+: \char`\"{} name, tags )
+\item 
+\#define \hyperlink{a00094_a2b70c603786d759242856d883dbe93bd}{G\+I\+V\+E\+N}(desc)~\hyperlink{a00094_afcb669b40babf8726c969fce8d2cd94b}{S\+E\+C\+T\+I\+O\+N}( \char`\"{}   Given\+: \char`\"{} desc, \char`\"{}\char`\"{} )
+\item 
+\#define \hyperlink{a00094_ab09e9b8186233f676ce6a23aebe89d6e}{W\+H\+E\+N}(desc)~\hyperlink{a00094_afcb669b40babf8726c969fce8d2cd94b}{S\+E\+C\+T\+I\+O\+N}( \char`\"{}    When\+: \char`\"{} desc, \char`\"{}\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a054a37584492a5dfbdb5ee0f2fc10b7a}{A\+N\+D\+\_\+\+W\+H\+E\+N}(desc)~\hyperlink{a00094_afcb669b40babf8726c969fce8d2cd94b}{S\+E\+C\+T\+I\+O\+N}( \char`\"{}And when\+: \char`\"{} desc, \char`\"{}\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a27987092139727fd7a471b5f74dc62de}{T\+H\+E\+N}(desc)~\hyperlink{a00094_afcb669b40babf8726c969fce8d2cd94b}{S\+E\+C\+T\+I\+O\+N}( \char`\"{}    Then\+: \char`\"{} desc, \char`\"{}\char`\"{} )
+\item 
+\#define \hyperlink{a00094_aafdc2a6cfbcecedec25e64bcbd6c09c6}{A\+N\+D\+\_\+\+T\+H\+E\+N}(desc)~\hyperlink{a00094_afcb669b40babf8726c969fce8d2cd94b}{S\+E\+C\+T\+I\+O\+N}( \char`\"{}     And\+: \char`\"{} desc, \char`\"{}\char`\"{} )
+\item 
+\#define \hyperlink{a00094_a3819417b11fa6717f32f8ae1ff69d170}{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+E\+N\+A\+B\+L\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}
+\end{DoxyCompactItemize}
+\subsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{a00117_a26414f52d0835939fae52aadd27e6257}{Catch\+::\+Test\+Function}) ()
+\item 
+typedef std\+::string($\ast$ \hyperlink{a00117_a14edb319150d3e108bbdef994f9eec2a}{Catch\+::exception\+Translate\+Function}) ()
+\end{DoxyCompactItemize}
+\subsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{a00120_ae3f96598a7858155750bf38e7295d83e}{Catch\+::\+Internal\+::\+Operator} \{ \\*
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83ea30e0accba6ec8384f4383b04dd2a6a9e}{Catch\+::\+Internal\+::\+Is\+Equal\+To}, 
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83ea1e1699cf7d3dbee0908f1a123da2456d}{Catch\+::\+Internal\+::\+Is\+Not\+Equal\+To}, 
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83eabbbfc41706595e50acbefa8408004b93}{Catch\+::\+Internal\+::\+Is\+Less\+Than}, 
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83eac0e8866139e99803d169595af70f6c22}{Catch\+::\+Internal\+::\+Is\+Greater\+Than}, 
+\\*
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83ea0db29a4c3f1e81260036c5e27a8407fd}{Catch\+::\+Internal\+::\+Is\+Less\+Than\+Or\+Equal\+To}, 
+\hyperlink{a00120_ae3f96598a7858155750bf38e7295d83ead2de7e9565e59e36c0987e402203ce1c}{Catch\+::\+Internal\+::\+Is\+Greater\+Than\+Or\+Equal\+To}
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Container\+T $>$ }\\void \hyperlink{a00117_aadf9786550a462740ec355f8219863a9}{Catch\+::delete\+All} (Container\+T \&container)
+\item 
+{\footnotesize template$<$typename Associative\+Container\+T $>$ }\\void \hyperlink{a00117_af2fcec1d4bd984fe19ff8b9a432c36a8}{Catch\+::delete\+All\+Values} (Associative\+Container\+T \&container)
+\item 
+bool \hyperlink{a00117_a695f62327be0676e046291eeaae15110}{Catch\+::starts\+With} (std\+::string const \&s, std\+::string const \&prefix)
+\item 
+bool \hyperlink{a00117_ada025504f627feaf9ac68ca391515dff}{Catch\+::ends\+With} (std\+::string const \&s, std\+::string const \&suffix)
+\item 
+bool \hyperlink{a00117_aa52974b0e426e7e2fbd725a900e9c36e}{Catch\+::contains} (std\+::string const \&s, std\+::string const \&infix)
+\item 
+void \hyperlink{a00117_a0760dbe87d090a55a35414db57d272c4}{Catch\+::to\+Lower\+In\+Place} (std\+::string \&s)
+\item 
+std\+::string \hyperlink{a00117_ac036a17412d318598ffda8e1fe7a1177}{Catch\+::to\+Lower} (std\+::string const \&s)
+\item 
+std\+::string \hyperlink{a00117_a084108b47f37d8bfd5db51c50c7451b3}{Catch\+::trim} (std\+::string const \&str)
+\item 
+std\+::ostream \& \hyperlink{a00117_a6ec18b5054d7fdfdde861c580b082995}{Catch\+::operator$<$$<$} (std\+::ostream \&os, Source\+Line\+Info const \&info)
+\item 
+bool \hyperlink{a00117_ae3bc6c6677e64e6eaa720dc3add31852}{Catch\+::is\+True} (bool value)
+\item 
+bool \hyperlink{a00117_a129be2186a2f6546206ec52c4bf2156f}{Catch\+::always\+True} ()
+\item 
+bool \hyperlink{a00117_ad425271249dd02956a9709e78b8b2783}{Catch\+::always\+False} ()
+\item 
+void \hyperlink{a00117_a702b612f683d154c466ea8297ed4a20d}{Catch\+::throw\+Logic\+Error} (std\+::string const \&message, Source\+Line\+Info const \&location\+Info)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T const \& \hyperlink{a00117_a5e95b3c47a7618db3649dc39b0bb9004}{Catch\+::operator+} (T const \&value, Stream\+End\+Stop)
+\item 
+I\+Generators\+For\+Test $\ast$ \hyperlink{a00117_a3d93b31e88fd01ee9e0d20757ff64eab}{Catch\+::create\+Generators\+For\+Test} ()
+\item 
+I\+Context \& \hyperlink{a00117_ad517cca9b21deb79101e90e5508dd161}{Catch\+::get\+Current\+Context} ()
+\item 
+I\+Mutable\+Context \& \hyperlink{a00117_af7bb0c32ab2453d2f53e92a96d15360e}{Catch\+::get\+Current\+Mutable\+Context} ()
+\item 
+void \hyperlink{a00117_ae50508f10ffc4ed873a31a4db4caea16}{Catch\+::clean\+Up\+Context} ()
+\item 
+Stream \hyperlink{a00117_ad7591011c5d99d59504ecd3384001c3e}{Catch\+::create\+Stream} (std\+::string const \&stream\+Name)
+\item 
+bool \hyperlink{a00117_a5205869c81c06d3460759cb86676ae68}{Catch\+::is\+Ok} (Result\+Was\+::\+Of\+Type result\+Type)
+\item 
+bool \hyperlink{a00117_a54b01af61673a3e1f21f31713639b180}{Catch\+::is\+Just\+Info} (int flags)
+\item 
+Result\+Disposition\+::\+Flags \hyperlink{a00117_ab32a083e442cc09f736327d2e2865999}{Catch\+::operator$\vert$} (Result\+Disposition\+::\+Flags lhs, Result\+Disposition\+::\+Flags rhs)
+\item 
+bool \hyperlink{a00117_a7f7480b15d74965459c844f0d393ed87}{Catch\+::should\+Continue\+On\+Failure} (int flags)
+\item 
+bool \hyperlink{a00117_a93ef4e3e307a2021ca0d41b32c0e54b0}{Catch\+::is\+False\+Test} (int flags)
+\item 
+bool \hyperlink{a00117_ab91eb13081203d634fe48d3d2ab386d7}{Catch\+::should\+Suppress\+Failure} (int flags)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \hyperlink{a00120_adde98c1a650e94615e2b37ab0b3734e2}{Catch\+::\+Internal\+::op\+Cast} (T const \&\hyperlink{a00107_aaccc9105df5383111407fd5b41255e23}{t})
+\item 
+{\footnotesize template$<$Operator Op, typename T1 , typename T2 $>$ }\\bool \hyperlink{a00120_a3849d993997f2b708281ff02e77dfecf}{Catch\+::\+Internal\+::apply\+Evaluator} (T1 const \&lhs, T2 const \&rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T1 , typename T2 $>$ }\\bool \hyperlink{a00120_a64ae04769c4583b9d4027c792b496c7d}{Catch\+::\+Internal\+::compare} (T1 const \&lhs, T2 const \&rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a171aec1826898b877980a2b15fe5f735}{Catch\+::\+Internal\+::compare} (unsigned int lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_aa2698c33ec87b16aff5c844165483a7a}{Catch\+::\+Internal\+::compare} (unsigned long lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_ad68724393ee3d7629001a2997f6134cc}{Catch\+::\+Internal\+::compare} (unsigned char lhs, int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_ac2af7b6757f9bb3539bb78acff5c4649}{Catch\+::\+Internal\+::compare} (unsigned int lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_ace20062a489a8a7049fe224d62e644a7}{Catch\+::\+Internal\+::compare} (unsigned long lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a640e0cce9260a912842bee58db501dc5}{Catch\+::\+Internal\+::compare} (unsigned char lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a17c92ed4b6d88a9f8bbcbc52544fe40f}{Catch\+::\+Internal\+::compare} (int lhs, unsigned int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_aac7a6452ed0d324031ceb7b4f3a3b61c}{Catch\+::\+Internal\+::compare} (int lhs, unsigned long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a7e82d987f62b9822107027c72a55fa6b}{Catch\+::\+Internal\+::compare} (int lhs, unsigned char rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a0b4783ede1901e5c1baf8ff909bcce8d}{Catch\+::\+Internal\+::compare} (long lhs, unsigned int rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_ae9aec44a08d9cbb0d3dd46d438b50d2c}{Catch\+::\+Internal\+::compare} (long lhs, unsigned long rhs)
+\item 
+{\footnotesize template$<$Operator Op$>$ }\\bool \hyperlink{a00120_a79664b5f5f497fba57bd156e098de1f2}{Catch\+::\+Internal\+::compare} (long lhs, unsigned char rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{a00120_a829570ad9e724c687aa42190a696032b}{Catch\+::\+Internal\+::compare} (long lhs, T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{a00120_a3f89c65fdb06aa7b648c5acf0ca107a9}{Catch\+::\+Internal\+::compare} (T $\ast$lhs, long rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{a00120_a4f30c29e4adb62c7e209e5b988e59397}{Catch\+::\+Internal\+::compare} (int lhs, T $\ast$rhs)
+\item 
+{\footnotesize template$<$Operator Op, typename T $>$ }\\bool \hyperlink{a00120_a95361ddae55c9a390e6510bdadccb1fc}{Catch\+::\+Internal\+::compare} (T $\ast$lhs, int rhs)
+\item 
+True\+Type \& \hyperlink{a00118_aff0ca0f561ad8053654ab27d54486197}{Catch\+::\+Detail\+::test\+Streamable} (std\+::ostream \&)
+\item 
+False\+Type \hyperlink{a00118_aac81f01b0d687f75b8f24a925591b7ac}{Catch\+::\+Detail\+::test\+Streamable} (False\+Type)
+\item 
+False\+Type \hyperlink{a00118_ae9a44d574c4fbd18fabaaee05a433d88}{Catch\+::\+Detail\+::operator$<$$<$} (std\+::ostream const \&, Borg\+Type const \&)
+\item 
+std\+::string \hyperlink{a00118_ac5d6c510e565ee5bddcc2236194ce29e}{Catch\+::\+Detail\+::raw\+Memory\+To\+String} (const void $\ast$object, std\+::size\+\_\+t size)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \hyperlink{a00118_a371620ed524abfcae5c3772bf49b563a}{Catch\+::\+Detail\+::raw\+Memory\+To\+String} (const T \&object)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \hyperlink{a00117_a386cb19a84b12339486771ad143a95ae}{Catch\+::to\+String} (T const \&value)
+\begin{DoxyCompactList}\small\item\em converts any type to a string \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Input\+Iterator $>$ }\\std\+::string \hyperlink{a00118_a6650a1dff325bf29962ff15ae73fd972}{Catch\+::\+Detail\+::range\+To\+String} (Input\+Iterator first, Input\+Iterator last)
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \hyperlink{a00118_aef46b4178e08758524d25d1d969a503c}{Catch\+::\+Detail\+::make\+String} (T const \&value)
+\item 
+std\+::string \hyperlink{a00117_ad6e969257437cf007b8b5017b22e570c}{Catch\+::to\+String} (std\+::string const \&value)
+\item 
+std\+::string \hyperlink{a00117_af9fc40701e3a7d0790866e7cf8c0279f}{Catch\+::to\+String} (std\+::wstring const \&value)
+\item 
+std\+::string \hyperlink{a00117_ace2e2fe33b196bc8278f605dcb72e38d}{Catch\+::to\+String} (const char $\ast$const value)
+\item 
+std\+::string \hyperlink{a00117_ae6c2bc95517444d8df8199bd3f61609b}{Catch\+::to\+String} (char $\ast$const value)
+\item 
+std\+::string \hyperlink{a00117_afa173b4639c682c9d8c20fae0939693c}{Catch\+::to\+String} (const wchar\+\_\+t $\ast$const value)
+\item 
+std\+::string \hyperlink{a00117_aa39121565abe9f30fce5d48e4e094768}{Catch\+::to\+String} (wchar\+\_\+t $\ast$const value)
+\item 
+std\+::string \hyperlink{a00117_acee54d0580385e4347bc42a7d22bc893}{Catch\+::to\+String} (int value)
+\item 
+std\+::string \hyperlink{a00117_aba1d78bce62f8c73cbfc2a14225356ea}{Catch\+::to\+String} (unsigned long value)
+\item 
+std\+::string \hyperlink{a00117_a6fd78030f740c1c3bdc60efdfd5fc85d}{Catch\+::to\+String} (unsigned int value)
+\item 
+std\+::string \hyperlink{a00117_a3eb4356d09b7ef3286f6c1c1efe8cabf}{Catch\+::to\+String} (const double value)
+\item 
+std\+::string \hyperlink{a00117_a80b6411e2cba89e58aa8feb960d045d5}{Catch\+::to\+String} (const float value)
+\item 
+std\+::string \hyperlink{a00117_a5d3bdb2ec0e6f415e2a1a0e4914d7d3a}{Catch\+::to\+String} (bool value)
+\item 
+std\+::string \hyperlink{a00117_a25a0a78cbb62ea08b5d49e443051c387}{Catch\+::to\+String} (char value)
+\item 
+std\+::string \hyperlink{a00117_a0a5d9d0965d0d2a0663773732283713e}{Catch\+::to\+String} (signed char value)
+\item 
+std\+::string \hyperlink{a00117_a5d83eaeb68579a556c86cc05f7a7765f}{Catch\+::to\+String} (unsigned char value)
+\item 
+I\+Result\+Capture \& \hyperlink{a00117_aff60c1de6ac6cea30175d70e33d83c8e}{Catch\+::get\+Result\+Capture} ()
+\item 
+bool \hyperlink{a00117_ab079497368fb1df25af39ad494d2a241}{Catch\+::is\+Debugger\+Active} ()
+\item 
+void \hyperlink{a00117_aa5dcf4750ce9a854f4b74d3c952d13cc}{Catch\+::write\+To\+Debug\+Console} (std\+::string const \&\hyperlink{a00114_ac3ed6ea030e1a1d6234b110347cad11e}{text})
+\item 
+{\footnotesize template$<$typename T $>$ }\\Composite\+Generator$<$ T $>$ \hyperlink{a00119_a030abfa7ee3c58d909cf6a6aa0405265}{Catch\+::\+Generators\+::between} (T from, T to)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Composite\+Generator$<$ T $>$ \hyperlink{a00119_a7a2c5bebb3c06c5b0ca05a80289b9eb1}{Catch\+::\+Generators\+::values} (T val1, T val2)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Composite\+Generator$<$ T $>$ \hyperlink{a00119_a496c4a826107e47203b6c609cfd8c2c5}{Catch\+::\+Generators\+::values} (T val1, T val2, T val3)
+\item 
+{\footnotesize template$<$typename T $>$ }\\Composite\+Generator$<$ T $>$ \hyperlink{a00119_afb1dcf02bfc8cdf990f27fdc7d7e4a4e}{Catch\+::\+Generators\+::values} (T val1, T val2, T val3, T val4)
+\item 
+I\+Registry\+Hub \& \hyperlink{a00117_ac24b072979540bfd922e7d46e899f46f}{Catch\+::get\+Registry\+Hub} ()
+\item 
+I\+Mutable\+Registry\+Hub \& \hyperlink{a00117_ac9ddcc6d66079add9cb2a3140b8ae51e}{Catch\+::get\+Mutable\+Registry\+Hub} ()
+\item 
+void \hyperlink{a00117_a0f78e9afdebc6d4512d18e76fbf54b8c}{Catch\+::clean\+Up} ()
+\item 
+std\+::string \hyperlink{a00117_adafff91485eeeeb9e9333f317cc0e3b1}{Catch\+::translate\+Active\+Exception} ()
+\item 
+{\footnotesize template$<$$>$ }\\std\+::string \hyperlink{a00117_ac501c2b6bfe82978d699ddda37c53d13}{Catch\+::to\+String$<$ Detail\+::\+Approx $>$} (Detail\+::\+Approx const \&value)
+\item 
+std\+::string \hyperlink{a00124_a1c41960bd2b455975e7be3cb87878fef}{Catch\+::\+Matchers\+::\+Impl\+::\+Std\+String\+::make\+String} (std\+::string const \&str)
+\item 
+std\+::string \hyperlink{a00124_a42a104fb88baf158ed3b7d0d422afdaa}{Catch\+::\+Matchers\+::\+Impl\+::\+Std\+String\+::make\+String} (const char $\ast$str)
+\item 
+{\footnotesize template$<$typename Expression\+T $>$ }\\Impl\+::\+Generic\+::\+All\+Of$<$ Expression\+T $>$ \hyperlink{a00121_aca6c1c17e137d989583c97f99705797a}{Catch\+::\+Matchers\+::\+All\+Of} (Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m1, Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m2)
+\item 
+{\footnotesize template$<$typename Expression\+T $>$ }\\Impl\+::\+Generic\+::\+All\+Of$<$ Expression\+T $>$ \hyperlink{a00121_a990366f7d62d10d9752ad7b24230def0}{Catch\+::\+Matchers\+::\+All\+Of} (Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m1, Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m2, Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m3)
+\item 
+{\footnotesize template$<$typename Expression\+T $>$ }\\Impl\+::\+Generic\+::\+Any\+Of$<$ Expression\+T $>$ \hyperlink{a00121_a9cb139c71b9e391d5fc017764695bf84}{Catch\+::\+Matchers\+::\+Any\+Of} (Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m1, Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m2)
+\item 
+{\footnotesize template$<$typename Expression\+T $>$ }\\Impl\+::\+Generic\+::\+Any\+Of$<$ Expression\+T $>$ \hyperlink{a00121_a8efb0e533db973b8aff1172fb908db02}{Catch\+::\+Matchers\+::\+Any\+Of} (Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m1, Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m2, Impl\+::\+Matcher$<$ Expression\+T $>$ const \&m3)
+\item 
+Impl\+::\+Std\+String\+::\+Equals \hyperlink{a00121_acfe75df863ee6f2672c88c7d2e662b2e}{Catch\+::\+Matchers\+::\+Equals} (std\+::string const \&str)
+\item 
+Impl\+::\+Std\+String\+::\+Equals \hyperlink{a00121_aea3565202c7f6e73cc6c647dd813306e}{Catch\+::\+Matchers\+::\+Equals} (const char $\ast$str)
+\item 
+Impl\+::\+Std\+String\+::\+Contains \hyperlink{a00121_addaab3af75bf3f7fa39d915f3010f9b0}{Catch\+::\+Matchers\+::\+Contains} (std\+::string const \&substr)
+\item 
+Impl\+::\+Std\+String\+::\+Contains \hyperlink{a00121_a779538ff33cfd68deb0d9ebb2251b346}{Catch\+::\+Matchers\+::\+Contains} (const char $\ast$substr)
+\item 
+Impl\+::\+Std\+String\+::\+Starts\+With \hyperlink{a00121_a9b6a7704df7d0717dc6686fd2055ffea}{Catch\+::\+Matchers\+::\+Starts\+With} (std\+::string const \&substr)
+\item 
+Impl\+::\+Std\+String\+::\+Starts\+With \hyperlink{a00121_a031985c11b8c8bb62585b3904f9fd2b0}{Catch\+::\+Matchers\+::\+Starts\+With} (const char $\ast$substr)
+\item 
+Impl\+::\+Std\+String\+::\+Ends\+With \hyperlink{a00121_a1e32a2d23a1eb9eda9840c712c7b00c1}{Catch\+::\+Matchers\+::\+Ends\+With} (std\+::string const \&substr)
+\item 
+Impl\+::\+Std\+String\+::\+Ends\+With \hyperlink{a00121_ae3e6d8f7fea6fac6513596b23e5d5153}{Catch\+::\+Matchers\+::\+Ends\+With} (const char $\ast$substr)
+\item 
+Test\+Case \hyperlink{a00117_a2a784590bb5068810d3f6013fed1f1d3}{Catch\+::make\+Test\+Case} (I\+Test\+Case $\ast$test\+Case, std\+::string const \&class\+Name, std\+::string const \&name, std\+::string const \&description, Source\+Line\+Info const \&line\+Info)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{a00094_aafdc2a6cfbcecedec25e64bcbd6c09c6}{}\index{catch.\+hpp@{catch.\+hpp}!A\+N\+D\+\_\+\+T\+H\+E\+N@{A\+N\+D\+\_\+\+T\+H\+E\+N}}
+\index{A\+N\+D\+\_\+\+T\+H\+E\+N@{A\+N\+D\+\_\+\+T\+H\+E\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{A\+N\+D\+\_\+\+T\+H\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+\_\+\+T\+H\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~{\bf S\+E\+C\+T\+I\+O\+N}( \char`\"{}     And\+: \char`\"{} desc, \char`\"{}\char`\"{} )}\label{a00094_aafdc2a6cfbcecedec25e64bcbd6c09c6}
+
+
+Definition at line 8982 of file catch.\+hpp.
+
+\hypertarget{a00094_a054a37584492a5dfbdb5ee0f2fc10b7a}{}\index{catch.\+hpp@{catch.\+hpp}!A\+N\+D\+\_\+\+W\+H\+E\+N@{A\+N\+D\+\_\+\+W\+H\+E\+N}}
+\index{A\+N\+D\+\_\+\+W\+H\+E\+N@{A\+N\+D\+\_\+\+W\+H\+E\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{A\+N\+D\+\_\+\+W\+H\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+D\+\_\+\+W\+H\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~{\bf S\+E\+C\+T\+I\+O\+N}( \char`\"{}And when\+: \char`\"{} desc, \char`\"{}\char`\"{} )}\label{a00094_a054a37584492a5dfbdb5ee0f2fc10b7a}
+
+
+Definition at line 8980 of file catch.\+hpp.
+
+\hypertarget{a00094_ab41cb63be394c30d48fa579bf8352f18}{}\index{catch.\+hpp@{catch.\+hpp}!A\+N\+O\+N\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{A\+N\+O\+N\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{A\+N\+O\+N\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{A\+N\+O\+N\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{A\+N\+O\+N\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+N\+O\+N\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E}( \char`\"{}\char`\"{}, \char`\"{}\char`\"{} )}\label{a00094_ab41cb63be394c30d48fa579bf8352f18}
+
+
+Definition at line 8959 of file catch.\+hpp.
+
+\hypertarget{a00094_a88df55a964a20b22fec4d74235ed7651}{}\index{catch.\+hpp@{catch.\+hpp}!C\+A\+P\+T\+U\+R\+E@{C\+A\+P\+T\+U\+R\+E}}
+\index{C\+A\+P\+T\+U\+R\+E@{C\+A\+P\+T\+U\+R\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+A\+P\+T\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+P\+T\+U\+R\+E(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}( \#msg \char`\"{} \+:= \char`\"{} $<$$<$ msg, \char`\"{}C\+A\+P\+T\+U\+R\+E\char`\"{} )}\label{a00094_a88df55a964a20b22fec4d74235ed7651}
+
+
+Definition at line 8941 of file catch.\+hpp.
+
+\hypertarget{a00094_a89636e916d8b61c85c63ea5a75b1e6fd}{}\index{catch.\+hpp@{catch.\+hpp}!C\+A\+T\+C\+H\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+N\+T\+O\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R@{C\+A\+T\+C\+H\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+N\+T\+O\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R}}
+\index{C\+A\+T\+C\+H\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+N\+T\+O\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R@{C\+A\+T\+C\+H\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+N\+T\+O\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+A\+T\+C\+H\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+N\+T\+O\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+T\+C\+H\+\_\+\+B\+R\+E\+A\+K\+\_\+\+I\+N\+T\+O\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~{\bf Catch\+::always\+True}();}\label{a00094_a89636e916d8b61c85c63ea5a75b1e6fd}
+
+
+Definition at line 1449 of file catch.\+hpp.
+
+\hypertarget{a00094_a05b6c8a530fa2e5b397add8966522777}{}\index{catch.\+hpp@{catch.\+hpp}!C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+O\+R@{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+O\+R}}
+\index{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+O\+R@{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+O\+R}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+O\+R(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~\+::{\bf Catch\+::throw\+Logic\+Error}( msg, {\bf C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O} );}\label{a00094_a05b6c8a530fa2e5b397add8966522777}
+
+
+Definition at line 270 of file catch.\+hpp.
+
+\hypertarget{a00094_abc0b2405454c51748a31e0393d9ad5d1}{}\index{catch.\+hpp@{catch.\+hpp}!C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O@{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O}}
+\index{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O@{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O~\+::{\bf Catch\+::\+Source\+Line\+Info}( \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, static\+\_\+cast$<$std\+::size\+\_\+t$>$( \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ ) )}\label{a00094_abc0b2405454c51748a31e0393d9ad5d1}
+
+
+Definition at line 269 of file catch.\+hpp.
+
+\hypertarget{a00094_a0408e94ca73880d41f38852b68eadb3c}{}\index{catch.\+hpp@{catch.\+hpp}!C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T@{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T}}
+\index{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T@{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T~throw()}\label{a00094_a0408e94ca73880d41f38852b68eadb3c}
+
+
+Definition at line 172 of file catch.\+hpp.
+
+\hypertarget{a00094_a61ef049189c00120bf4d1641477e509c}{}\index{catch.\+hpp@{catch.\+hpp}!C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+\+I\+S@{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+\+I\+S}}
+\index{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+\+I\+S@{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+\+I\+S}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+\+I\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+T\+C\+H\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+\+I\+S(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\label{a00094_a61ef049189c00120bf4d1641477e509c}
+
+
+Definition at line 173 of file catch.\+hpp.
+
+\hypertarget{a00094_ae717ef7d955c82073b1aae5a1d2de0ae}{}\index{catch.\+hpp@{catch.\+hpp}!C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D@{C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D}}
+\index{C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D@{C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D~throw {\bf Catch\+::\+Not\+Implemented\+Exception}( {\bf C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O} )}\label{a00094_ae717ef7d955c82073b1aae5a1d2de0ae}
+
+
+Definition at line 294 of file catch.\+hpp.
+
+\hypertarget{a00094_af7f9d4a12274e1ccf4b1021e5d35e0c5}{}\index{catch.\+hpp@{catch.\+hpp}!C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S@{C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S}}
+\index{C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S@{C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S(
+\begin{DoxyParamCaption}
+\item[{}]{alias, }
+\item[{}]{spec}
+\end{DoxyParamCaption}
+)~namespace\{ {\bf Catch\+::\+Registrar\+For\+Tag\+Aliases} {\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}( Auto\+Register\+Tag\+Alias )( alias, spec, {\bf C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O} ); \}}\label{a00094_af7f9d4a12274e1ccf4b1021e5d35e0c5}
+
+
+Definition at line 2343 of file catch.\+hpp.
+
+\hypertarget{a00094_a094602ff56422c96e501eaaef1ef8c12}{}\index{catch.\+hpp@{catch.\+hpp}!C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N@{C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}}
+\index{C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N@{C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N(
+\begin{DoxyParamCaption}
+\item[{}]{signature}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}( signature )}\label{a00094_a094602ff56422c96e501eaaef1ef8c12}
+
+
+Definition at line 8968 of file catch.\+hpp.
+
+\hypertarget{a00094_a4d20f8c0701894cac4dab32c899d9789}{}\index{catch.\+hpp@{catch.\+hpp}!C\+H\+E\+C\+K@{C\+H\+E\+C\+K}}
+\index{C\+H\+E\+C\+K@{C\+H\+E\+C\+K}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+H\+E\+C\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\char`\"{} )}\label{a00094_a4d20f8c0701894cac4dab32c899d9789}
+
+
+Definition at line 8925 of file catch.\+hpp.
+
+\hypertarget{a00094_a8e6db07fea42f6472f431a940ff462bf}{}\index{catch.\+hpp@{catch.\+hpp}!C\+H\+E\+C\+K\+\_\+\+F\+A\+L\+S\+E@{C\+H\+E\+C\+K\+\_\+\+F\+A\+L\+S\+E}}
+\index{C\+H\+E\+C\+K\+\_\+\+F\+A\+L\+S\+E@{C\+H\+E\+C\+K\+\_\+\+F\+A\+L\+S\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+H\+E\+C\+K\+\_\+\+F\+A\+L\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+F\+A\+L\+S\+E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure} $\vert$ {\bf Catch\+::\+Result\+Disposition\+::\+False\+Test}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+F\+A\+L\+S\+E\char`\"{} )}\label{a00094_a8e6db07fea42f6472f431a940ff462bf}
+
+
+Definition at line 8926 of file catch.\+hpp.
+
+\hypertarget{a00094_a50639cc19bf82ae5ce1c8d08d628784c}{}\index{catch.\+hpp@{catch.\+hpp}!C\+H\+E\+C\+K\+\_\+\+N\+O\+F\+A\+I\+L@{C\+H\+E\+C\+K\+\_\+\+N\+O\+F\+A\+I\+L}}
+\index{C\+H\+E\+C\+K\+\_\+\+N\+O\+F\+A\+I\+L@{C\+H\+E\+C\+K\+\_\+\+N\+O\+F\+A\+I\+L}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+H\+E\+C\+K\+\_\+\+N\+O\+F\+A\+I\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+N\+O\+F\+A\+I\+L(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure} $\vert$ {\bf Catch\+::\+Result\+Disposition\+::\+Suppress\+Fail}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+N\+O\+F\+A\+I\+L\char`\"{} )}\label{a00094_a50639cc19bf82ae5ce1c8d08d628784c}
+
+
+Definition at line 8929 of file catch.\+hpp.
+
+\hypertarget{a00094_a6c1cf3811206fc694cbba31364b61d87}{}\index{catch.\+hpp@{catch.\+hpp}!C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+H\+R\+O\+W@{C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+H\+R\+O\+W}}
+\index{C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+H\+R\+O\+W@{C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+H\+R\+O\+W}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+H\+R\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+H\+R\+O\+W(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+N\+O\+T\+H\+R\+O\+W\char`\"{} )}\label{a00094_a6c1cf3811206fc694cbba31364b61d87}
+
+
+Definition at line 8933 of file catch.\+hpp.
+
+\hypertarget{a00094_a5b8c33c63e0804d4458e2c761370b75d}{}\index{catch.\+hpp@{catch.\+hpp}!C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T@{C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}}
+\index{C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T@{C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T(
+\begin{DoxyParamCaption}
+\item[{}]{arg, }
+\item[{}]{matcher}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}( arg, matcher, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T\char`\"{} )}\label{a00094_a5b8c33c63e0804d4458e2c761370b75d}
+
+
+Definition at line 8935 of file catch.\+hpp.
+
+\hypertarget{a00094_ab35bfeeeae3c3cb223f550f1d6e9a396}{}\index{catch.\+hpp@{catch.\+hpp}!C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S@{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S}}
+\index{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S@{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\char`\"{} )}\label{a00094_ab35bfeeeae3c3cb223f550f1d6e9a396}
+
+
+Definition at line 8931 of file catch.\+hpp.
+
+\hypertarget{a00094_a1fb6439098d2a12bb69188034e03baf2}{}\index{catch.\+hpp@{catch.\+hpp}!C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S@{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}}
+\index{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S@{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{exception\+Type}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}( expr, exception\+Type, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S\char`\"{} )}\label{a00094_a1fb6439098d2a12bb69188034e03baf2}
+
+
+Definition at line 8932 of file catch.\+hpp.
+
+\hypertarget{a00094_adabf2ab3d775d62ecc87ac74c235d303}{}\index{catch.\+hpp@{catch.\+hpp}!C\+H\+E\+C\+K\+E\+D\+\_\+\+E\+L\+S\+E@{C\+H\+E\+C\+K\+E\+D\+\_\+\+E\+L\+S\+E}}
+\index{C\+H\+E\+C\+K\+E\+D\+\_\+\+E\+L\+S\+E@{C\+H\+E\+C\+K\+E\+D\+\_\+\+E\+L\+S\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+H\+E\+C\+K\+E\+D\+\_\+\+E\+L\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+E\+D\+\_\+\+E\+L\+S\+E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+L\+S\+E}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+E\+D\+\_\+\+E\+L\+S\+E\char`\"{} )}\label{a00094_adabf2ab3d775d62ecc87ac74c235d303}
+
+
+Definition at line 8928 of file catch.\+hpp.
+
+\hypertarget{a00094_acf5256555bbf08fa5105f50242111dbb}{}\index{catch.\+hpp@{catch.\+hpp}!C\+H\+E\+C\+K\+E\+D\+\_\+\+I\+F@{C\+H\+E\+C\+K\+E\+D\+\_\+\+I\+F}}
+\index{C\+H\+E\+C\+K\+E\+D\+\_\+\+I\+F@{C\+H\+E\+C\+K\+E\+D\+\_\+\+I\+F}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{C\+H\+E\+C\+K\+E\+D\+\_\+\+I\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+E\+D\+\_\+\+I\+F(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+F}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}C\+H\+E\+C\+K\+E\+D\+\_\+\+I\+F\char`\"{} )}\label{a00094_acf5256555bbf08fa5105f50242111dbb}
+
+
+Definition at line 8927 of file catch.\+hpp.
+
+\hypertarget{a00094_a292ad803e75cf5ca00676b8595513ace}{}\index{catch.\+hpp@{catch.\+hpp}!F\+A\+I\+L@{F\+A\+I\+L}}
+\index{F\+A\+I\+L@{F\+A\+I\+L}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{F\+A\+I\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+A\+I\+L(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}( {\bf Catch\+::\+Result\+Was\+::\+Explicit\+Failure}, {\bf Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}F\+A\+I\+L\char`\"{}, msg )}\label{a00094_a292ad803e75cf5ca00676b8595513ace}
+
+
+Definition at line 8956 of file catch.\+hpp.
+
+\hypertarget{a00094_af66c8a03872c4e1a9f412475f83adbe8}{}\index{catch.\+hpp@{catch.\+hpp}!G\+E\+N\+E\+R\+A\+T\+E@{G\+E\+N\+E\+R\+A\+T\+E}}
+\index{G\+E\+N\+E\+R\+A\+T\+E@{G\+E\+N\+E\+R\+A\+T\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{G\+E\+N\+E\+R\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+N\+E\+R\+A\+T\+E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E}( expr )}\label{a00094_af66c8a03872c4e1a9f412475f83adbe8}
+
+
+Definition at line 8964 of file catch.\+hpp.
+
+\hypertarget{a00094_a2b70c603786d759242856d883dbe93bd}{}\index{catch.\+hpp@{catch.\+hpp}!G\+I\+V\+E\+N@{G\+I\+V\+E\+N}}
+\index{G\+I\+V\+E\+N@{G\+I\+V\+E\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{G\+I\+V\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+I\+V\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~{\bf S\+E\+C\+T\+I\+O\+N}( \char`\"{}   Given\+: \char`\"{} desc, \char`\"{}\char`\"{} )}\label{a00094_a2b70c603786d759242856d883dbe93bd}
+
+
+Definition at line 8978 of file catch.\+hpp.
+
+\hypertarget{a00094_a3ae64706314066fdc8b6c8029a915aa7}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+F\+O@{I\+N\+F\+O}}
+\index{I\+N\+F\+O@{I\+N\+F\+O}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+F\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+F\+O(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}( msg, \char`\"{}I\+N\+F\+O\char`\"{} )}\label{a00094_a3ae64706314066fdc8b6c8029a915aa7}
+
+
+Definition at line 8938 of file catch.\+hpp.
+
+\hypertarget{a00094_a82505ae0c9e3c7f5bf9c2a07d6503a45}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+L\+S\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+L\+S\+E}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+L\+S\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+L\+S\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+L\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+L\+S\+E(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{result\+Disposition, }
+\item[{}]{macro\+Name}
+\end{DoxyParamCaption}
+)}\label{a00094_a82505ae0c9e3c7f5bf9c2a07d6503a45}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{a00094_abd733b3fcbeffd2ca83afaeecc838972}{INTERNAL\_CATCH\_TEST}( expr, resultDisposition, macroName ); \hyperlink{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{\(\backslash\)}
+\hyperlink{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{    if}( !\hyperlink{a00117_aff60c1de6ac6cea30175d70e33d83c8e}{Catch::getResultCapture}().getLastResult()->succeeded() )
+\end{DoxyCode}
+
+
+Definition at line 1492 of file catch.\+hpp.
+
+\hypertarget{a00094_af900fcf078aaaf0fc27acc951e12dd6c}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~expr.\+set\+File\+Info( \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+ \char`\"{}(\char`\"{} {\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R}( \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ ) \char`\"{})\char`\"{} )}\label{a00094_af900fcf078aaaf0fc27acc951e12dd6c}
+
+
+Definition at line 1919 of file catch.\+hpp.
+
+\hypertarget{a00094_a0464f43bb9cdca1e645640677f26cb13}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+F@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+F}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+F@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+F}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+F(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{result\+Disposition, }
+\item[{}]{macro\+Name}
+\end{DoxyParamCaption}
+)}\label{a00094_a0464f43bb9cdca1e645640677f26cb13}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{a00094_abd733b3fcbeffd2ca83afaeecc838972}{INTERNAL\_CATCH\_TEST}( expr, resultDisposition, macroName ); \hyperlink{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{\(\backslash\)}
+\hyperlink{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{    if}( \hyperlink{a00117_aff60c1de6ac6cea30175d70e33d83c8e}{Catch::getResultCapture}().getLastResult()->succeeded() )
+\end{DoxyCode}
+
+
+Definition at line 1487 of file catch.\+hpp.
+
+\hypertarget{a00094_a08b133553db6141c660d7cb89229a4ad}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O(
+\begin{DoxyParamCaption}
+\item[{}]{log, }
+\item[{}]{macro\+Name}
+\end{DoxyParamCaption}
+)~{\bf Catch\+::\+Scoped\+Message} {\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}( scoped\+Message ) = {\bf Catch\+::\+Message\+Builder}( macro\+Name, {\bf C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O}, {\bf Catch\+::\+Result\+Was\+::\+Info} ) $<$$<$ log;}\label{a00094_a08b133553db6141c660d7cb89229a4ad}
+
+
+Definition at line 1567 of file catch.\+hpp.
+
+\hypertarget{a00094_a0ff459dc5f7a595c42c49bb2cf973eff}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R(
+\begin{DoxyParamCaption}
+\item[{}]{line}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R2}( line )}\label{a00094_a0ff459dc5f7a595c42c49bb2cf973eff}
+
+
+Definition at line 1917 of file catch.\+hpp.
+
+\hypertarget{a00094_a0c14d11e8296418378f06dfff9233aaf}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R2@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R2}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R2@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R2}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+L\+I\+N\+E\+S\+T\+R2(
+\begin{DoxyParamCaption}
+\item[{}]{line}
+\end{DoxyParamCaption}
+)~\#line}\label{a00094_a0c14d11e8296418378f06dfff9233aaf}
+
+
+Definition at line 1916 of file catch.\+hpp.
+
+\hypertarget{a00094_a668f4d27507d64accd74ca9fb5c66176}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E(
+\begin{DoxyParamCaption}
+\item[{}]{Qualified\+Method, }
+\item[{}]{Name, }
+\item[{}]{Desc}
+\end{DoxyParamCaption}
+)~namespace\{ {\bf Catch\+::\+Auto\+Reg} {\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}( auto\+Registrar )( \&Qualified\+Method, \char`\"{}\&\char`\"{} \#Qualified\+Method, {\bf Catch\+::\+Name\+And\+Desc}( Name, Desc ), {\bf C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O} ); \}}\label{a00094_a668f4d27507d64accd74ca9fb5c66176}
+
+
+Definition at line 565 of file catch.\+hpp.
+
+\hypertarget{a00094_aee1ba712b8d150dd3ad51899e24d52e8}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G(
+\begin{DoxyParamCaption}
+\item[{}]{message\+Type, }
+\item[{}]{result\+Disposition, }
+\item[{}]{macro\+Name, }
+\item[{}]{log}
+\end{DoxyParamCaption}
+)}\label{a00094_aee1ba712b8d150dd3ad51899e24d52e8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+            Catch::ResultBuilder \_\_catchResult( macroName, 
+      \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, \textcolor{stringliteral}{""}, resultDisposition ); \(\backslash\)
+            \_\_catchResult << log + \hyperlink{a00077}{::Catch::StreamEndStop}(); \(\backslash\)
+            \_\_catchResult.captureResult( messageType ); \hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{\(\backslash\)}
+\hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{            INTERNAL\_CATCH\_REACT}( \_\_catchResult ) \(\backslash\)
+        \} \textcolor{keywordflow}{while}( \hyperlink{a00117_ad425271249dd02956a9709e78b8b2783}{Catch::alwaysFalse}() )
+\end{DoxyCode}
+
+
+Definition at line 1557 of file catch.\+hpp.
+
+\hypertarget{a00094_aaa38ad6989965be6130366ea0892f1da}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{result\+Disposition, }
+\item[{}]{macro\+Name}
+\end{DoxyParamCaption}
+)}\label{a00094_aaa38ad6989965be6130366ea0892f1da}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+        Catch::ResultBuilder \_\_catchResult( macroName, \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, #
+      expr, resultDisposition ); \(\backslash\)
+        try \{ \(\backslash\)
+            expr; \(\backslash\)
+            \_\_catchResult.captureResult( \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efae7cbe89bb9ec7ece9b44d48b63d01b63}{Catch::ResultWas::Ok} ); \(\backslash\)
+        \} \(\backslash\)
+        catch( ... ) \{ \(\backslash\)
+            \_\_catchResult.useActiveException( resultDisposition ); \(\backslash\)
+        \} \hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{\(\backslash\)}
+\hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{        INTERNAL\_CATCH\_REACT}( \_\_catchResult ) \(\backslash\)
+    \} \textcolor{keywordflow}{while}( \hyperlink{a00117_ad425271249dd02956a9709e78b8b2783}{Catch::alwaysFalse}() )
+\end{DoxyCode}
+
+
+Definition at line 1497 of file catch.\+hpp.
+
+\hypertarget{a00094_a345ec5265fc806d64c3dda4c184e8071}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+A\+C\+T@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+A\+C\+T}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+A\+C\+T@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+A\+C\+T}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+A\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+A\+C\+T(
+\begin{DoxyParamCaption}
+\item[{}]{result\+Builder}
+\end{DoxyParamCaption}
+)}\label{a00094_a345ec5265fc806d64c3dda4c184e8071}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( resultBuilder.shouldDebugBreak() ) \hyperlink{a00094_a89636e916d8b61c85c63ea5a75b1e6fd}{CATCH\_BREAK\_INTO\_DEBUGGER}(); \(\backslash\)
+    resultBuilder.react();
+\end{DoxyCode}
+
+
+Definition at line 1469 of file catch.\+hpp.
+
+\hypertarget{a00094_a24b4f679939a83cbda4a5c92557d77fa}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~{\bf if}( {\bf Catch\+::\+Section} const\& {\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}( catch\+\_\+internal\+\_\+\+Section ) = {\bf Catch\+::\+Section\+Info}( {\bf C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+L\+I\+N\+E\+I\+N\+F\+O}, name, desc ) )}\label{a00094_a24b4f679939a83cbda4a5c92557d77fa}
+
+
+Definition at line 1737 of file catch.\+hpp.
+
+\hypertarget{a00094_ae5403b344db1b68faf372ad1dbcb5791}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y2}( expr )}\label{a00094_ae5403b344db1b68faf372ad1dbcb5791}
+
+
+Definition at line 58 of file catch.\+hpp.
+
+\hypertarget{a00094_af5d658c0f6223019fd91fda2dc8bff78}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y2@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y2}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y2@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y2}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y2(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~\#expr}\label{a00094_af5d658c0f6223019fd91fda2dc8bff78}
+
+
+Definition at line 57 of file catch.\+hpp.
+
+\hypertarget{a00094_abd733b3fcbeffd2ca83afaeecc838972}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{result\+Disposition, }
+\item[{}]{macro\+Name}
+\end{DoxyParamCaption}
+)}\label{a00094_abd733b3fcbeffd2ca83afaeecc838972}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+        Catch::ResultBuilder \_\_catchResult( macroName, \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, #
+      expr, resultDisposition ); \(\backslash\)
+        try \{ \(\backslash\)
+            ( \_\_catchResult->*expr ).endExpression(); \(\backslash\)
+        \} \(\backslash\)
+        catch( ... ) \{ \(\backslash\)
+            \_\_catchResult.useActiveException( \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8af3bd52347ed6f8796e8ce2f77bb39ea5}{Catch::ResultDisposition::Normal}
+       ); \(\backslash\)
+        \} \hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{\(\backslash\)}
+\hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{        INTERNAL\_CATCH\_REACT}( \_\_catchResult ) \(\backslash\)
+    \} \textcolor{keywordflow}{while}( \hyperlink{a00117_ae3bc6c6677e64e6eaa720dc3add31852}{Catch::isTrue}( \textcolor{keyword}{false} && (expr) ) )
+\end{DoxyCode}
+
+
+Definition at line 1474 of file catch.\+hpp.
+
+\hypertarget{a00094_a46bb9f683226dfa2c857dd62af7aa106}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D(
+\begin{DoxyParamCaption}
+\item[{}]{Class\+Name, }
+\item[{}]{Test\+Name, }
+\item[{}]{Desc}
+\end{DoxyParamCaption}
+)}\label{a00094_a46bb9f683226dfa2c857dd62af7aa106}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{namespace}\{ \(\backslash\)
+            struct \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( \_\_\_\_C\_A\_T\_C\_H\_\_\_\_T\_E\_S\_T\_\_\_\_ ) : 
+      ClassName\{ \(\backslash\)
+                void \hyperlink{a00107_ab52c919104cfd3fd5aef89c5e39ec637}{test}(); \(\backslash\)
+            \}; \(\backslash\)
+            Catch::AutoReg \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( autoRegistrar ) ( &
+      \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( \_\_\_\_C\_A\_T\_C\_H\_\_\_\_T\_E\_S\_T\_\_\_\_ )::
+      \hyperlink{a00107_ab52c919104cfd3fd5aef89c5e39ec637}{test}, #ClassName, \hyperlink{a00117}{Catch}::NameAndDesc( TestName, Desc ), 
+      \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO} ); \(\backslash\)
+        \} \(\backslash\)
+        void \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( \_\_\_\_C\_A\_T\_C\_H\_\_\_\_T\_E\_S\_T\_\_\_\_ )::
+      \hyperlink{a00107_ab52c919104cfd3fd5aef89c5e39ec637}{test}()
+\end{DoxyCode}
+
+
+Definition at line 569 of file catch.\+hpp.
+
+\hypertarget{a00094_a1cb98d355207a372c71f19ea989eb0cc}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E(
+\begin{DoxyParamCaption}
+\item[{}]{Name, }
+\item[{}]{Desc}
+\end{DoxyParamCaption}
+)}\label{a00094_a1cb98d355207a372c71f19ea989eb0cc}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{static} \textcolor{keywordtype}{void} \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( \_\_\_\_C\_A\_T\_C\_H\_\_\_\_T\_E\_S\_T\_\_\_\_ )(); \(\backslash\)
+        namespace\{ \hyperlink{a00007}{Catch::AutoReg} \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( 
+      autoRegistrar )( &\hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}(  \_\_\_\_C\_A\_T\_C\_H\_\_\_\_T\_E\_S\_T\_\_\_\_ ), 
+      \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, \hyperlink{a00053}{Catch::NameAndDesc}( Name, Desc ) ); \}\(\backslash\)
+        static \textcolor{keywordtype}{void} \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}(  \_\_\_\_C\_A\_T\_C\_H\_\_\_\_T\_E\_S\_T\_\_\_\_ )()
+\end{DoxyCode}
+
+
+Definition at line 559 of file catch.\+hpp.
+
+\hypertarget{a00094_a60549afdb2a4590fc8da21c56c11ba5b}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{result\+Disposition, }
+\item[{}]{macro\+Name}
+\end{DoxyParamCaption}
+)}\label{a00094_a60549afdb2a4590fc8da21c56c11ba5b}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+        Catch::ResultBuilder \_\_catchResult( macroName, \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, #
+      expr, resultDisposition ); \hyperlink{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{\(\backslash\)}
+\hyperlink{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{        if}( \_\_catchResult.allowThrows() ) \(\backslash\)
+            \textcolor{keywordflow}{try} \{ \(\backslash\)
+                expr; \(\backslash\)
+                \_\_catchResult.captureResult( 
+      \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efa8b6d3d5bc78d4e7a95543b6ecfbdb57d}{Catch::ResultWas::DidntThrowException} ); \(\backslash\)
+            \} \(\backslash\)
+            catch( ... ) \{ \(\backslash\)
+                \_\_catchResult.captureResult( \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efae7cbe89bb9ec7ece9b44d48b63d01b63}{Catch::ResultWas::Ok} ); \(\backslash\)
+            \} \(\backslash\)
+        else \(\backslash\)
+            \_\_catchResult.captureResult( \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efae7cbe89bb9ec7ece9b44d48b63d01b63}{Catch::ResultWas::Ok} ); 
+      \hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{\(\backslash\)}
+\hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{        INTERNAL\_CATCH\_REACT}( \_\_catchResult ) \(\backslash\)
+    \} \textcolor{keywordflow}{while}( \hyperlink{a00117_ad425271249dd02956a9709e78b8b2783}{Catch::alwaysFalse}() )
+\end{DoxyCode}
+
+
+Definition at line 1511 of file catch.\+hpp.
+
+\hypertarget{a00094_a2f6f8a62aaedd398df98f11b6ab3d8eb}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{exception\+Type, }
+\item[{}]{result\+Disposition, }
+\item[{}]{macro\+Name}
+\end{DoxyParamCaption}
+)}\label{a00094_a2f6f8a62aaedd398df98f11b6ab3d8eb}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+        Catch::ResultBuilder \_\_catchResult( macroName, \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, #
+      expr, resultDisposition ); \hyperlink{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{\(\backslash\)}
+\hyperlink{a00100_a7dfde2690fc0e73598d08c98d98b42d9}{        if}( \_\_catchResult.allowThrows() ) \(\backslash\)
+            \textcolor{keywordflow}{try} \{ \(\backslash\)
+                expr; \(\backslash\)
+                \_\_catchResult.captureResult( 
+      \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efa8b6d3d5bc78d4e7a95543b6ecfbdb57d}{Catch::ResultWas::DidntThrowException} ); \(\backslash\)
+            \} \(\backslash\)
+            catch( exceptionType ) \{ \(\backslash\)
+                \_\_catchResult.captureResult( \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efae7cbe89bb9ec7ece9b44d48b63d01b63}{Catch::ResultWas::Ok} ); \(\backslash\)
+            \} \(\backslash\)
+            catch( ... ) \{ \(\backslash\)
+                \_\_catchResult.useActiveException( resultDisposition ); \(\backslash\)
+            \} \(\backslash\)
+        else \(\backslash\)
+            \_\_catchResult.captureResult( \hyperlink{a00069_a624e1ee3661fcf6094ceef1f654601efae7cbe89bb9ec7ece9b44d48b63d01b63}{Catch::ResultWas::Ok} ); 
+      \hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{\(\backslash\)}
+\hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{        INTERNAL\_CATCH\_REACT}( \_\_catchResult ) \(\backslash\)
+    \} \textcolor{keywordflow}{while}( \hyperlink{a00117_ad425271249dd02956a9709e78b8b2783}{Catch::alwaysFalse}() )
+\end{DoxyCode}
+
+
+Definition at line 1528 of file catch.\+hpp.
+
+\hypertarget{a00094_a109d814750b0a695e2b66e9c53e748c0}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+R\+A\+N\+S\+L\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N(
+\begin{DoxyParamCaption}
+\item[{}]{signature}
+\end{DoxyParamCaption}
+)}\label{a00094_a109d814750b0a695e2b66e9c53e748c0}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{static} std::string \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( catch\_internal\_ExceptionTranslator
+       )( signature ); \(\backslash\)
+    namespace\{ \hyperlink{a00027}{Catch::ExceptionTranslatorRegistrar} 
+      \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( catch\_internal\_ExceptionRegistrar )( &
+      \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}( catch\_internal\_ExceptionTranslator ) ); \}\(\backslash\)
+    static std::string \hyperlink{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{INTERNAL\_CATCH\_UNIQUE\_NAME}(  
+      catch\_internal\_ExceptionTranslator )( signature )
+\end{DoxyCode}
+
+
+Definition at line 2009 of file catch.\+hpp.
+
+\hypertarget{a00094_afe320ceec108fc8c160f9ac3938f1bc8}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E}( name, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+ )}\label{a00094_afe320ceec108fc8c160f9ac3938f1bc8}
+
+
+Definition at line 55 of file catch.\+hpp.
+
+\hypertarget{a00094_a1b51a086ea21a750bd306ac0ed4d2a95}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{line}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E2}( name, line )}\label{a00094_a1b51a086ea21a750bd306ac0ed4d2a95}
+
+
+Definition at line 54 of file catch.\+hpp.
+
+\hypertarget{a00094_a7c21e89d8b7727757ce9ca2b848f1cda}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E2@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E2}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E2@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E2}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+N\+A\+M\+E\+\_\+\+L\+I\+N\+E2(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{line}
+\end{DoxyParamCaption}
+)~name\#\#line}\label{a00094_a7c21e89d8b7727757ce9ca2b848f1cda}
+
+
+Definition at line 53 of file catch.\+hpp.
+
+\hypertarget{a00094_a243c8e2802ce58df247f51bcb8a15650}{}\index{catch.\+hpp@{catch.\+hpp}!I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}}
+\index{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T@{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T(
+\begin{DoxyParamCaption}
+\item[{}]{arg, }
+\item[{}]{matcher, }
+\item[{}]{result\+Disposition, }
+\item[{}]{macro\+Name}
+\end{DoxyParamCaption}
+)}\label{a00094_a243c8e2802ce58df247f51bcb8a15650}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+        Catch::ResultBuilder \_\_catchResult( macroName, \hyperlink{a00094_abc0b2405454c51748a31e0393d9ad5d1}{CATCH\_INTERNAL\_LINEINFO}, #arg
+       \textcolor{stringliteral}{" "} #matcher, resultDisposition ); \(\backslash\)
+        try \{ \(\backslash\)
+            std::string matcherAsString = ::Catch::Matchers::matcher.toString(); \(\backslash\)
+            \_\_catchResult \(\backslash\)
+                .setLhs( \hyperlink{a00117_a386cb19a84b12339486771ad143a95ae}{Catch::toString}( arg ) ) \(\backslash\)
+                .setRhs( matcherAsString == \textcolor{stringliteral}{"\{?\}"} ? #matcher : matcherAsString ) \(\backslash\)
+                .setOp( \textcolor{stringliteral}{"matches"} ) \(\backslash\)
+                .setResultType( ::Catch::Matchers::matcher.match( arg ) ); \(\backslash\)
+            \_\_catchResult.captureExpression(); \(\backslash\)
+        \} \textcolor{keywordflow}{catch}( ... ) \{ \(\backslash\)
+            \_\_catchResult.useActiveException( resultDisposition | 
+      \hyperlink{a00068_a3396cad6e2259af326b3aae93e23e9d8aa18c94bd60c5614e17a84c2ced3bbfd5}{Catch::ResultDisposition::ContinueOnFailure} ); \(\backslash\)
+        \} \hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{\(\backslash\)}
+\hyperlink{a00094_a345ec5265fc806d64c3dda4c184e8071}{        INTERNAL\_CATCH\_REACT}( \_\_catchResult ) \(\backslash\)
+    \} \textcolor{keywordflow}{while}( \hyperlink{a00117_ad425271249dd02956a9709e78b8b2783}{Catch::alwaysFalse}() )
+\end{DoxyCode}
+
+
+Definition at line 1571 of file catch.\+hpp.
+
+\hypertarget{a00094_a7cbb972e639dfcccaa0f479715b35be2}{}\index{catch.\+hpp@{catch.\+hpp}!M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E(
+\begin{DoxyParamCaption}
+\item[{}]{method, }
+\item[{}]{name, }
+\item[{}]{description}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+A\+S\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E}( method, name, description )}\label{a00094_a7cbb972e639dfcccaa0f479715b35be2}
+
+
+Definition at line 8954 of file catch.\+hpp.
+
+\hypertarget{a00094_a1adc4854d9c6a32af14aa1ddee5b87ef}{}\index{catch.\+hpp@{catch.\+hpp}!R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R@{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R}}
+\index{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R@{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{reporter\+Type}
+\end{DoxyParamCaption}
+)~I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+L\+E\+G\+A\+C\+Y\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R( name, reporter\+Type )}\label{a00094_a1adc4854d9c6a32af14aa1ddee5b87ef}
+
+
+Definition at line 8962 of file catch.\+hpp.
+
+\hypertarget{a00094_acadc9d11edc5137e12476268d11cbb23}{}\index{catch.\+hpp@{catch.\+hpp}!R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R@{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R}}
+\index{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R@{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{reporter\+Type}
+\end{DoxyParamCaption}
+)~I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R\+\_\+\+R\+E\+P\+O\+R\+T\+E\+R( name, reporter\+Type )}\label{a00094_acadc9d11edc5137e12476268d11cbb23}
+
+
+Definition at line 8961 of file catch.\+hpp.
+
+\hypertarget{a00094_ad9f2db71e103991db7d6f001a955285f}{}\index{catch.\+hpp@{catch.\+hpp}!R\+E\+Q\+U\+I\+R\+E@{R\+E\+Q\+U\+I\+R\+E}}
+\index{R\+E\+Q\+U\+I\+R\+E@{R\+E\+Q\+U\+I\+R\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{R\+E\+Q\+U\+I\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+I\+R\+E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\char`\"{} )}\label{a00094_ad9f2db71e103991db7d6f001a955285f}
+
+
+Definition at line 8918 of file catch.\+hpp.
+
+\hypertarget{a00094_a8b0e7081fa7227e55b6a195a940cb8c1}{}\index{catch.\+hpp@{catch.\+hpp}!R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+S\+E@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+S\+E}}
+\index{R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+S\+E@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+S\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+S\+E(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Normal} $\vert$ {\bf Catch\+::\+Result\+Disposition\+::\+False\+Test}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+F\+A\+L\+S\+E\char`\"{} )}\label{a00094_a8b0e7081fa7227e55b6a195a940cb8c1}
+
+
+Definition at line 8919 of file catch.\+hpp.
+
+\hypertarget{a00094_aaf314e5b53e024051ea5d0a9eb6d75a9}{}\index{catch.\+hpp@{catch.\+hpp}!R\+E\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+H\+R\+O\+W@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+H\+R\+O\+W}}
+\index{R\+E\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+H\+R\+O\+W@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+H\+R\+O\+W}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{R\+E\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+H\+R\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+H\+R\+O\+W(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+\_\+\+T\+H\+R\+O\+W}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+N\+O\+T\+H\+R\+O\+W\char`\"{} )}\label{a00094_aaf314e5b53e024051ea5d0a9eb6d75a9}
+
+
+Definition at line 8923 of file catch.\+hpp.
+
+\hypertarget{a00094_ac1354db6f3e9c1e0a8eda0eea7ff1f0a}{}\index{catch.\+hpp@{catch.\+hpp}!R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+A\+T@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+A\+T}}
+\index{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+A\+T@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+A\+T}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+A\+T(
+\begin{DoxyParamCaption}
+\item[{}]{arg, }
+\item[{}]{matcher}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+H\+E\+C\+K\+\_\+\+T\+H\+A\+T}( arg, matcher, {\bf Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+A\+T\char`\"{} )}\label{a00094_ac1354db6f3e9c1e0a8eda0eea7ff1f0a}
+
+
+Definition at line 8936 of file catch.\+hpp.
+
+\hypertarget{a00094_a7d8d2d630f08ecda4a8ddf20d011814f}{}\index{catch.\+hpp@{catch.\+hpp}!R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S}}
+\index{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S(
+\begin{DoxyParamCaption}
+\item[{}]{expr}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S}( expr, {\bf Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\char`\"{} )}\label{a00094_a7d8d2d630f08ecda4a8ddf20d011814f}
+
+
+Definition at line 8921 of file catch.\+hpp.
+
+\hypertarget{a00094_ae24a059e3c28ff3eea69be48282f5f81}{}\index{catch.\+hpp@{catch.\+hpp}!R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}}
+\index{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S(
+\begin{DoxyParamCaption}
+\item[{}]{expr, }
+\item[{}]{exception\+Type}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S}( expr, exception\+Type, {\bf Catch\+::\+Result\+Disposition\+::\+Normal}, \char`\"{}R\+E\+Q\+U\+I\+R\+E\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+S\char`\"{} )}\label{a00094_ae24a059e3c28ff3eea69be48282f5f81}
+
+
+Definition at line 8922 of file catch.\+hpp.
+
+\hypertarget{a00094_a9f0ab245cdba000deb91cdfb16808059}{}\index{catch.\+hpp@{catch.\+hpp}!S\+C\+E\+N\+A\+R\+I\+O@{S\+C\+E\+N\+A\+R\+I\+O}}
+\index{S\+C\+E\+N\+A\+R\+I\+O@{S\+C\+E\+N\+A\+R\+I\+O}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{S\+C\+E\+N\+A\+R\+I\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+E\+N\+A\+R\+I\+O(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{tags}
+\end{DoxyParamCaption}
+)~{\bf T\+E\+S\+T\+\_\+\+C\+A\+S\+E}( \char`\"{}Scenario\+: \char`\"{} name, tags )}\label{a00094_a9f0ab245cdba000deb91cdfb16808059}
+
+
+Definition at line 8975 of file catch.\+hpp.
+
+\hypertarget{a00094_af3463f70ca99312394bb2850802e7fb3}{}\index{catch.\+hpp@{catch.\+hpp}!S\+C\+E\+N\+A\+R\+I\+O\+\_\+\+M\+E\+T\+H\+O\+D@{S\+C\+E\+N\+A\+R\+I\+O\+\_\+\+M\+E\+T\+H\+O\+D}}
+\index{S\+C\+E\+N\+A\+R\+I\+O\+\_\+\+M\+E\+T\+H\+O\+D@{S\+C\+E\+N\+A\+R\+I\+O\+\_\+\+M\+E\+T\+H\+O\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{S\+C\+E\+N\+A\+R\+I\+O\+\_\+\+M\+E\+T\+H\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+E\+N\+A\+R\+I\+O\+\_\+\+M\+E\+T\+H\+O\+D(
+\begin{DoxyParamCaption}
+\item[{}]{class\+Name, }
+\item[{}]{name, }
+\item[{}]{tags}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}( class\+Name, \char`\"{}Scenario\+: \char`\"{} name, tags )}\label{a00094_af3463f70ca99312394bb2850802e7fb3}
+
+
+Definition at line 8976 of file catch.\+hpp.
+
+\hypertarget{a00094_ac0f6898b30b544cafa4f575aa5df2499}{}\index{catch.\+hpp@{catch.\+hpp}!S\+C\+O\+P\+E\+D\+\_\+\+C\+A\+P\+T\+U\+R\+E@{S\+C\+O\+P\+E\+D\+\_\+\+C\+A\+P\+T\+U\+R\+E}}
+\index{S\+C\+O\+P\+E\+D\+\_\+\+C\+A\+P\+T\+U\+R\+E@{S\+C\+O\+P\+E\+D\+\_\+\+C\+A\+P\+T\+U\+R\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{S\+C\+O\+P\+E\+D\+\_\+\+C\+A\+P\+T\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+O\+P\+E\+D\+\_\+\+C\+A\+P\+T\+U\+R\+E(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}( \#msg \char`\"{} \+:= \char`\"{} $<$$<$ msg, \char`\"{}C\+A\+P\+T\+U\+R\+E\char`\"{} )}\label{a00094_ac0f6898b30b544cafa4f575aa5df2499}
+
+
+Definition at line 8942 of file catch.\+hpp.
+
+\hypertarget{a00094_a35fb0dbec68e4116010eb55d4e1aed42}{}\index{catch.\+hpp@{catch.\+hpp}!S\+C\+O\+P\+E\+D\+\_\+\+I\+N\+F\+O@{S\+C\+O\+P\+E\+D\+\_\+\+I\+N\+F\+O}}
+\index{S\+C\+O\+P\+E\+D\+\_\+\+I\+N\+F\+O@{S\+C\+O\+P\+E\+D\+\_\+\+I\+N\+F\+O}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{S\+C\+O\+P\+E\+D\+\_\+\+I\+N\+F\+O}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+C\+O\+P\+E\+D\+\_\+\+I\+N\+F\+O(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+F\+O}( msg, \char`\"{}I\+N\+F\+O\char`\"{} )}\label{a00094_a35fb0dbec68e4116010eb55d4e1aed42}
+
+
+Definition at line 8940 of file catch.\+hpp.
+
+\hypertarget{a00094_afcb669b40babf8726c969fce8d2cd94b}{}\index{catch.\+hpp@{catch.\+hpp}!S\+E\+C\+T\+I\+O\+N@{S\+E\+C\+T\+I\+O\+N}}
+\index{S\+E\+C\+T\+I\+O\+N@{S\+E\+C\+T\+I\+O\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{S\+E\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+C\+T\+I\+O\+N(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{description}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N}( name, description )}\label{a00094_afcb669b40babf8726c969fce8d2cd94b}
+
+
+Definition at line 8955 of file catch.\+hpp.
+
+\hypertarget{a00094_a3d0d5d38dd75c7ffebcc8c6e1e03d2ce}{}\index{catch.\+hpp@{catch.\+hpp}!S\+U\+C\+C\+E\+E\+D@{S\+U\+C\+C\+E\+E\+D}}
+\index{S\+U\+C\+C\+E\+E\+D@{S\+U\+C\+C\+E\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{S\+U\+C\+C\+E\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+U\+C\+C\+E\+E\+D(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}( {\bf Catch\+::\+Result\+Was\+::\+Ok}, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}S\+U\+C\+C\+E\+E\+D\char`\"{}, msg )}\label{a00094_a3d0d5d38dd75c7ffebcc8c6e1e03d2ce}
+
+
+Definition at line 8957 of file catch.\+hpp.
+
+\hypertarget{a00094_a4306f112aa064372e584f2af283f24e9}{}\index{catch.\+hpp@{catch.\+hpp}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+C\+A\+S\+E(
+\begin{DoxyParamCaption}
+\item[{}]{name, }
+\item[{}]{description}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E}( name, description )}\label{a00094_a4306f112aa064372e584f2af283f24e9}
+
+
+Definition at line 8952 of file catch.\+hpp.
+
+\hypertarget{a00094_a883fb6fc28b7dbda0fcefb2dd626546f}{}\index{catch.\+hpp@{catch.\+hpp}!T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D@{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D(
+\begin{DoxyParamCaption}
+\item[{}]{class\+Name, }
+\item[{}]{name, }
+\item[{}]{description}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+M\+E\+T\+H\+O\+D}( class\+Name, name, description )}\label{a00094_a883fb6fc28b7dbda0fcefb2dd626546f}
+
+
+Definition at line 8953 of file catch.\+hpp.
+
+\hypertarget{a00094_a27987092139727fd7a471b5f74dc62de}{}\index{catch.\+hpp@{catch.\+hpp}!T\+H\+E\+N@{T\+H\+E\+N}}
+\index{T\+H\+E\+N@{T\+H\+E\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+H\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+H\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~{\bf S\+E\+C\+T\+I\+O\+N}( \char`\"{}    Then\+: \char`\"{} desc, \char`\"{}\char`\"{} )}\label{a00094_a27987092139727fd7a471b5f74dc62de}
+
+
+Definition at line 8981 of file catch.\+hpp.
+
+\hypertarget{a00094_ac4e861fe31efada5e2470f4aba857224}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+P\+P\+R\+O\+X\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+P\+P\+R\+O\+X\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+P\+P\+R\+O\+X\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+P\+P\+R\+O\+X\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+P\+P\+R\+O\+X\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+P\+P\+R\+O\+X\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_ac4e861fe31efada5e2470f4aba857224}
+
+
+Definition at line 2015 of file catch.\+hpp.
+
+\hypertarget{a00094_aa5118eb771d1cdf1a14bce53296675dc}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+R\+E\+S\+U\+L\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+R\+E\+S\+U\+L\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+R\+E\+S\+U\+L\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+R\+E\+S\+U\+L\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+R\+E\+S\+U\+L\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+A\+S\+S\+E\+R\+T\+I\+O\+N\+R\+E\+S\+U\+L\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_aa5118eb771d1cdf1a14bce53296675dc}
+
+
+Definition at line 637 of file catch.\+hpp.
+
+\hypertarget{a00094_af06e9a04b0106596b7645d81e1aba5c0}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_af06e9a04b0106596b7645d81e1aba5c0}
+
+
+Definition at line 581 of file catch.\+hpp.
+
+\hypertarget{a00094_a27b42830f93b62d65bd7c15fb3acd0d0}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+M\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a27b42830f93b62d65bd7c15fb3acd0d0}
+
+
+Definition at line 51 of file catch.\+hpp.
+
+\hypertarget{a00094_ae20e90c8b19224675d022f94b534ef6b}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+E\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+E\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+E\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+E\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+E\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+T\+I\+E\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_ae20e90c8b19224675d022f94b534ef6b}
+
+
+Definition at line 65 of file catch.\+hpp.
+
+\hypertarget{a00094_a07a1c68dee179942c1aede4f9b304543}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a07a1c68dee179942c1aede4f9b304543}
+
+
+Definition at line 297 of file catch.\+hpp.
+
+\hypertarget{a00094_ad762c0f54e0f59a5d1e1326ca378a0ff}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+D\+E\+B\+U\+G\+G\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_ad762c0f54e0f59a5d1e1326ca378a0ff}
+
+
+Definition at line 1404 of file catch.\+hpp.
+
+\hypertarget{a00094_a5182533b90ae6028b4003ee34ea3c317}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a5182533b90ae6028b4003ee34ea3c317}
+
+
+Definition at line 778 of file catch.\+hpp.
+
+\hypertarget{a00094_adadd64d692f8420a4e553145d3d401db}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+L\+H\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+L\+H\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+L\+H\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+L\+H\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+L\+H\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+E\+X\+P\+R\+E\+S\+S\+I\+O\+N\+\_\+\+L\+H\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_adadd64d692f8420a4e553145d3d401db}
+
+
+Definition at line 775 of file catch.\+hpp.
+
+\hypertarget{a00094_a871c039e801b57ac15d606dc25c3519d}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a871c039e801b57ac15d606dc25c3519d}
+
+
+Definition at line 1742 of file catch.\+hpp.
+
+\hypertarget{a00094_a24243dc93e4f452db07fb6514bb9e749}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a24243dc93e4f452db07fb6514bb9e749}
+
+
+Definition at line 14 of file catch.\+hpp.
+
+\hypertarget{a00094_a465bc09c8d9805aad7642381df6cae5f}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a465bc09c8d9805aad7642381df6cae5f}
+
+
+Definition at line 1371 of file catch.\+hpp.
+
+\hypertarget{a00094_a9f31ada8e1aac0a38d7a7e2cfb6968b5}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a9f31ada8e1aac0a38d7a7e2cfb6968b5}
+
+
+Definition at line 1922 of file catch.\+hpp.
+
+\hypertarget{a00094_a70327cb83c2141b3b54e9549418021ad}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+G\+E\+N\+E\+R\+A\+T\+O\+R\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a70327cb83c2141b3b54e9549418021ad}
+
+
+Definition at line 300 of file catch.\+hpp.
+
+\hypertarget{a00094_a57cf77eef2160d800daa6c6a77ee3b51}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+U\+B\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+U\+B\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+U\+B\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+U\+B\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+U\+B\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+U\+B\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a57cf77eef2160d800daa6c6a77ee3b51}
+
+
+Definition at line 1926 of file catch.\+hpp.
+
+\hypertarget{a00094_a8a69d5371df35756eb6ad9b47bcf3e94}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+U\+N\+N\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+U\+N\+N\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+U\+N\+N\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+U\+N\+N\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+U\+N\+N\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+R\+U\+N\+N\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a8a69d5371df35756eb6ad9b47bcf3e94}
+
+
+Definition at line 1453 of file catch.\+hpp.
+
+\hypertarget{a00094_a81d9db69cb4be6ddd3888ad919273a47}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a81d9db69cb4be6ddd3888ad919273a47}
+
+
+Definition at line 2321 of file catch.\+hpp.
+
+\hypertarget{a00094_a57d04225b51dece606932db63aebeb5f}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+S\+\_\+\+T\+E\+S\+T\+C\+A\+S\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a57d04225b51dece606932db63aebeb5f}
+
+
+Definition at line 450 of file catch.\+hpp.
+
+\hypertarget{a00094_a9345188bea461b3084194d7ec2824101}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+A\+T\+C\+H\+E\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+A\+T\+C\+H\+E\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+A\+T\+C\+H\+E\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+A\+T\+C\+H\+E\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+A\+T\+C\+H\+E\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+A\+T\+C\+H\+E\+R\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a9345188bea461b3084194d7ec2824101}
+
+
+Definition at line 2096 of file catch.\+hpp.
+
+\hypertarget{a00094_a0e15a2d360f827455b6ef757290ada34}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a0e15a2d360f827455b6ef757290ada34}
+
+
+Definition at line 1315 of file catch.\+hpp.
+
+\hypertarget{a00094_a62f025f954221470c23a77e90ffacd56}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+N\+O\+T\+I\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a62f025f954221470c23a77e90ffacd56}
+
+
+Definition at line 48 of file catch.\+hpp.
+
+\hypertarget{a00094_a898dc40c2fe76409f8b4ccd1d4fb4a9a}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+O\+P\+T\+I\+O\+N\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a898dc40c2fe76409f8b4ccd1d4fb4a9a}
+
+
+Definition at line 2345 of file catch.\+hpp.
+
+\hypertarget{a00094_aaf8c6350ab325682f46e786bfef3b622}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_aaf8c6350ab325682f46e786bfef3b622}
+
+
+Definition at line 1407 of file catch.\+hpp.
+
+\hypertarget{a00094_af6024c3338ada36de16549522ec8f4dd}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+T\+R\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+T\+R\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+T\+R\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+T\+R\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+T\+R\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+P\+T\+R\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_af6024c3338ada36de16549522ec8f4dd}
+
+
+Definition at line 324 of file catch.\+hpp.
+
+\hypertarget{a00094_a3819417b11fa6717f32f8ae1ff69d170}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+E\+N\+A\+B\+L\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+E\+N\+A\+B\+L\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+E\+N\+A\+B\+L\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+E\+N\+A\+B\+L\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+E\+N\+A\+B\+L\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+E\+N\+A\+B\+L\+E\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a3819417b11fa6717f32f8ae1ff69d170}
+
+
+Definition at line 8988 of file catch.\+hpp.
+
+\hypertarget{a00094_a41060a914a029983a3a9db8d50724329}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+B\+U\+I\+L\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+B\+U\+I\+L\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+B\+U\+I\+L\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+B\+U\+I\+L\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+B\+U\+I\+L\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+B\+U\+I\+L\+D\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a41060a914a029983a3a9db8d50724329}
+
+
+Definition at line 584 of file catch.\+hpp.
+
+\hypertarget{a00094_aac869d5d0c85bfa60806c9c82dde6288}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_aac869d5d0c85bfa60806c9c82dde6288}
+
+
+Definition at line 587 of file catch.\+hpp.
+
+\hypertarget{a00094_a8d1f899b4d3552159fecfb94489a987c}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a8d1f899b4d3552159fecfb94489a987c}
+
+
+Definition at line 1589 of file catch.\+hpp.
+
+\hypertarget{a00094_a81c64c1b655f2696bb14eca5538fac46}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a81c64c1b655f2696bb14eca5538fac46}
+
+
+Definition at line 1592 of file catch.\+hpp.
+
+\hypertarget{a00094_a5b7548a20bcce22bb178bad3c80c4f7d}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+F\+I\+N\+A\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+F\+I\+N\+A\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+F\+I\+N\+A\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+F\+I\+N\+A\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+F\+I\+N\+A\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+F\+I\+N\+A\+E\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a5b7548a20bcce22bb178bad3c80c4f7d}
+
+
+Definition at line 952 of file catch.\+hpp.
+
+\hypertarget{a00094_a5eead7e2b722a8372e8a09843f099634}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+S\+U\+P\+P\+R\+E\+S\+S\+\_\+\+W\+A\+R\+N\+I\+N\+G\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a5eead7e2b722a8372e8a09843f099634}
+
+
+Definition at line 18 of file catch.\+hpp.
+
+\hypertarget{a00094_a015a212804c0b8a41c767acf24284ba3}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+A\+G\+\_\+\+A\+L\+I\+A\+S\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a015a212804c0b8a41c767acf24284ba3}
+
+
+Definition at line 2324 of file catch.\+hpp.
+
+\hypertarget{a00094_ac7156c930a04d3362065f3e3e7365de0}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+S\+E\+\_\+\+I\+N\+F\+O\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_ac7156c930a04d3362065f3e3e7365de0}
+
+
+Definition at line 2424 of file catch.\+hpp.
+
+\hypertarget{a00094_a202df3911846a6f2281d940b29b84824}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+E\+S\+T\+\_\+\+R\+E\+G\+I\+S\+T\+R\+Y\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a202df3911846a6f2281d940b29b84824}
+
+
+Definition at line 447 of file catch.\+hpp.
+
+\hypertarget{a00094_a407db4a5c791398e2c3bf6b2aa709117}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+I\+M\+E\+R\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a407db4a5c791398e2c3bf6b2aa709117}
+
+
+Definition at line 1677 of file catch.\+hpp.
+
+\hypertarget{a00094_ac25416dc686629ad60493262cc42c451}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+S\+T\+R\+I\+N\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+S\+T\+R\+I\+N\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+S\+T\+R\+I\+N\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+S\+T\+R\+I\+N\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+S\+T\+R\+I\+N\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+S\+T\+R\+I\+N\+G\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_ac25416dc686629ad60493262cc42c451}
+
+
+Definition at line 949 of file catch.\+hpp.
+
+\hypertarget{a00094_a8acf596db7161876a50fa22d20195502}{}\index{catch.\+hpp@{catch.\+hpp}!T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+T\+A\+L\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+T\+A\+L\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}}
+\index{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+T\+A\+L\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D@{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+T\+A\+L\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+T\+A\+L\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+O\+B\+L\+U\+E\+C\+U\+B\+E\+S\+\_\+\+C\+A\+T\+C\+H\+\_\+\+T\+O\+T\+A\+L\+S\+\_\+\+H\+P\+P\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D}\label{a00094_a8acf596db7161876a50fa22d20195502}
+
+
+Definition at line 1610 of file catch.\+hpp.
+
+\hypertarget{a00094_a108d6c5c51dd46e82a62b262394f0242}{}\index{catch.\+hpp@{catch.\+hpp}!W\+A\+R\+N@{W\+A\+R\+N}}
+\index{W\+A\+R\+N@{W\+A\+R\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{W\+A\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+A\+R\+N(
+\begin{DoxyParamCaption}
+\item[{}]{msg}
+\end{DoxyParamCaption}
+)~{\bf I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+C\+A\+T\+C\+H\+\_\+\+M\+S\+G}( {\bf Catch\+::\+Result\+Was\+::\+Warning}, {\bf Catch\+::\+Result\+Disposition\+::\+Continue\+On\+Failure}, \char`\"{}W\+A\+R\+N\char`\"{}, msg )}\label{a00094_a108d6c5c51dd46e82a62b262394f0242}
+
+
+Definition at line 8939 of file catch.\+hpp.
+
+\hypertarget{a00094_ab09e9b8186233f676ce6a23aebe89d6e}{}\index{catch.\+hpp@{catch.\+hpp}!W\+H\+E\+N@{W\+H\+E\+N}}
+\index{W\+H\+E\+N@{W\+H\+E\+N}!catch.\+hpp@{catch.\+hpp}}
+\paragraph[{W\+H\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+H\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{desc}
+\end{DoxyParamCaption}
+)~{\bf S\+E\+C\+T\+I\+O\+N}( \char`\"{}    When\+: \char`\"{} desc, \char`\"{}\char`\"{} )}\label{a00094_ab09e9b8186233f676ce6a23aebe89d6e}
+
+
+Definition at line 8979 of file catch.\+hpp.
+

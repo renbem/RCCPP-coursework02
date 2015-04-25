@@ -1,7 +1,16 @@
+/**
+ * \brief Implementation of the game class.
+ *
+ * Game represents the grid of the game, incorporating all the boards.
+ *
+ * \author Michael Ebner
+ * \date April 2015
+ */
+
 #ifndef GAME_H_
 #define GAME_H_
 
-#include <stack>
+// #include <stack>
 #include "Board.h"
 
 class Game{

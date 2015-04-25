@@ -1,8 +1,14 @@
-#include <iostream>
-#include <fstream>
-
+/**
+ * \brief Implementation of the function writeComputationalTimeResultsToFile.
+ *
+ * writeComputationalTimeResultsToFile writes the measured computational time
+ * into a txt-file which can be used for further processing.
+ *
+ * \author Michael Ebner
+ * \date April 2015
+ */
+ 
 #include "writeComputationalTimeResultsToFile.h"
-#include "MyException.h"
 
 void writeComputationalTimeResultsToFile(std::vector<double> elapsedTime,
     std::string outfile){
