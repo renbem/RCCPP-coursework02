@@ -105,7 +105,7 @@ end
 figure
 semilogx(boardCells,elapsedTime(:,1)./elapsedTime(:,2), 'rx', 'LineWidth', MyLineWidth); hold on
 xlabel('Number of Cells')
-ylabel('OpenMP/Serial')
+ylabel('Relative computational time OpenMP/Serial')
 title('Relative speed-up after 1000 steps')
 
 if(saveFlag)

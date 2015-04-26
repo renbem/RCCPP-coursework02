@@ -12,9 +12,9 @@ The project can be downloaded from \url{https://github.com/renbem/RCCPP-coursewo
 \end{itemize}
 
 \section{Choice of design}
-The implementation follows the design as illustrated in \cref{fig:OverviewOfImplementation} which translates the concept of a having a game consisting of boards which in turn consist of the cells.
+The implementation follows the design as illustrated in \cref{fig:OverviewOfImplementation} which translates the concept of a having a game consisting of boards which in turn consist of cells.
 
-The classes are designed so that a new iteration is triggered by the member function \texttt{computeNextStep} of \texttt{Game}, cf. \cref{fig:computeNextStepCall}. I decided to connect the "rules of the game" with the board via the two methods \texttt{determineNeighbourCells} and \texttt{applyTransitionRules}. One could argue that this might be better situated in the class \texttt{Game} since the rules can be considered as an intrinsic property of the game and the board could be of arbitrary shape. However, since the Conway's Game of Life relies on well-established rules in order to have a "meaningful game" (i.e. no extinction or overcrowding of cells) the definition of a neighbour and the propagation rules depend strongly on the shape and therefore on the board.
+The classes are designed so that a new iteration is triggered by the member function \texttt{computeNextStep} of \texttt{Game}, cf. \cref{fig:computeNextStepCall}. I decided to connect the "rules of the game" with the board via the two methods \texttt{determineNeighbourCells} and \texttt{applyTransitionRules} since they constitute two separate logical units. However, one could argue that this might be better situated in the class \texttt{Game} since the rules can be considered as an intrinsic property of the game and the board could be of arbitrary shape. Nevertheless, since the Conway's Game of Life relies on well-established rules in order to have a "meaningful game" (i.e. no extinction or overcrowding of cells) the definition of a neighbour and the propagation rules depend strongly on the shape and therefore on the board.
 
 \begin{figure}
 	\includegraphics[width=\textwidth]{doxygen/latex/a00143.pdf}
@@ -39,8 +39,8 @@ The classes are designed so that a new iteration is triggered by the member func
 %	\label{fig:MainClasses}
 %\end{figure}
 
-\subsection{Parallelisation}
-The code was parallelised via \textbf{OpenMP} within the method \texttt{computeNextStep}, cf. line 10 in \cref{Gamecc}. The line 9 and 11 was added since I could not compile it without any error messages on Mac (further instructions in \cref{sec:BuildRunTest}) but it works on Ubuntu. Therefore, the code runs on non-linux platforms only in the serial version.
+\section{Parallelisation}
+The code was parallelised via \textbf{OpenMP} within the method \texttt{computeNextStep}, cf. line 10 in \cref{Gamecc}. The line 9 and 11 was added since I could not compile it without any error messages on Mac (further information in \cref{sec:BuildRunTest}) but it works on Ubuntu. Therefore, the code runs on non-linux platforms only in the serial version.
 
 
 \lstinputlisting
@@ -53,15 +53,15 @@ Unit tests were written to test the following cases:
 	\item Check input file\footnote{It is only tested whether the input file exists. Many other cases should be tested in addition. E.g.: Format of file appropriate?, Number of columns always identical?, Minimum number of rows and columns alright? etc.}.
 	\item Several tests to check malformed command lines.
 	\item Several tests to check whether the correct neighbours are returned by \texttt{Board::neighbourCells}. (The "infinite board" was implemented by assuming periodic boundary conditions.)
-	\item Attempted access to non-existing indices of board throws an exception.
+	\item Check that attempted access to non-existing indices of board throws an exception.
 	\item Test whether one step of Conway's Game of Life is computed correctly.
 	\item Test whether the parallel computation via OpenMP returns the same board as the serial version.
 	
 \end{itemize}
-The respective file \texttt{main\_UnitTests.cc} is located in \texttt{test/}
+The corresponding file \texttt{main\_UnitTests.cc} is located in \texttt{test/}.
 
 \section{Build, run and test}\label{sec:BuildRunTest}
-The respective \texttt{CMakeLists.txt} file in the parent directory to build the code was tested on two operating systems:
+The respective parent directory \texttt{CMakeLists.txt} file to build the code was tested on two operating systems:
 
 \begin{itemize}
 	\item OS X 10.10.3 (Macbook Pro, 2.5 GHz Intel Core i7)
@@ -79,8 +79,6 @@ In order to build the code run the following lines in the main directory:
 	\texttt{cmake ..}\\
 	\texttt{make}
 \end{quote}
-
-
 After building the code two binary files will be generated:
 \begin{itemize}
 	\item \texttt{conwaysGameOfLife} located in \texttt{build/test/bin/}
@@ -106,18 +104,60 @@ in \texttt{build/test/bin/}.
 
 
 \section{Results}\label{sec:results}
+In this section the results, obtained on Ubuntu, are shown and shall be discussed.
+
+\subsection{Video}
+An example board of dimension $200\times 400$ was computed and uploaded to \url{https://www.youtube.com/watch?v=AeIm2I_9n5g&feature=youtu.be}. Several phenomena can be observed such as gliders, oscillators and stationary patterns.
+
+\subsection{Parallel vs. serial implementation}
+In this comparison the Game of Life rules were applied to boards of dimensions
+\begin{enumerate}
+	\item $10\times10$ (100 Cells)
+	\item $10\times20$ (200 Cells)
+	\item $10\times50$ (500 Cells)
+	\item $10\times100$ (\num{1000} Cells)
+	\item $50\times100$ (\num{5000} Cells)
+	\item $100\times100$ (\num{10000} Cells)
+	\item $100\times200$ (\num{20000} Cells)
+	\item $200\times200$ (\num{40000} Cells)
+	\item $200\times300$ (\num{60000} Cells)
+	\item $200\times400$ (\num{80000} Cells)
+\end{enumerate}
+for in total 1000 iterations for both the serial and parallel version. 
+
+\begin{figure}\centering
+	\subfloat[Serial implementation]{\label{fig:resultsSerial}\includegraphics[width=0.95\textwidth]{figures/CommandLine_Serial.pdf}} \\
+	\subfloat[Parallel implementation]{\label{fig:resultsOMP}\includegraphics[width=0.95\textwidth]{figures/CommandLine_OpenMP.pdf}} 
+	\caption{Statistic obtained via command 'time'}
+	\label{fig:CommandLineResults}
+\end{figure}
+
+\smallskip
+
+The respective cumulative computational times over the number of cells are illustrated in \cref{fig:computationalTimeOverCells} which states the expected roughly linear increase for each computational method. It can be observed that the implementation via OpenMP is already beneficial in lower numbers and becomes clearly evident in higher ones. However, the relative speed up seems to fluctuate.
+
+\smallskip
+
+In \cref{fig:computationalTimeOverIterations} the computational time is shown over iterations for selected boards. Again, the higher the number of cells the more severe the impact of OpenMP on cumulative time.
+
+\smallskip
+
+Lastly, \cref{fig:computationalTimeSpeedup} depicts the relative speed-up. In general, the advantage of using OpenMP becomes more apparent in higher number of cells. Since it was computed on 4 cores the theoretical maximum speed-up would be less than 4. However, the relative figures varies substantially over the number of cells. For a closer investigation larger boards could be investigated. Moreover, the fact that a virtual machine needed to be used could have altered the results as well.
 
 \begin{figure}\centering
 	\includegraphics[width=0.8\textwidth]{figures/SerialOpenMP_Cells.pdf}
 	\caption{Computational time over number of cells}
+	\label{fig:computationalTimeOverCells}
 \end{figure}
 
 \begin{figure}\centering
 	\includegraphics[width=0.8\textwidth]{figures/SerialOpenMP_Iterations.pdf}
 	\caption{Computational time over number of iterations}
+	\label{fig:computationalTimeOverIterations}
 \end{figure}
 
 \begin{figure}\centering
 	\includegraphics[width=0.8\textwidth]{figures/SerialOpenMP_Speedup.pdf}
 	\caption{Relative speed-up}
+	\label{fig:computationalTimeSpeedup}
 \end{figure}
