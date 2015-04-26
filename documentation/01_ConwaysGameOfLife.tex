@@ -1,14 +1,14 @@
-\chapter{Conways Game of Life}
+\chapter{Conway's Game of Life}
 
-Based on the lecture notes and \url{http://en.wikipedia.org/wiki/Conways_Game_of_Life}\footnote{Retrieved: April 25, October 2015} the concept of the game can be understood as a simulation of a population change over time. The rules read as follows:
+Based on the lecture notes and \url{http://en.wikipedia.org/wiki/Conways_Game_of_Life}\footnote{Retrieved: April 25, October 2015} a summary of the rules of Conway's Game of Life reads as follows:
 \begin{itemize}
-	\item The game is represented by an infinite two-dimensional grid of cells.
+	\item The game is represented by an infinite two-dimensional, rectangular grid of cells.
 	\item Every cell can represent two possible states: dead or alive.
 	\item The grid with its cells represent a population at a discrete point of time.
 	\item The state of each cell in the consecutive time step depends on its 8 adjacent neighbours.
-	\item The transition of the each cell's state are described by these rules (Summary is given in \cref{table:rules}):
+	\item The transition of the each cell's state are described by these rules, cf. \cref{table:rules}:
 	\begin{itemize}
-		\item A live cell remains alive in case it is surrounded by either two or three living cells. Otherwise it dies which relates to the cases of under-population or overcrowding respectively.
+		\item A live cell remains alive in case it is surrounded by either two or three living cells. Otherwise it dies which relates to the cases of under-population or overcrowding, respectively.
 		\item A dead cell with exactly three surrounding living cells becomes alive associated with the idea of reproduction.
 	\end{itemize}
 \end{itemize}

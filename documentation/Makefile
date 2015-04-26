@@ -1,7 +1,7 @@
 MAIN = Documentation
-NAME = RCCPP
+NAME = RCCPP_CW2_MichaelEbner
 
-full: $(MAIN.tex)
+full: $(MAIN).tex
 	latex $(MAIN).tex
 	latex $(MAIN).tex
 	# bibtex $(MAIN)
@@ -32,6 +32,19 @@ full: $(MAIN.tex)
 #	rm Paper1.pdf
 #-------Ende: Update Metadaten
 	open $(NAME).pdf 	
+
+pdf: $(MAIN).tex
+	pdflatex $(MAIN).tex
+	mv $(MAIN).pdf $(NAME).pdf
+	open $(NAME).pdf
+
+pdffull: $(MAIN).tex
+	pdflatex $(MAIN).tex
+	pdflatex $(MAIN).tex
+	pdflatex $(MAIN).tex
+	pdflatex $(MAIN).tex
+	mv $(MAIN).pdf $(NAME).pdf
+	open $(NAME).pdf
 
 clean:
 	rm -f *.o *.c~ \#*	
