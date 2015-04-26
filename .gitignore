@@ -7,3 +7,4 @@ test/data/GameHistory_*
 
 documentation/Makefile
 documentation/*tex
+documentation/figures
