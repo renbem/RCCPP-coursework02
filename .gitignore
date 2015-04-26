@@ -5,5 +5,5 @@ build/
 matlab/GameHistories/
 test/data/GameHistory_*
 
-#documentation/Makefile
-#documentation/*tex
+documentation/Makefile
+documentation/*tex
