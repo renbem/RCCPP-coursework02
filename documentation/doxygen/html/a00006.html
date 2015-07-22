@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>Conway&#39;s Game of Life: Catch::AssertionResultData Struct Reference</title>
+<title>Conway&#39;s Game of Life: main.cc File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -39,9 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -62,10 +60,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -84,119 +80,80 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="a00117.html">Catch</a></li><li class="navelem"><a class="el" href="a00006.html">AssertionResultData</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="a00173.html">List of all members</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Catch::AssertionResultData Struct Reference</div>  </div>
+<div class="title">main.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="a00094_source.html">catch.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Catch::AssertionResultData:</div>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &quot;Game.h&quot;</code><br />
+<code>#include &quot;MyException.h&quot;</code><br />
+<code>#include &quot;writeComputationalTimeResultsToFile.h&quot;</code><br />
+<code>#include &quot;readCommandLine.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for main.cc:</div>
 <div class="dyncontent">
-<div class="center"><img src="a00174.png" border="0" usemap="#_catch_1_1_assertion_result_data_coll__map" alt="Collaboration graph"/></div>
+<div class="center"><img src="a00016.png" border="0" usemap="#main_8cc" alt=""/></div>
+<map name="main_8cc" id="main_8cc">
+</map>
 </div>
+</div>
+<p><a href="a00006_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a37179edde9f853f22d4456677fd97701"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00006.html#a37179edde9f853f22d4456677fd97701">AssertionResultData</a> ()</td></tr>
-<tr class="separator:a37179edde9f853f22d4456677fd97701"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a9e809d36fffbeb1c7d0cbe7382dd9595"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00006.html#a9e809d36fffbeb1c7d0cbe7382dd9595">reconstructedExpression</a></td></tr>
-<tr class="separator:a9e809d36fffbeb1c7d0cbe7382dd9595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac34215803c4c4a88f795879f61c1f7b4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00006.html#ac34215803c4c4a88f795879f61c1f7b4">message</a></td></tr>
-<tr class="separator:ac34215803c4c4a88f795879f61c1f7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ceab4a7ff722aec5587e3748caf66b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00069.html#a624e1ee3661fcf6094ceef1f654601ef">ResultWas::OfType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00006.html#a7ceab4a7ff722aec5587e3748caf66b7">resultType</a></td></tr>
-<tr class="separator:a7ceab4a7ff722aec5587e3748caf66b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00006.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="a00094_source.html#l00657">657</a> of file <a class="el" href="a00094_source.html">catch.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a37179edde9f853f22d4456677fd97701"></a>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Catch::AssertionResultData::AssertionResultData </td>
+          <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="a00094_source.html#l00659">659</a> of file <a class="el" href="a00094_source.html">catch.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ac34215803c4c4a88f795879f61c1f7b4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
         <tr>
-          <td class="memname">std::string Catch::AssertionResultData::message</td>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="a00094_source.html#l00662">662</a> of file <a class="el" href="a00094_source.html">catch.hpp</a>.</p>
+<p>Definition at line <a class="el" href="a00006_source.html#l00026">26</a> of file <a class="el" href="a00006_source.html">main.cc</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="a00006_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#a00006_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="a00006_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="a00006_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" id="node2" href="a00008.html#a20e7468e7c7621b99ed5a35e29a56623" title="Implementation of the function readCommandLine. " alt="" coords="141,5,275,31"/><area shape="rect" id="node3" href="a00009.html#a006b80a1f9b722b42b808c5e38565fc7" title="Implementation of the function writeComputationalTimeResultsToFile. " alt="" coords="104,55,313,93"/></map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="a9e809d36fffbeb1c7d0cbe7382dd9595"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Catch::AssertionResultData::reconstructedExpression</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="a00094_source.html#l00661">661</a> of file <a class="el" href="a00094_source.html">catch.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7ceab4a7ff722aec5587e3748caf66b7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00069.html#a624e1ee3661fcf6094ceef1f654601ef">ResultWas::OfType</a> Catch::AssertionResultData::resultType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="a00094_source.html#l00663">663</a> of file <a class="el" href="a00094_source.html">catch.hpp</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="a00094_source.html">catch.hpp</a></li>
-</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 25 2015 20:26:34 for Conway&#39;s Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 22 2015 12:04:42 for Conway&#39;s Game of Life by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

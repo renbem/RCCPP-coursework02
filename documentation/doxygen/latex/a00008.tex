@@ -1,95 +1,55 @@
-\hypertarget{a00008}{}\subsection{Catch\+:\+:Between\+Generator$<$ T $>$ Class Template Reference}
-\label{a00008}\index{Catch\+::\+Between\+Generator$<$ T $>$@{Catch\+::\+Between\+Generator$<$ T $>$}}
-
-
-{\ttfamily \#include $<$catch.\+hpp$>$}
-
-
-
-Inheritance diagram for Catch\+:\+:Between\+Generator$<$ T $>$\+:\nopagebreak
+\hypertarget{a00008}{}\subsection{read\+Command\+Line.\+cc File Reference}
+\label{a00008}\index{read\+Command\+Line.\+cc@{read\+Command\+Line.\+cc}}
+{\ttfamily \#include \char`\"{}read\+Command\+Line.\+h\char`\"{}}\\*
+Include dependency graph for read\+Command\+Line.\+cc\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=235pt]{a00178}
+\includegraphics[width=194pt]{a00018}
 \end{center}
 \end{figure}
-
-
-Collaboration diagram for Catch\+:\+:Between\+Generator$<$ T $>$\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=235pt]{a00179}
-\end{center}
-\end{figure}
-\subsubsection*{Public Member Functions}
+\subsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{a00008_a835a057d691ae37caef660624099b51c}{Between\+Generator} (T from, T to)
-\item 
-virtual T \hyperlink{a00008_af83575d62cc727ca995446cff4d6c26c}{get\+Value} (std\+::size\+\_\+t index) const 
-\item 
-virtual std\+::size\+\_\+t \hyperlink{a00008_aa53a04a259e796ba2b5adabed79474b5}{size} () const 
-\end{DoxyCompactItemize}
+std\+::vector$<$ std\+::string $>$ \hyperlink{a00008_a20e7468e7c7621b99ed5a35e29a56623}{read\+Command\+Line} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Implementation of the function read\+Command\+Line. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsubsection{Detailed Description}
-\subsubsection*{template$<$typename T$>$class Catch\+::\+Between\+Generator$<$ T $>$}
-
-
-
-Definition at line 1759 of file catch.\+hpp.
-
-
-
-\subsubsection{Constructor \& Destructor Documentation}
-\hypertarget{a00008_a835a057d691ae37caef660624099b51c}{}\index{Catch\+::\+Between\+Generator@{Catch\+::\+Between\+Generator}!Between\+Generator@{Between\+Generator}}
-\index{Between\+Generator@{Between\+Generator}!Catch\+::\+Between\+Generator@{Catch\+::\+Between\+Generator}}
-\paragraph[{Between\+Generator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Catch\+::\+Between\+Generator}$<$ T $>$\+::{\bf Between\+Generator} (
+\subsubsection{Function Documentation}
+\hypertarget{a00008_a20e7468e7c7621b99ed5a35e29a56623}{}\index{read\+Command\+Line.\+cc@{read\+Command\+Line.\+cc}!read\+Command\+Line@{read\+Command\+Line}}
+\index{read\+Command\+Line@{read\+Command\+Line}!read\+Command\+Line.\+cc@{read\+Command\+Line.\+cc}}
+\paragraph[{read\+Command\+Line}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ read\+Command\+Line (
 \begin{DoxyParamCaption}
-\item[{T}]{from, }
-\item[{T}]{to}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [inline]}}\label{a00008_a835a057d691ae37caef660624099b51c}
+)}\label{a00008_a20e7468e7c7621b99ed5a35e29a56623}
 
 
-Definition at line 1761 of file catch.\+hpp.
+Implementation of the function read\+Command\+Line. 
+
+read\+Command\+Line parses the input parameters given by the command line.
+
+\begin{DoxyAuthor}{Author}
+Michael Ebner 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2015 
+\end{DoxyDate}
 
 
-
-\subsubsection{Member Function Documentation}
-\hypertarget{a00008_af83575d62cc727ca995446cff4d6c26c}{}\index{Catch\+::\+Between\+Generator@{Catch\+::\+Between\+Generator}!get\+Value@{get\+Value}}
-\index{get\+Value@{get\+Value}!Catch\+::\+Between\+Generator@{Catch\+::\+Between\+Generator}}
-\paragraph[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ virtual T {\bf Catch\+::\+Between\+Generator}$<$ T $>$\+::get\+Value (
-\begin{DoxyParamCaption}
-\item[{std\+::size\+\_\+t}]{index}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{a00008_af83575d62cc727ca995446cff4d6c26c}
-
-
-Implements \hyperlink{a00034_ad69e937cb66dba3ed9429c42abf4fce3}{Catch\+::\+I\+Generator$<$ T $>$}.
-
-
-
-Definition at line 1763 of file catch.\+hpp.
-
-\hypertarget{a00008_aa53a04a259e796ba2b5adabed79474b5}{}\index{Catch\+::\+Between\+Generator@{Catch\+::\+Between\+Generator}!size@{size}}
-\index{size@{size}!Catch\+::\+Between\+Generator@{Catch\+::\+Between\+Generator}}
-\paragraph[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ virtual std\+::size\+\_\+t {\bf Catch\+::\+Between\+Generator}$<$ T $>$\+::size (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{a00008_aa53a04a259e796ba2b5adabed79474b5}
-
-
-Implements \hyperlink{a00034_a2e317253b03e838b6065ce69719a198e}{Catch\+::\+I\+Generator$<$ T $>$}.
+Definition at line 14 of file read\+Command\+Line.\+cc.
 
 
 
-Definition at line 1767 of file catch.\+hpp.
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{a00008_a20e7468e7c7621b99ed5a35e29a56623_icgraph}
+\end{center}
+\end{figure}
 
 
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
-\item 
-\hyperlink{a00094}{catch.\+hpp}\end{DoxyCompactItemize}

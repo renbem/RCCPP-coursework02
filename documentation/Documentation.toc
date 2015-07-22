@@ -1,0 +1,14 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Conway's Game of Life}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Implementation}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Structure of project-folder}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}Choice of design}{2}{section.2.2}
+\contentsline {section}{\numberline {2.3}Parallelisation}{2}{section.2.3}
+\contentsline {section}{\numberline {2.4}Unit tests}{4}{section.2.4}
+\contentsline {section}{\numberline {2.5}Build, run and test}{4}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Build instructions}{5}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Running the programme}{5}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Run unit tests}{5}{subsection.2.5.3}
+\contentsline {section}{\numberline {2.6}Results}{5}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Video}{6}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Parallel vs. serial implementation}{6}{subsection.2.6.2}
